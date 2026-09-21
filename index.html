@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ôn tập Triết học Mác - Lênin: Hình thái Kinh tế - Xã hội</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .transform-style-3d {
+      transform-style: preserve-3d;
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header & Navigation -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm backdrop-blur-md bg-white/90">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('flashcards')">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-rose-500 flex items-center justify-center text-white shadow-md shadow-indigo-200">
+          <i class="fa-solid fa-graduation-cap text-lg"></i>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg text-slate-900 leading-tight">MLN111 • Triết Học Mác - Lênin</h1>
+          <p class="text-xs font-medium text-slate-500">Học thuyết Hình thái Kinh tế - Xã hội</p>
+        </div>
+      </div>
+
+      <!-- Nav Tabs -->
+      <nav class="flex items-center space-x-1 sm:space-x-2 bg-slate-100 p-1.5 rounded-xl text-xs sm:text-sm font-medium">
+        <button id="tab-btn-flashcards" onclick="switchTab('flashcards')" class="px-3.5 py-1.5 rounded-lg transition-all duration-200 text-indigo-700 bg-white shadow-sm font-semibold flex items-center gap-1.5">
+          <i class="fa-regular fa-clone"></i>
+          <span>Flashcards</span>
+        </button>
+        <button id="tab-btn-quiz" onclick="switchTab('quiz')" class="px-3.5 py-1.5 rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+          <i class="fa-solid fa-circle-question"></i>
+          <span>Trắc nghiệm</span>
+        </button>
+        <button id="tab-btn-mindmap" onclick="switchTab('mindmap')" class="px-3.5 py-1.5 rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+          <i class="fa-solid fa-sitemap"></i>
+          <span>Sơ đồ 5 Hình thái</span>
+        </button>
+        <button id="tab-btn-summary" onclick="switchTab('summary')" class="px-3.5 py-1.5 rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Tóm tắt lý thuyết</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6">
+
+    <!-- TAB 1: FLASHCARDS (QUIZLET STYLE) -->
+    <section id="tab-flashcards" class="block animate-fade-in">
+      <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Ôn tập thẻ Flashcards</h2>
+          <p class="text-sm text-slate-500 mt-0.5">Nhấp vào thẻ hoặc bấm phím Cách (Space) để lật mặt sau xem giải nghĩa</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="shuffleCards()" class="px-3.5 py-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 shadow-sm flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-shuffle text-indigo-500"></i> Xáo trộn thẻ
+          </button>
+          <button onclick="resetCards()" class="px-3.5 py-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 shadow-sm flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-arrow-rotate-left text-slate-500"></i> Bắt đầu lại
+          </button>
+        </div>
+      </div>
+
+      <!-- Flashcard Interactive Deck -->
+      <div class="max-w-2xl mx-auto mb-8">
+        <!-- Progress Bar -->
+        <div class="mb-3 flex items-center justify-between text-xs font-semibold text-slate-500">
+          <span id="card-counter">Thẻ 1 / 10</span>
+          <span id="card-progress-percent">10%</span>
+        </div>
+        <div class="w-full bg-slate-200 rounded-full h-1.5 mb-6 overflow-hidden">
+          <div id="card-progress-bar" class="bg-indigo-600 h-1.5 rounded-full transition-all duration-300" style="width: 10%"></div>
+        </div>
+
+        <!-- Flip Card Viewport -->
+        <div class="perspective-1000 w-full h-80 sm:h-96 cursor-pointer select-none" onclick="flipCard()">
+          <div id="flip-card-inner" class="relative w-full h-full transform-style-3d transition-transform duration-500 rounded-3xl shadow-xl border border-slate-100">
+            <!-- Front -->
+            <div class="absolute inset-0 backface-hidden bg-white rounded-3xl p-8 flex flex-col justify-between items-center text-center border border-slate-100 shadow-sm">
+              <div class="w-full flex justify-between items-center text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                <span class="bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                  <i class="fa-solid fa-tag"></i> <span id="card-topic">Khái niệm cốt lõi</span>
+                </span>
+                <span class="flex items-center gap-1"><i class="fa-solid fa-rotate"></i> Bấm để lật</span>
+              </div>
+              <div class="my-auto px-4">
+                <h3 id="card-front-title" class="text-2xl sm:text-3xl font-extrabold text-slate-800 mb-3 tracking-tight">
+                  Hình thái kinh tế - xã hội là gì?
+                </h3>
+                <p id="card-front-hint" class="text-xs text-slate-400 italic">Gợi ý: Cấu tạo từ 3 yếu tố cơ bản nào?</p>
+              </div>
+              <div class="text-slate-400 text-xs font-medium">
+                <i class="fa-regular fa-lightbulb text-amber-500 mr-1"></i> Bấm vào thẻ để xem định nghĩa
+              </div>
+            </div>
+
+            <!-- Back -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-3xl p-8 flex flex-col justify-between items-center text-center shadow-md">
+              <div class="w-full flex justify-between items-center text-xs font-medium text-slate-300">
+                <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-indigo-200">Định nghĩa & Bản chất</span>
+                <span class="flex items-center gap-1"><i class="fa-solid fa-rotate"></i> Bấm để lật lại</span>
+              </div>
+              <div class="my-auto px-4 overflow-y-auto max-h-56 sm:max-h-64">
+                <h4 id="card-back-title" class="text-lg sm:text-xl font-bold text-amber-300 mb-2">Định nghĩa</h4>
+                <p id="card-back-content" class="text-sm sm:text-base text-slate-100 leading-relaxed font-normal">
+                  Là một phạm trù của chủ nghĩa duy vật lịch sử dùng để chỉ xã hội ở từng giai đoạn lịch sử nhất định, với một kiểu quan hệ sản xuất đặc trưng cho xã hội đó, phù hợp với một trình độ nhất định của lực lượng sản xuất và với một kiến trúc thượng tầng tương ứng được xây dựng trên những quan hệ sản xuất ấy.
+                </p>
+                <div id="card-back-note" class="mt-3 text-xs text-slate-300 border-t border-slate-700 pt-2 text-left">
+                  <strong class="text-indigo-300">Cấu trúc:</strong> Lực lượng sản xuất + Quan hệ sản xuất (Cơ sở hạ tầng) + Kiến trúc thượng tầng.
+                </div>
+              </div>
+              <div class="text-xs text-slate-400">
+                Ôn kỹ để vận dụng vào phần giải thích quy luật!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls (Prev / Flip / Next) -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button onclick="prevCard()" class="w-12 h-12 rounded-full border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 flex items-center justify-center text-lg shadow-sm transition hover:scale-105 active:scale-95" title="Thẻ trước (Phím mũi tên trái)">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button onclick="flipCard()" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-200 flex items-center gap-2 transition hover:scale-105 active:scale-95">
+            <i class="fa-solid fa-repeat"></i>
+            <span>Lật thẻ (Space)</span>
+          </button>
+          <button onclick="nextCard()" class="w-12 h-12 rounded-full border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 flex items-center justify-center text-lg shadow-sm transition hover:scale-105 active:scale-95" title="Thẻ tiếp theo (Phím mũi tên phải)">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid of all cards quick preview -->
+      <div class="mt-12 border-t border-slate-200 pt-8">
+        <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-indigo-600"></i> Danh mục toàn bộ 10 thuật ngữ quan trọng
+        </h3>
+        <div id="flashcards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+      </div>
+    </section>
+
+    <!-- TAB 2: TRẮC NGHIỆM TÍNH ĐIỂM (QUIZ) -->
+    <section id="tab-quiz" class="hidden animate-fade-in">
+      <div class="max-w-3xl mx-auto">
+        <!-- Quiz Header Info -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm mb-6 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900">Bài kiểm tra trắc nghiệm MLN111</h2>
+            <p class="text-xs text-slate-500 mt-1">Gồm 10 câu hỏi tiêu biểu chọn lọc từ ngân hàng câu hỏi ôn tập môn Triết học Mác - Lênin</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block uppercase font-bold tracking-wider">Điểm số hiện tại</span>
+              <span id="quiz-live-score" class="text-xl font-extrabold text-indigo-600">0 / 10</span>
+            </div>
+            <button onclick="resetQuiz()" class="p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 text-slate-600 transition" title="Làm lại bài thi">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Quiz Submission / Results Modal / Area -->
+        <div id="quiz-result-box" class="hidden mt-8 bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 rounded-2xl p-8 text-white shadow-xl text-center">
+          <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-indigo-500/20 text-indigo-300 text-3xl mb-4 border border-indigo-400/30">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-1">Kết Quả Bài Trắc Nghiệm</h3>
+          <p id="quiz-result-score" class="text-4xl font-extrabold text-amber-400 my-3">8 / 10 Điểm</p>
+          <p id="quiz-result-comment" class="text-sm text-slate-200 max-w-md mx-auto mb-6">
+            Rất tốt! Bạn đã nắm chắc các quy luật căn bản của học thuyết Hình thái kinh tế - xã hội.
+          </p>
+          <button onclick="resetQuiz()" class="px-6 py-3 bg-white text-indigo-900 font-bold rounded-xl text-sm hover:bg-indigo-50 transition shadow-lg">
+            <i class="fa-solid fa-arrow-rotate-left mr-1.5"></i> Thi lại lần nữa
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: SƠ ĐỒ 5 HÌNH THÁI KT-XH (MINDMAP) -->
+    <section id="tab-mindmap" class="hidden animate-fade-in">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-slate-900">Tiến trình lịch sử tự nhiên của 5 Hình thái KT-XH</h2>
+        <p class="text-sm text-slate-500 mt-1">C.Mác: "Sự phát triển của các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên"</p>
+      </div>
+
+      <!-- Timeline Chart -->
+      <div class="relative border-l-4 border-indigo-500 ml-4 sm:ml-8 my-8 space-y-8">
+
+        <!-- 1. Công xã nguyên thủy -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-white border-4 border-indigo-500 group-hover:scale-125 transition-transform"></div>
+          <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-indigo-300 transition">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h3 class="text-base font-bold text-slate-900">1. Hình thái Kinh tế - Xã hội Cộng sản nguyên thủy</h3>
+              <span class="text-xs bg-emerald-50 text-emerald-700 font-semibold px-2.5 py-1 rounded-full">Sơ khai lịch sử</span>
+            </div>
+            <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5">
+              <li>• <strong>LLSX:</strong> Công cụ lao động thô sơ bằng đá, săn bắt, hái lượm.</li>
+              <li>• <strong>QHSX:</strong> Sở hữu chung về tư liệu sản xuất (công hữu), cùng làm cùng hưởng, chưa có bóc lột.</li>
+              <li>• <strong>Kiến trúc thượng tầng:</strong> Chưa có nhà nước, quản lý xã hội theo thị tộc, bộ lạc, đạo đức cộng đồng.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2. Chiếm hữu nô lệ -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-white border-4 border-indigo-500 group-hover:scale-125 transition-transform"></div>
+          <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-indigo-300 transition">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h3 class="text-base font-bold text-slate-900">2. Hình thái Kinh tế - Xã hội Chiếm hữu nô lệ</h3>
+              <span class="text-xs bg-amber-50 text-amber-700 font-semibold px-2.5 py-1 rounded-full">Xuất hiện giai cấp đầu tiên</span>
+            </div>
+            <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5">
+              <li>• <strong>LLSX:</strong> Xuất hiện công cụ bằng kim loại (đồng, sắt), chăn nuôi và trồng trọt phát triển.</li>
+              <li>• <strong>QHSX:</strong> Sở hữu tư nhân tuyệt đối của chủ nô đối với tư liệu sản xuất và cả bản thân người nô lệ.</li>
+              <li>• <strong>Kiến trúc thượng tầng:</strong> Nhà nước chủ nô ra đời (nhà nước đầu tiên trong lịch sử) để đàn áp nô lệ.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Phong kiến -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-white border-4 border-indigo-500 group-hover:scale-125 transition-transform"></div>
+          <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-indigo-300 transition">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h3 class="text-base font-bold text-slate-900">3. Hình thái Kinh tế - Xã hội Phong kiến</h3>
+              <span class="text-xs bg-blue-50 text-blue-700 font-semibold px-2.5 py-1 rounded-full">Địa tô & Nông nô</span>
+            </div>
+            <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5">
+              <li>• <strong>LLSX:</strong> Nông nghiệp tiểu nông, thủ công nghiệp phát triển, công cụ bằng sắt hoàn thiện hơn.</li>
+              <li>• <strong>QHSX:</strong> Địa chủ phong kiến sở hữu ruộng đất; nông dân/nông nô bị bóc lột qua tô thuế. Nông dân có tư liệu sinh hoạt và gia đình riêng.</li>
+              <li>• <strong>Kiến trúc thượng tầng:</strong> Nhà nước quân chủ phong kiến tập quyền hoặc phân quyền, hệ tư tưởng tôn giáo chi phối mạnh mẽ.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Tư bản chủ nghĩa -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-white border-4 border-indigo-500 group-hover:scale-125 transition-transform"></div>
+          <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-indigo-300 transition">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h3 class="text-base font-bold text-slate-900">4. Hình thái Kinh tế - Xã hội Tư bản chủ nghĩa</h3>
+              <span class="text-xs bg-purple-50 text-purple-700 font-semibold px-2.5 py-1 rounded-full">Sản xuất đại công nghiệp</span>
+            </div>
+            <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5">
+              <li>• <strong>LLSX:</strong> Đại công nghiệp cơ khí hóa, tự động hóa, cách mạng công nghệ, LLSX mang tính xã hội hóa cao độ.</li>
+              <li>• <strong>QHSX:</strong> Tư hữu tư bản chủ nghĩa về tư liệu sản xuất; bóc lột giá trị thặng dư đối với giai cấp công nhân làm thuê.</li>
+              <li>• <strong>Mâu thuẫn cơ bản:</strong> Giữa tính chất xã hội hóa ngày càng cao của LLSX với chế độ chiếm hữu tư nhân TBCN về TLSX.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. Cộng sản chủ nghĩa -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-white border-4 border-rose-500 group-hover:scale-125 transition-transform"></div>
+          <div class="bg-gradient-to-r from-rose-50 to-indigo-50 rounded-2xl p-5 border border-rose-200 shadow-sm hover:border-rose-300 transition">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h3 class="text-base font-bold text-rose-900">5. Hình thái Kinh tế - Xã hội Cộng sản chủ nghĩa</h3>
+              <span class="text-xs bg-rose-600 text-white font-semibold px-2.5 py-1 rounded-full">Hình thái phát triển cao nhất</span>
+            </div>
+            <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+              <li>• <strong>Giai đoạn thấp (CNXH):</strong> Công hữu tư liệu sản xuất chủ yếu; nguyên tắc phân phối: <em>"Làm theo năng lực, hưởng theo lao động"</em>.</li>
+              <li>• <strong>Giai đoạn cao (CNCS):</strong> LLSX phát triển vượt bậc của cải dồi dào; xoá bỏ hoàn toàn giai cấp; phân phối: <em>"Làm theo năng lực, hưởng theo nhu cầu"</em>.</li>
+              <li>• <strong>Kiến trúc thượng tầng:</strong> Nhà nước tự tiêu vong khi không còn đối kháng giai cấp.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Góc liên hệ Việt Nam -->
+      <div class="mt-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <h4 class="text-base font-bold text-amber-900 flex items-center gap-2 mb-2">
+          <i class="fa-solid fa-star text-amber-600"></i> Ý nghĩa thực tiễn & Sự vận dụng của Đảng ta ở Việt Nam
+        </h4>
+        <p class="text-sm text-amber-950 leading-relaxed">
+          Việt Nam quá độ lên chủ nghĩa xã hội <strong>bỏ qua chế độ tư bản chủ nghĩa</strong> là hoàn toàn phù hợp với tính quy luật lịch sử - tự nhiên. "Bỏ qua" ở đây được hiểu là bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng TBCN, nhưng tiếp thu, kế thừa những thành tựu của nhân loại dưới CNTB, đặc biệt là khoa học - công nghệ để phát triển mạnh mẽ Lực lượng sản xuất.
+        </p>
+      </div>
+    </section>
+
+    <!-- TAB 4: TÓM TẮT LÝ THUYẾT (CHEAT SHEET) -->
+    <section id="tab-summary" class="hidden animate-fade-in">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-slate-900">Tóm tắt lý thuyết cốt lõi (Cheat Sheet)</h2>
+        <p class="text-sm text-slate-500 mt-1">Nắm chắc 3 quy luật và mối quan hệ biện chứng nền tảng</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Cấu trúc hình thái KT-XH -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-lg mb-4">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 mb-2">1. Cấu trúc Hình thái Kinh tế - Xã hội</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">Gồm 3 yếu tố cơ bản liên kết chặt chẽ:</p>
+          <div class="space-y-2 text-xs sm:text-sm">
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <strong class="text-indigo-600 block">Lực lượng sản xuất (LLSX):</strong>
+              Là nền tảng vật chất - kỹ thuật. Gồm: <em>Người lao động</em> (chủ thể giữ vai trò quyết định nhất) và <em>Tư liệu sản xuất</em> (trong đó công cụ lao động là yếu tố động nhất, cách mạng nhất).
+            </div>
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <strong class="text-indigo-600 block">Quan hệ sản xuất (QHSX) - Cơ sở hạ tầng:</strong>
+              Gồm quan hệ sở hữu về TLSX, quan hệ tổ chức quản lý, và quan hệ phân phối sản phẩm.
+            </div>
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <strong class="text-indigo-600 block">Kiến trúc thượng tầng (KTTT):</strong>
+              Hệ tư tưởng chính trị, pháp quyền, đạo đức, triết học,... cùng các thiết chế tương ứng (Nhà nước, đảng phái, giáo hội,...). Trong đó Nhà nước là thiết chế quyền lực mạnh nhất.
+            </div>
+          </div>
+        </div>
+
+        <!-- Quy luật LLSX & QHSX -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-lg mb-4">
+            <i class="fa-solid fa-arrows-split-up-and-left"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 mb-2">2. Quy luật QHSX phù hợp với trình độ LLSX</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">Quy luật cơ bản nhất chi phối sự vận động của lịch sử loài người:</p>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-700">
+            <div class="p-3 bg-indigo-50/60 rounded-xl border border-indigo-100">
+              <strong class="text-slate-900 block mb-1">• LLSX quyết định QHSX:</strong>
+              LLSX biến đổi không ngừng; khi LLSX đạt trình độ mới, QHSX cũ trở thành "xiềng xích" kìm hãm, đòi hỏi một cuộc cách mạng thay thế QHSX cũ bằng QHSX mới phù hợp.
+            </div>
+            <div class="p-3 bg-indigo-50/60 rounded-xl border border-indigo-100">
+              <strong class="text-slate-900 block mb-1">• QHSX tác động trở lại LLSX:</strong>
+              - Nếu <strong>phù hợp</strong>: thúc đẩy LLSX phát triển mạnh mẽ.<br>
+              - Nếu <strong>không phù hợp</strong> (lạc hậu hơn hoặc giả tạo vượt trước): kìm hãm, phá vỡ LLSX.
+            </div>
+          </div>
+        </div>
+
+        <!-- Cơ sở hạ tầng & Kiến trúc thượng tầng -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg mb-4">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 mb-2">3. Quan hệ biện chứng giữa CSHT & KTTT</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">Mối quan hệ kinh tế và chính trị/tư tưởng:</p>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-700">
+            <p>• <strong>Cơ sở hạ tầng (CSHT):</strong> Là toàn bộ những quan hệ sản xuất hợp thành cơ cấu kinh tế của một xã hội nhất định.</p>
+            <p>• <strong>CSHT quyết định KTTT:</strong> Cơ cấu kinh tế thế nào thì sinh ra hệ tư tưởng, bộ máy nhà nước tương ứng. CSHT thay đổi thì sớm muộn KTTT cũng thay đổi theo.</p>
+            <p>• <strong>KTTT tác động trở lại CSHT:</strong> Nhà nước thông qua luật pháp, chính sách trực tiếp bảo vệ và củng cố CSHT kinh tế sinh ra nó.</p>
+          </div>
+        </div>
+
+        <!-- Quá trình lịch sử - tự nhiên -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-lg mb-4">
+            <i class="fa-solid fa-timeline"></i>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 mb-2">4. Tính "Lịch sử - Tự nhiên"</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">Tại sao việc thay thế hình thái KT-XH là tất yếu khách quan?</p>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-700">
+            <p>• Sự thay thế lẫn nhau của các hình thái kinh tế - xã hội tuân theo các <strong>quy luật khách quan</strong> (độc lập với ý muốn chủ quan của con người), nguồn gốc sâu xa bắt đầu từ sự phát triển của LLSX.</p>
+            <p>• Tuy nhiên, tiến trình này không diễn ra đơn điệu: do điều kiện địa lý, văn hóa, bối cảnh thời đại, một số dân tộc có thể <strong>bỏ qua</strong> một hoặc vài hình thái KT-XH để tiến thẳng lên hình thái cao hơn.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-auto">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="font-semibold text-slate-700">Dự án Mini-App Ôn Tập Triết Học Mác - Lênin (MLN111)</p>
+      <p class="mt-1">Chủ đề: Học thuyết Hình thái Kinh tế - Xã hội • Phục vụ học tập và thuyết trình nhóm</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // DATA: 10 FLASHCARDS
+    const flashcardsData = [
+      {
+        id: 1,
+        topic: "Khái niệm",
+        front: "Hình thái Kinh tế - Xã hội là gì?",
+        hint: "Cấu tạo gồm 3 thành tố cơ bản",
+        backTitle: "Định nghĩa Hình thái KT - XH",
+        back: "Là một phạm trù của chủ nghĩa duy vật lịch sử dùng để chỉ xã hội ở từng giai đoạn lịch sử nhất định, với một kiểu quan hệ sản xuất đặc trưng, phù hợp với một trình độ nhất định của lực lượng sản xuất và với một kiến trúc thượng tầng tương ứng.",
+        note: "3 bộ phận cấu thành: LLSX, QHSX (Cơ sở hạ tầng), Kiến trúc thượng tầng."
+      },
+      {
+        id: 2,
+        topic: "LLSX",
+        front: "Lực lượng sản xuất (LLSX) gồm những yếu tố nào?",
+        hint: "Yếu tố nào giữ vai trò quyết định nhất?",
+        backTitle: "Cấu trúc Lực lượng sản xuất",
+        back: "LLSX gồm 2 bộ phận chính: Người lao động (tri thức, kỹ năng, kinh nghiệm) và Tư liệu sản xuất (gồm Tư liệu lao động và Đối tượng lao động).",
+        note: "Người lao động giữ vai trò quyết định nhất. Công cụ lao động là yếu tố động nhất, cách mạng nhất."
+      },
+      {
+        id: 3,
+        topic: "QHSX",
+        front: "Quan hệ sản xuất (QHSX) là gì & gồm mấy mặt?",
+        hint: "3 quan hệ kinh tế giữa người với người",
+        backTitle: "3 mặt của Quan hệ sản xuất",
+        back: "Là quan hệ giữa người với người trong quá trình sản xuất vật chất. Gồm 3 mặt: (1) Quan hệ sở hữu đối với tư liệu sản xuất; (2) Quan hệ tổ chức quản lý sản xuất; (3) Quan hệ phân phối sản phẩm.",
+        note: "Quan hệ sở hữu đối với TLSX giữ vai trò quyết định đối với 2 quan hệ còn lại."
+      },
+      {
+        id: 4,
+        topic: "Quy luật cốt lõi",
+        front: "Nội dung quy luật QHSX phù hợp với trình độ LLSX?",
+        hint: "Quy luật cơ bản nhất chi phối lịch sử xã hội",
+        backTitle: "Quy luật Biện chứng LLSX & QHSX",
+        back: "LLSX quyết định sự ra đời, biến đổi của QHSX. Ngược lại, QHSX tác động trở lại LLSX: nếu phù hợp thì thúc đẩy LLSX phát triển; nếu không phù hợp (lạc hậu hoặc vượt trước giả tạo) sẽ kìm hãm LLSX.",
+        note: "Mâu thuẫn giữa LLSX tiên tiến và QHSX lỗi thời là nguyên nhân gốc rễ dẫn đến cách mạng xã hội."
+      },
+      {
+        id: 5,
+        topic: "CSHT & KTTT",
+        front: "Cơ sở hạ tầng (CSHT) của xã hội là gì?",
+        hint: "Đừng nhầm lẫn với điện, đường, trường, trạm!",
+        backTitle: "Khái niệm Cơ sở hạ tầng",
+        back: "Là toàn bộ những quan hệ sản xuất của một xã hội trong sự vận động hiện thực của chúng hợp thành cơ cấu kinh tế của xã hội đó (gồm QHSX thống trị, QHSX tàn dư và QHSX mầm mống).",
+        note: "Khái niệm CSHT trong triết học là kết cấu kinh tế, khác khái niệm hạ tầng kỹ thuật xây dựng."
+      },
+      {
+        id: 6,
+        topic: "CSHT & KTTT",
+        front: "Kiến trúc thượng tầng (KTTT) là gì?",
+        hint: "Yếu tố nào có quyền lực mạnh nhất trong KTTT?",
+        backTitle: "Khái niệm Kiến trúc thượng tầng",
+        back: "Là toàn bộ những quan điểm, tư tưởng xã hội (chính trị, pháp quyền, đạo đức, triết học, tôn giáo...) cùng với những thiết chế tương ứng (nhà nước, đảng phái, giáo hội...) được hình thành trên một cơ sở hạ tầng nhất định.",
+        note: "Trong KTTT của xã hội có giai cấp, Nhà nước là thiết chế giữ vai trò quyền lực mạnh nhất."
+      },
+      {
+        id: 7,
+        topic: "Quy luật",
+        front: "Mối quan hệ biện chứng giữa CSHT và KTTT?",
+        hint: "Kinh tế quyết định chính trị hay ngược lại?",
+        backTitle: "Biện chứng giữa CSHT & KTTT",
+        back: "CSHT quyết định KTTT (CSHT nào sinh ra KTTT ấy; CSHT đổi thì KTTT sớm muộn đổi theo). KTTT tác động trở lại mạnh mẽ CSHT thông qua chức năng bảo vệ cơ sở kinh tế sinh ra nó.",
+        note: "Sự tác động của KTTT đối với CSHT diễn ra theo cả hai chiều: tích cực hoặc tiêu cực."
+      },
+      {
+        id: 8,
+        topic: "Tiến trình",
+        front: "Ý nghĩa luận điểm: 'Sự phát triển các hình thái KT-XH là quá trình lịch sử - tự nhiên'?",
+        hint: "Quy luật khách quan hay ý muốn chủ quan?",
+        backTitle: "Tính Lịch sử - Tự nhiên",
+        back: "Nghĩa là sự vận động thay thế nhau của các hình thái KT-XH tuân theo các quy luật khách quan (đặc biệt là quy luật QHSX phù hợp với LLSX), không phụ thuộc vào ý muốn chủ quan của con người.",
+        note: "Khẳng định tiến trình phát triển đi lên là tất yếu của lịch sử nhân loại."
+      },
+      {
+        id: 9,
+        topic: "Tiến trình",
+        front: "Nhân loại đã trải qua những hình thái KT-XH nào?",
+        hint: "Thứ tự 5 hình thái từ thấp đến cao",
+        backTitle: "5 Hình thái Kinh tế - Xã hội",
+        back: "Tuần tự gồm: (1) Cộng sản nguyên thủy; (2) Chiếm hữu nô lệ; (3) Phong kiến; (4) Tư bản chủ nghĩa; (5) Cộng sản chủ nghĩa (giai đoạn đầu là CNXH).",
+        note: "Do điều kiện lịch sử cụ thể, một số quốc gia có thể phát triển 'bỏ qua' một vài hình thái."
+      },
+      {
+        id: 10,
+        topic: "Vận dụng VN",
+        front: "Việt Nam 'bỏ qua chế độ TBCN' đi lên CNXH hiểu thế nào?",
+        hint: "Vận dụng thực tiễn của Đảng ta",
+        backTitle: "Vận dụng tại Việt Nam",
+        back: "Là bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng TBCN; nhưng tiếp thu, kế thừa những thành tựu mà nhân loại đã đạt được dưới chế độ tư bản (khoa học, kỹ thuật, công nghệ) để phát triển nhanh LLSX.",
+        note: "Đây là sự lựa chọn hợp quy luật khách quan và thực tiễn cách mạng Việt Nam."
+      }
+    ];
+
+    // DATA: 10 MULTIPLE CHOICE QUESTIONS
+    const quizData = [
+      {
+        question: "1. Yếu tố nào giữ vai trò quyết định nhất trong lực lượng sản xuất?",
+        options: [
+          "Tư liệu lao động",
+          "Người lao động",
+          "Công cụ lao động",
+          "Đối tượng lao động"
+        ],
+        correct: 1,
+        explain: "Người lao động với tri thức, kỹ năng và kinh nghiệm là chủ thể sáng tạo, giữ vai trò quyết định nhất trong mọi quá trình sản xuất."
+      },
+      {
+        question: "2. Trong các yếu tố của tư liệu lao động, yếu tố nào là 'động nhất, cách mạng nhất'?",
+        options: [
+          "Phương tiện vận chuyển",
+          "Nhà kho, bến bãi",
+          "Công cụ lao động",
+          "Hệ thống quản lý"
+        ],
+        correct: 2,
+        explain: "Công cụ lao động là thước đo trình độ chinh phục tự nhiên của con người và luôn luôn biến đổi, phát triển sớm nhất."
+      },
+      {
+        question: "3. Quan hệ nào giữ vai trò quyết định nhất trong 3 mặt của Quan hệ sản xuất?",
+        options: [
+          "Quan hệ sở hữu đối với tư liệu sản xuất",
+          "Quan hệ tổ chức và quản lý sản xuất",
+          "Quan hệ phân phối sản phẩm lao động",
+          "Quan hệ lưu thông hàng hóa trên thị trường"
+        ],
+        correct: 0,
+        explain: "Quan hệ sở hữu về TLSX quyết định ai nắm quyền quản lý và quyết định cách thức phân phối của cải làm ra."
+      },
+      {
+        question: "4. Theo triết học Mác - Lênin, Cơ sở hạ tầng của xã hội là gì?",
+        options: [
+          "Đường sá, cầu cống, trường học, bệnh viện",
+          "Toàn bộ tài nguyên khoáng sản của đất nước",
+          "Toàn bộ những quan hệ sản xuất hợp thành cơ cấu kinh tế của một xã hội",
+          "Tổng thể các máy móc nhà máy xí nghiệp hiện đại"
+        ],
+        correct: 2,
+        explain: "Trong chủ nghĩa duy vật lịch sử, CSHT là phạm trù kinh tế chỉ toàn bộ các quan hệ sản xuất của xã hội trong sự vận động hiện thực."
+      },
+      {
+        question: "5. Thiết chế nào có quyền lực mạnh nhất trong Kiến trúc thượng tầng của xã hội có giai cấp?",
+        options: [
+          "Giáo hội và các tổ chức tôn giáo",
+          "Các hội đoàn nghề nghiệp",
+          "Nhà nước",
+          "Các cơ quan truyền thông báo chí"
+        ],
+        correct: 2,
+        explain: "Nhà nước là bộ máy quyền lực đặc biệt nắm trong tay công cụ bạo lực và pháp luật để bảo vệ lợi ích của giai cấp thống trị."
+      },
+      {
+        question: "6. Khi quan hệ sản xuất không phù hợp (lạc hậu hơn hoặc giả tạo vượt trước) với trình độ LLSX thì sẽ gây ra hậu quả gì?",
+        options: [
+          "Thúc đẩy lực lượng sản xuất bứt phá nhanh hơn",
+          "Kìm hãm sự phát triển của lực lượng sản xuất",
+          "Không gây ảnh hưởng gì tới lực lượng sản xuất",
+          "Lập tức thủ tiêu toàn bộ mọi công cụ lao động"
+        ],
+        correct: 1,
+        explain: "Chỉ khi QHSX phù hợp thì mới là 'địa bàn' mở đường cho LLSX phát triển; nếu không phù hợp nó sẽ trở thành xiềng xích kìm hãm."
+      },
+      {
+        question: "7. Luận điểm nổi tiếng 'Sự phát triển của các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên' là của ai?",
+        options: [
+          "V.I. Lênin",
+          "C. Mác",
+          "Ph. Ăngghen",
+          "G.W.F. Hêghen"
+        ],
+        correct: 1,
+        explain: "C.Mác đã đưa ra luận điểm cốt tử này trong Lời tựa cuốn 'Tư bản' (Tập 1, 1867)."
+      },
+      {
+        question: "8. Hình thái kinh tế - xã hội đầu tiên xuất hiện sự phân chia giai cấp và bóc lột là:",
+        options: [
+          "Cộng sản nguyên thủy",
+          "Chiếm hữu nô lệ",
+          "Phong kiến",
+          "Tư bản chủ nghĩa"
+        ],
+        correct: 1,
+        explain: "Xã hội Chiếm hữu nô lệ là hình thái đầu tiên có sự đối kháng giai cấp gay gắt giữa chủ nô và nô lệ."
+      },
+      {
+        question: "9. Sự thay thế của một hình thái kinh tế - xã hội cũ bằng một hình thái mới cao hơn được thực hiện thông qua con đường nào?",
+        options: [
+          "Sự thỏa hiệp hòa bình vô điều kiện giữa các giai cấp",
+          "Cách mạng xã hội",
+          "Các cuộc đàm phán ngoại giao thuần túy",
+          "Sự nhường lại quyền lực tự nguyện của giai cấp thống trị"
+        ],
+        correct: 1,
+        explain: "Cách mạng xã hội là đỉnh cao của đấu tranh giai cấp, đập tan QHSX cũ và thiết lập QHSX mới giải phóng sức sản xuất."
+      },
+      {
+        question: "10. Đảng ta xác định: Con đường đi lên của nước ta là sự phát triển quá độ lên CNXH bỏ qua chế độ TBCN, nghĩa là:",
+        options: [
+          "Bỏ qua mọi thành tựu văn minh và công nghệ của nhân loại",
+          "Bỏ qua hoàn toàn nền kinh tế thị trường",
+          "Bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng TBCN",
+          "Bỏ qua giai đoạn công nghiệp hóa, hiện đại hóa đất nước"
+        ],
+        correct: 2,
+        explain: "Cương lĩnh của Đảng khẳng định: bỏ qua việc xác lập địa vị thống trị của QHSX và KTTT tư bản, nhưng kế thừa thành tựu khoa học - công nghệ để phát triển đất nước."
+      }
+    ];
+
+    // FLASHCARD APP STATE & FUNCTIONS
+    let currentCardIndex = 0;
+    let isFlipped = false;
+    let cards = [...flashcardsData];
+
+    function renderCurrentCard() {
+      const card = cards[currentCardIndex];
+      const inner = document.getElementById('flip-card-inner');
+      
+      if (isFlipped) {
+        inner.classList.remove('rotate-y-180');
+        isFlipped = false;
+      }
+
+      setTimeout(() => {
+        document.getElementById('card-topic').innerText = card.topic;
+        document.getElementById('card-front-title').innerText = card.front;
+        document.getElementById('card-front-hint').innerText = 'Gợi ý: ' + card.hint;
+        document.getElementById('card-back-title').innerText = card.backTitle;
+        document.getElementById('card-back-content').innerText = card.back;
+        document.getElementById('card-back-note').innerHTML = '<strong class="text-indigo-300">Ghi chú:</strong> ' + card.note;
+
+        document.getElementById('card-counter').innerText = `Thẻ ${currentCardIndex + 1} / ${cards.length}`;
+        const pct = Math.round(((currentCardIndex + 1) / cards.length) * 100);
+        document.getElementById('card-progress-percent').innerText = `${pct}%`;
+        document.getElementById('card-progress-bar').style.width = `${pct}%`;
+      }, 150);
+    }
+
+    function flipCard() {
+      const inner = document.getElementById('flip-card-inner');
+      isFlipped = !isFlipped;
+      if (isFlipped) {
+        inner.classList.add('rotate-y-180');
+      } else {
+        inner.classList.remove('rotate-y-180');
+      }
+    }
+
+    function nextCard() {
+      if (currentCardIndex < cards.length - 1) {
+        currentCardIndex++;
+      } else {
+        currentCardIndex = 0;
+      }
+      renderCurrentCard();
+    }
+
+    function prevCard() {
+      if (currentCardIndex > 0) {
+        currentCardIndex--;
+      } else {
+        currentCardIndex = cards.length - 1;
+      }
+      renderCurrentCard();
+    }
+
+    function shuffleCards() {
+      cards.sort(() => Math.random() - 0.5);
+      currentCardIndex = 0;
+      renderCurrentCard();
+    }
+
+    function resetCards() {
+      cards = [...flashcardsData];
+      currentCardIndex = 0;
+      renderCurrentCard();
+    }
+
+    function renderAllCardsGrid() {
+      const grid = document.getElementById('flashcards-grid');
+      grid.innerHTML = cards.map((c, idx) => `
+        <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:border-indigo-300 transition">
+          <div class="flex items-center justify-between text-xs font-semibold mb-1">
+            <span class="text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Thẻ #${idx + 1} • ${c.topic}</span>
+          </div>
+          <h4 class="font-bold text-slate-800 text-sm mb-1">${c.front}</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">${c.back}</p>
+        </div>
+      `).join('');
+    }
+
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+      const isCardsActive = !document.getElementById('tab-flashcards').classList.contains('hidden');
+      if (!isCardsActive) return;
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        flipCard();
+      } else if (e.code === 'ArrowRight') {
+        nextCard();
+      } else if (e.code === 'ArrowLeft') {
+        prevCard();
+      }
+    });
+
+    // QUIZ LOGIC
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = quizData.map((q, qIndex) => {
+        return `
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm transition" id="quiz-card-${qIndex}">
+            <p class="text-base font-bold text-slate-900 mb-4 leading-snug">${q.question}</p>
+            <div class="space-y-2.5">
+              ${q.options.map((opt, optIndex) => `
+                <button 
+                  onclick="selectOption(${qIndex}, ${optIndex})" 
+                  id="opt-btn-${qIndex}-${optIndex}"
+                  class="w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50/40 text-xs sm:text-sm font-medium transition flex items-center justify-between group">
+                  <span class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-slate-100 group-hover:bg-indigo-100 group-hover:text-indigo-700 text-slate-600 font-bold flex items-center justify-center text-xs">
+                      ${String.fromCharCode(65 + optIndex)}
+                    </span>
+                    <span>${opt}</span>
+                  </span>
+                  <span id="check-icon-${qIndex}-${optIndex}" class="hidden text-sm"></span>
+                </button>
+              `).join('')}
+            </div>
+            <div id="explain-box-${qIndex}" class="hidden mt-4 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
+              <strong class="text-indigo-600 font-bold"><i class="fa-solid fa-circle-info mr-1"></i> Giải thích:</strong>
+              <span>${q.explain}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function selectOption(qIndex, optIndex) {
+      if (userAnswers[qIndex] !== undefined) return;
+
+      userAnswers[qIndex] = optIndex;
+      const q = quizData[qIndex];
+      const isCorrect = (optIndex === q.correct);
+
+      for (let i = 0; i < q.options.length; i++) {
+        const btn = document.getElementById(`opt-btn-${qIndex}-${i}`);
+        btn.classList.add('cursor-default');
+
+        if (i === q.correct) {
+          btn.classList.remove('border-slate-200', 'hover:border-indigo-300', 'hover:bg-indigo-50/40');
+          btn.classList.add('bg-emerald-50', 'border-emerald-500', 'text-emerald-900', 'font-semibold');
+          const check = document.getElementById(`check-icon-${qIndex}-${i}`);
+          check.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600"></i>';
+          check.classList.remove('hidden');
+        } else if (i === optIndex && !isCorrect) {
+          btn.classList.remove('border-slate-200', 'hover:border-indigo-300', 'hover:bg-indigo-50/40');
+          btn.classList.add('bg-rose-50', 'border-rose-400', 'text-rose-900');
+          const check = document.getElementById(`check-icon-${qIndex}-${i}`);
+          check.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-500"></i>';
+          check.classList.remove('hidden');
+        }
+      }
+
+      document.getElementById(`explain-box-${qIndex}`).classList.remove('hidden');
+      calculateScore();
+    }
+
+    function calculateScore() {
+      let correctCount = 0;
+      let totalAnswered = 0;
+
+      for (let qIdx in userAnswers) {
+        totalAnswered++;
+        if (userAnswers[qIdx] === quizData[qIdx].correct) {
+          correctCount++;
+        }
+      }
+
+      document.getElementById('quiz-live-score').innerText = `${correctCount} / 10`;
+
+      if (totalAnswered === quizData.length) {
+        const resultBox = document.getElementById('quiz-result-box');
+        resultBox.classList.remove('hidden');
+        document.getElementById('quiz-result-score').innerText = `${correctCount} / 10 Điểm`;
+
+        if (correctCount >= 8) {
+          document.getElementById('quiz-result-comment').innerText = 'Xuất sắc! Bạn nắm rất vững kiến thức Hình thái Kinh tế - Xã hội và sẵn sàng cho kỳ thi!';
+          confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+          });
+        } else if (correctCount >= 5) {
+          document.getElementById('quiz-result-comment').innerText = 'Khá tốt! Bạn đã nắm được phần lớn khái niệm, hãy xem lại các thẻ Flashcard để củng cố thêm nhé.';
+        } else {
+          document.getElementById('quiz-result-comment').innerText = 'Cần ôn tập thêm! Hãy dành ít phút lật lại các thẻ Flashcard và đọc phần Tóm tắt lý thuyết.';
+        }
+        resultBox.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById('quiz-result-box').classList.add('hidden');
+      document.getElementById('quiz-live-score').innerText = '0 / 10';
+      renderQuiz();
+    }
+
+    // TAB SWITCHING
+    function switchTab(tabId) {
+      const tabs = ['flashcards', 'quiz', 'mindmap', 'summary'];
+      tabs.forEach(t => {
+        const section = document.getElementById(`tab-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (t === tabId) {
+          section.classList.remove('hidden');
+          btn.classList.add('text-indigo-700', 'bg-white', 'shadow-sm', 'font-semibold');
+          btn.classList.remove('text-slate-600');
+        } else {
+          section.classList.add('hidden');
+          btn.classList.remove('text-indigo-700', 'bg-white', 'shadow-sm', 'font-semibold');
+          btn.classList.add('text-slate-600');
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderCurrentCard();
+      renderAllCardsGrid();
+      renderQuiz();
+    });
+  </script>
+</body>
+</html>
