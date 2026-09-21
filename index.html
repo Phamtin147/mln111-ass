@@ -66,11 +66,11 @@
       <nav class="flex items-center space-x-1 sm:space-x-2 bg-slate-100 p-1.5 rounded-xl text-xs sm:text-sm font-medium">
         <button id="tab-btn-flashcards" onclick="switchTab('flashcards')" class="px-3.5 py-1.5 rounded-lg transition-all duration-200 text-indigo-700 bg-white shadow-sm font-semibold flex items-center gap-1.5">
           <i class="fa-regular fa-clone"></i>
-          <span>Flashcards</span>
+          <span>Flashcards (30)</span>
         </button>
         <button id="tab-btn-quiz" onclick="switchTab('quiz')" class="px-3.5 py-1.5 rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
           <i class="fa-solid fa-circle-question"></i>
-          <span>Trắc nghiệm</span>
+          <span>Trắc nghiệm (15)</span>
         </button>
         <button id="tab-btn-mindmap" onclick="switchTab('mindmap')" class="px-3.5 py-1.5 rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
           <i class="fa-solid fa-sitemap"></i>
@@ -87,19 +87,19 @@
   <!-- Main Container -->
   <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6">
 
-    <!-- TAB 1: FLASHCARDS (QUIZLET STYLE) -->
+    <!-- TAB 1: FLASHCARDS -->
     <section id="tab-flashcards" class="block animate-fade-in">
       <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 class="text-2xl font-bold text-slate-900">Ôn tập thẻ Flashcards</h2>
-          <p class="text-sm text-slate-500 mt-0.5">Nhấp vào thẻ hoặc bấm phím Cách (Space) để lật mặt sau xem giải nghĩa</p>
+          <h2 class="text-2xl font-bold text-slate-900">Thẻ ghi nhớ Flashcards (Bộ 30 thẻ toàn diện)</h2>
+          <p class="text-sm text-slate-500 mt-0.5">Nhấp vào thẻ hoặc phím Cách (Space) để lật mặt sau, mũi tên Trái/Phải để chuyển</p>
         </div>
         <div class="flex items-center gap-2">
           <button onclick="shuffleCards()" class="px-3.5 py-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 shadow-sm flex items-center gap-1.5 transition">
             <i class="fa-solid fa-shuffle text-indigo-500"></i> Xáo trộn thẻ
           </button>
           <button onclick="resetCards()" class="px-3.5 py-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 shadow-sm flex items-center gap-1.5 transition">
-            <i class="fa-solid fa-arrow-rotate-left text-slate-500"></i> Bắt đầu lại
+            <i class="fa-solid fa-arrow-rotate-left text-slate-500"></i> Về đầu
           </button>
         </div>
       </div>
@@ -108,11 +108,11 @@
       <div class="max-w-2xl mx-auto mb-8">
         <!-- Progress Bar -->
         <div class="mb-3 flex items-center justify-between text-xs font-semibold text-slate-500">
-          <span id="card-counter">Thẻ 1 / 10</span>
-          <span id="card-progress-percent">10%</span>
+          <span id="card-counter">Thẻ 1 / 30</span>
+          <span id="card-progress-percent">3%</span>
         </div>
         <div class="w-full bg-slate-200 rounded-full h-1.5 mb-6 overflow-hidden">
-          <div id="card-progress-bar" class="bg-indigo-600 h-1.5 rounded-full transition-all duration-300" style="width: 10%"></div>
+          <div id="card-progress-bar" class="bg-indigo-600 h-1.5 rounded-full transition-all duration-300" style="width: 3.3%"></div>
         </div>
 
         <!-- Flip Card Viewport -->
@@ -124,7 +124,7 @@
                 <span class="bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                   <i class="fa-solid fa-tag"></i> <span id="card-topic">Khái niệm cốt lõi</span>
                 </span>
-                <span class="flex items-center gap-1"><i class="fa-solid fa-rotate"></i> Bấm để lật</span>
+                <span class="flex items-center gap-1 text-slate-400 text-xs"><i class="fa-solid fa-rotate"></i> Bấm để lật</span>
               </div>
               <div class="my-auto px-4">
                 <h3 id="card-front-title" class="text-2xl sm:text-3xl font-extrabold text-slate-800 mb-3 tracking-tight">
@@ -133,27 +133,27 @@
                 <p id="card-front-hint" class="text-xs text-slate-400 italic">Gợi ý: Cấu tạo từ 3 yếu tố cơ bản nào?</p>
               </div>
               <div class="text-slate-400 text-xs font-medium">
-                <i class="fa-regular fa-lightbulb text-amber-500 mr-1"></i> Bấm vào thẻ để xem định nghĩa
+                <i class="fa-regular fa-lightbulb text-amber-500 mr-1"></i> Bấm vào thẻ để xem định nghĩa chi tiết
               </div>
             </div>
 
             <!-- Back -->
             <div class="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-3xl p-8 flex flex-col justify-between items-center text-center shadow-md">
               <div class="w-full flex justify-between items-center text-xs font-medium text-slate-300">
-                <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-indigo-200">Định nghĩa & Bản chất</span>
-                <span class="flex items-center gap-1"><i class="fa-solid fa-rotate"></i> Bấm để lật lại</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-indigo-200">Định nghĩa & Ý nghĩa</span>
+                <span class="flex items-center gap-1 text-xs"><i class="fa-solid fa-rotate"></i> Bấm để lật lại</span>
               </div>
               <div class="my-auto px-4 overflow-y-auto max-h-56 sm:max-h-64">
                 <h4 id="card-back-title" class="text-lg sm:text-xl font-bold text-amber-300 mb-2">Định nghĩa</h4>
                 <p id="card-back-content" class="text-sm sm:text-base text-slate-100 leading-relaxed font-normal">
-                  Là một phạm trù của chủ nghĩa duy vật lịch sử dùng để chỉ xã hội ở từng giai đoạn lịch sử nhất định, với một kiểu quan hệ sản xuất đặc trưng cho xã hội đó, phù hợp với một trình độ nhất định của lực lượng sản xuất và với một kiến trúc thượng tầng tương ứng được xây dựng trên những quan hệ sản xuất ấy.
+                  Nội dung...
                 </p>
                 <div id="card-back-note" class="mt-3 text-xs text-slate-300 border-t border-slate-700 pt-2 text-left">
-                  <strong class="text-indigo-300">Cấu trúc:</strong> Lực lượng sản xuất + Quan hệ sản xuất (Cơ sở hạ tầng) + Kiến trúc thượng tầng.
+                  Ghi chú...
                 </div>
               </div>
               <div class="text-xs text-slate-400">
-                Ôn kỹ để vận dụng vào phần giải thích quy luật!
+                Nhấn Space hoặc mũi tên để tiếp tục ôn tập
               </div>
             </div>
           </div>
@@ -174,28 +174,30 @@
         </div>
       </div>
 
-      <!-- Grid of all cards quick preview -->
-      <div class="mt-12 border-t border-slate-200 pt-8">
-        <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-layer-group text-indigo-600"></i> Danh mục toàn bộ 10 thuật ngữ quan trọng
-        </h3>
-        <div id="flashcards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+      <!-- Filter by Category -->
+      <div class="mt-10 border-t border-slate-200 pt-6">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
+            <i class="fa-solid fa-layer-group text-indigo-600"></i> Danh bạ toàn bộ 30 thuật ngữ ôn tập
+          </h3>
+          <span class="text-xs text-slate-500" id="filter-count">30 thẻ</span>
+        </div>
+        <div id="flashcards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
       </div>
     </section>
 
     <!-- TAB 2: TRẮC NGHIỆM TÍNH ĐIỂM (QUIZ) -->
     <section id="tab-quiz" class="hidden animate-fade-in">
       <div class="max-w-3xl mx-auto">
-        <!-- Quiz Header Info -->
         <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm mb-6 flex flex-wrap items-center justify-between gap-4">
           <div>
             <h2 class="text-xl font-bold text-slate-900">Bài kiểm tra trắc nghiệm MLN111</h2>
-            <p class="text-xs text-slate-500 mt-1">Gồm 10 câu hỏi tiêu biểu chọn lọc từ ngân hàng câu hỏi ôn tập môn Triết học Mác - Lênin</p>
+            <p class="text-xs text-slate-500 mt-1">15 câu hỏi trọng tâm sát với đề thi kết thúc học phần môn Triết học Mác - Lênin</p>
           </div>
           <div class="flex items-center gap-3">
             <div class="text-right">
               <span class="text-xs text-slate-400 block uppercase font-bold tracking-wider">Điểm số hiện tại</span>
-              <span id="quiz-live-score" class="text-xl font-extrabold text-indigo-600">0 / 10</span>
+              <span id="quiz-live-score" class="text-xl font-extrabold text-indigo-600">0 / 15</span>
             </div>
             <button onclick="resetQuiz()" class="p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 text-slate-600 transition" title="Làm lại bài thi">
               <i class="fa-solid fa-rotate-right"></i>
@@ -203,16 +205,14 @@
           </div>
         </div>
 
-        <!-- Question Container -->
         <div id="quiz-container" class="space-y-6"></div>
 
-        <!-- Quiz Submission / Results Modal / Area -->
         <div id="quiz-result-box" class="hidden mt-8 bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 rounded-2xl p-8 text-white shadow-xl text-center">
           <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-indigo-500/20 text-indigo-300 text-3xl mb-4 border border-indigo-400/30">
             <i class="fa-solid fa-award"></i>
           </div>
           <h3 class="text-2xl font-black mb-1">Kết Quả Bài Trắc Nghiệm</h3>
-          <p id="quiz-result-score" class="text-4xl font-extrabold text-amber-400 my-3">8 / 10 Điểm</p>
+          <p id="quiz-result-score" class="text-4xl font-extrabold text-amber-400 my-3">12 / 15 Điểm</p>
           <p id="quiz-result-comment" class="text-sm text-slate-200 max-w-md mx-auto mb-6">
             Rất tốt! Bạn đã nắm chắc các quy luật căn bản của học thuyết Hình thái kinh tế - xã hội.
           </p>
@@ -230,9 +230,7 @@
         <p class="text-sm text-slate-500 mt-1">C.Mác: "Sự phát triển của các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên"</p>
       </div>
 
-      <!-- Timeline Chart -->
       <div class="relative border-l-4 border-indigo-500 ml-4 sm:ml-8 my-8 space-y-8">
-
         <!-- 1. Công xã nguyên thủy -->
         <div class="relative pl-6 sm:pl-8 group">
           <div class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-white border-4 border-indigo-500 group-hover:scale-125 transition-transform"></div>
@@ -312,7 +310,6 @@
             </ul>
           </div>
         </div>
-
       </div>
 
       <!-- Góc liên hệ Việt Nam -->
@@ -334,7 +331,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
         <!-- Cấu trúc hình thái KT-XH -->
         <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
           <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-lg mb-4">
@@ -404,7 +400,6 @@
             <p>• Tuy nhiên, tiến trình này không diễn ra đơn điệu: do điều kiện địa lý, văn hóa, bối cảnh thời đại, một số dân tộc có thể <strong>bỏ qua</strong> một hoặc vài hình thái KT-XH để tiến thẳng lên hình thái cao hơn.</p>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -420,7 +415,7 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // DATA: 10 FLASHCARDS
+    // DATA: 30 FLASHCARDS TOÀN DIỆN
     const flashcardsData = [
       {
         id: 1,
@@ -433,108 +428,278 @@
       },
       {
         id: 2,
-        topic: "LLSX",
-        front: "Lực lượng sản xuất (LLSX) gồm những yếu tố nào?",
-        hint: "Yếu tố nào giữ vai trò quyết định nhất?",
-        backTitle: "Cấu trúc Lực lượng sản xuất",
-        back: "LLSX gồm 2 bộ phận chính: Người lao động (tri thức, kỹ năng, kinh nghiệm) và Tư liệu sản xuất (gồm Tư liệu lao động và Đối tượng lao động).",
-        note: "Người lao động giữ vai trò quyết định nhất. Công cụ lao động là yếu tố động nhất, cách mạng nhất."
+        topic: "Sản xuất vật chất",
+        front: "Sản xuất vật chất giữ vai trò gì đối với xã hội?",
+        hint: "Là nền tảng của sự tồn tại và phát triển",
+        backTitle: "Vai trò của sản xuất vật chất",
+        back: "Là cơ sở của sự tồn tại và phát triển của xã hội loài người; là tiền đề của mọi hoạt động lịch sử của con người; quyết định sự biến đổi và phát triển của mọi mặt đời sống xã hội.",
+        note: "C.Mác khẳng định: muốn sống thì trước hết phải có ăn, mặc, ở... do đó phải sản xuất vật chất."
       },
       {
         id: 3,
-        topic: "QHSX",
-        front: "Quan hệ sản xuất (QHSX) là gì & gồm mấy mặt?",
-        hint: "3 quan hệ kinh tế giữa người với người",
-        backTitle: "3 mặt của Quan hệ sản xuất",
-        back: "Là quan hệ giữa người với người trong quá trình sản xuất vật chất. Gồm 3 mặt: (1) Quan hệ sở hữu đối với tư liệu sản xuất; (2) Quan hệ tổ chức quản lý sản xuất; (3) Quan hệ phân phối sản phẩm.",
-        note: "Quan hệ sở hữu đối với TLSX giữ vai trò quyết định đối với 2 quan hệ còn lại."
+        topic: "Phương thức SX",
+        front: "Phương thức sản xuất (PTSX) là gì?",
+        hint: "Sự thống nhất giữa 2 mặt nào?",
+        backTitle: "Phương thức sản xuất",
+        back: "Là cách thức con người tiến hành sản xuất của cải vật chất ở từng giai đoạn lịch sử nhất định. PTSX là sự thống nhất hữu cơ giữa Lực lượng sản xuất (mặt kỹ thuật) và Quan hệ sản xuất (mặt kinh tế - xã hội).",
+        note: "Mỗi xã hội được đặc trưng bằng một phương thức sản xuất nhất định."
       },
       {
         id: 4,
-        topic: "Quy luật cốt lõi",
-        front: "Nội dung quy luật QHSX phù hợp với trình độ LLSX?",
-        hint: "Quy luật cơ bản nhất chi phối lịch sử xã hội",
-        backTitle: "Quy luật Biện chứng LLSX & QHSX",
-        back: "LLSX quyết định sự ra đời, biến đổi của QHSX. Ngược lại, QHSX tác động trở lại LLSX: nếu phù hợp thì thúc đẩy LLSX phát triển; nếu không phù hợp (lạc hậu hoặc vượt trước giả tạo) sẽ kìm hãm LLSX.",
-        note: "Mâu thuẫn giữa LLSX tiên tiến và QHSX lỗi thời là nguyên nhân gốc rễ dẫn đến cách mạng xã hội."
+        topic: "LLSX",
+        front: "Lực lượng sản xuất (LLSX) là gì?",
+        hint: "Mối quan hệ giữa con người với tự nhiên",
+        backTitle: "Định nghĩa Lực lượng sản xuất",
+        back: "Là mối quan hệ giữa con người với giới tự nhiên trong quá trình sản xuất vật chất; thể hiện năng lực thực tiễn của con người trong việc chinh phục, cải biến tự nhiên nhằm tạo ra của cải.",
+        note: "Gồm 2 bộ phận: Người lao động và Tư liệu sản xuất."
       },
       {
         id: 5,
-        topic: "CSHT & KTTT",
-        front: "Cơ sở hạ tầng (CSHT) của xã hội là gì?",
-        hint: "Đừng nhầm lẫn với điện, đường, trường, trạm!",
-        backTitle: "Khái niệm Cơ sở hạ tầng",
-        back: "Là toàn bộ những quan hệ sản xuất của một xã hội trong sự vận động hiện thực của chúng hợp thành cơ cấu kinh tế của xã hội đó (gồm QHSX thống trị, QHSX tàn dư và QHSX mầm mống).",
-        note: "Khái niệm CSHT trong triết học là kết cấu kinh tế, khác khái niệm hạ tầng kỹ thuật xây dựng."
+        topic: "LLSX",
+        front: "Yếu tố nào giữ vai trò quyết định hàng đầu trong LLSX?",
+        hint: "Chủ thể sáng tạo của nền sản xuất",
+        backTitle: "Vai trò của Người lao động",
+        back: "Người lao động (với thể lực, kỹ năng, tri thức, kinh nghiệm và tính năng động sáng tạo) giữ vai trò quyết định nhất. Không có con người thì mọi tư liệu sản xuất chỉ là vật vô tri vô giác.",
+        note: "Trong thời đại cách mạng công nghiệp 4.0, vai trò trí tuệ người lao động càng quan trọng."
       },
       {
         id: 6,
-        topic: "CSHT & KTTT",
-        front: "Kiến trúc thượng tầng (KTTT) là gì?",
-        hint: "Yếu tố nào có quyền lực mạnh nhất trong KTTT?",
-        backTitle: "Khái niệm Kiến trúc thượng tầng",
-        back: "Là toàn bộ những quan điểm, tư tưởng xã hội (chính trị, pháp quyền, đạo đức, triết học, tôn giáo...) cùng với những thiết chế tương ứng (nhà nước, đảng phái, giáo hội...) được hình thành trên một cơ sở hạ tầng nhất định.",
-        note: "Trong KTTT của xã hội có giai cấp, Nhà nước là thiết chế giữ vai trò quyền lực mạnh nhất."
+        topic: "LLSX",
+        front: "Yếu tố nào là 'động nhất, cách mạng nhất' trong LLSX?",
+        hint: "Bộ phận thay đổi liên tục của tư liệu lao động",
+        backTitle: "Công cụ lao động",
+        back: "Công cụ lao động là yếu tố động nhất, cách mạng nhất. Con người luôn cải tiến công cụ để tăng năng suất và giảm nhẹ sức lao động.",
+        note: "Mác: 'Những thời đại kinh tế khác nhau không phải ở chỗ chúng sản xuất ra cái gì, mà là sản xuất bằng cách nào, với những tư liệu lao động nào'."
       },
       {
         id: 7,
-        topic: "Quy luật",
-        front: "Mối quan hệ biện chứng giữa CSHT và KTTT?",
-        hint: "Kinh tế quyết định chính trị hay ngược lại?",
-        backTitle: "Biện chứng giữa CSHT & KTTT",
-        back: "CSHT quyết định KTTT (CSHT nào sinh ra KTTT ấy; CSHT đổi thì KTTT sớm muộn đổi theo). KTTT tác động trở lại mạnh mẽ CSHT thông qua chức năng bảo vệ cơ sở kinh tế sinh ra nó.",
-        note: "Sự tác động của KTTT đối với CSHT diễn ra theo cả hai chiều: tích cực hoặc tiêu cực."
+        topic: "LLSX",
+        front: "Khoa học ngày nay có vai trò như thế nào đối với LLSX?",
+        hint: "Khoa học trở thành...",
+        backTitle: "Khoa học công nghệ trong LLSX",
+        back: "Khoa học đã trở thành 'lực lượng sản xuất trực tiếp'. Tri thức khoa học thâm nhập trực tiếp vào người lao động, công cụ lao động và đối tượng lao động, quyết định năng suất và chất lượng sản phẩm.",
+        note: "Khoa học - công nghệ là động lực đột phá của nền kinh tế tri thức hiện đại."
       },
       {
         id: 8,
-        topic: "Tiến trình",
-        front: "Ý nghĩa luận điểm: 'Sự phát triển các hình thái KT-XH là quá trình lịch sử - tự nhiên'?",
-        hint: "Quy luật khách quan hay ý muốn chủ quan?",
-        backTitle: "Tính Lịch sử - Tự nhiên",
-        back: "Nghĩa là sự vận động thay thế nhau của các hình thái KT-XH tuân theo các quy luật khách quan (đặc biệt là quy luật QHSX phù hợp với LLSX), không phụ thuộc vào ý muốn chủ quan của con người.",
-        note: "Khẳng định tiến trình phát triển đi lên là tất yếu của lịch sử nhân loại."
+        topic: "QHSX",
+        front: "Quan hệ sản xuất (QHSX) là gì & gồm mấy mặt?",
+        hint: "Quan hệ kinh tế giữa người với người",
+        backTitle: "3 mặt của Quan hệ sản xuất",
+        back: "Là quan hệ giữa người với người trong quá trình sản xuất và tái sản xuất vật chất. Gồm 3 mặt: (1) Quan hệ sở hữu đối với tư liệu sản xuất; (2) Quan hệ tổ chức quản lý sản xuất; (3) Quan hệ phân phối sản phẩm.",
+        note: "Quan hệ sở hữu về TLSX giữ vai trò quyết định đối với 2 mặt còn lại."
       },
       {
         id: 9,
-        topic: "Tiến trình",
-        front: "Nhân loại đã trải qua những hình thái KT-XH nào?",
-        hint: "Thứ tự 5 hình thái từ thấp đến cao",
-        backTitle: "5 Hình thái Kinh tế - Xã hội",
-        back: "Tuần tự gồm: (1) Cộng sản nguyên thủy; (2) Chiếm hữu nô lệ; (3) Phong kiến; (4) Tư bản chủ nghĩa; (5) Cộng sản chủ nghĩa (giai đoạn đầu là CNXH).",
-        note: "Do điều kiện lịch sử cụ thể, một số quốc gia có thể phát triển 'bỏ qua' một vài hình thái."
+        topic: "QHSX",
+        front: "Tại sao quan hệ sở hữu về TLSX giữ vai trò quyết định nhất?",
+        hint: "Ai nắm TLSX thì...",
+        backTitle: "Vai trò của Quan hệ sở hữu",
+        back: "Bởi vì ai nắm quyền sở hữu tư liệu sản xuất thì người đó sẽ nắm quyền quyết định quy trình tổ chức quản lý sản xuất và chi phối toàn bộ việc phân phối của cải làm ra trong xã hội.",
+        note: "Lịch sử cho thấy thay đổi chế độ sở hữu là cốt lõi của mọi cuộc cách mạng xã hội."
       },
       {
         id: 10,
+        topic: "Quy luật 1",
+        front: "Nội dung quy luật QHSX phù hợp với trình độ LLSX?",
+        hint: "Quy luật phổ biến và cơ bản nhất của lịch sử",
+        backTitle: "Quy luật Biện chứng LLSX & QHSX",
+        back: "LLSX quyết định sự ra đời, biến đổi và phát triển của QHSX. Khi LLSX phát triển đến một trình độ mới, QHSX cũ lỗi thời kìm hãm nó, đòi hỏi phải được thay thế bằng QHSX mới tiến bộ phù hợp.",
+        note: "QHSX tác động trở lại: phù hợp thì thúc đẩy, không phù hợp thì kìm hãm LLSX."
+      },
+      {
+        id: 11,
+        topic: "Quy luật 1",
+        front: "Thế nào là 'QHSX không phù hợp với trình độ LLSX'?",
+        hint: "Có 2 trạng thái không phù hợp",
+        backTitle: "Sự không phù hợp của QHSX",
+        back: "Xảy ra ở 2 trường hợp: (1) QHSX lạc hậu hơn trình độ LLSX; hoặc (2) QHSX vượt trước một cách chủ quan, duy ý chí so với trình độ phát triển còn non kém của LLSX.",
+        note: "Cả 2 trường hợp đều kìm hãm sự phát triển của LLSX và triệt tiêu động lực lao động."
+      },
+      {
+        id: 12,
+        topic: "CSHT & KTTT",
+        front: "Cơ sở hạ tầng (CSHT) của xã hội là gì?",
+        hint: "Đừng nhầm lẫn với hạ tầng kỹ thuật (cầu đường)!",
+        backTitle: "Khái niệm Cơ sở hạ tầng",
+        back: "Là toàn bộ những quan hệ sản xuất của một xã hội trong sự vận động hiện thực hợp thành cơ cấu kinh tế của xã hội đó. Gồm: QHSX thống trị, QHSX tàn dư và QHSX mầm mống tương lai.",
+        note: "Trong đó QHSX thống trị giữ vai trò chi phối và định hình đặc trưng của CSHT."
+      },
+      {
+        id: 13,
+        topic: "CSHT & KTTT",
+        front: "Kiến trúc thượng tầng (KTTT) là gì?",
+        hint: "Tư tưởng và các thiết chế tương ứng",
+        backTitle: "Khái niệm Kiến trúc thượng tầng",
+        back: "Là toàn bộ những quan điểm, hệ tư tưởng xã hội (chính trị, pháp quyền, triết học, đạo đức, tôn giáo, nghệ thuật...) cùng các thiết chế tương ứng (Nhà nước, đảng phái, giáo hội...) sinh ra trên một CSHT nhất định.",
+        note: "Nhà nước là yếu tố quyền lực mạnh mẽ nhất trong KTTT của xã hội có giai cấp."
+      },
+      {
+        id: 14,
+        topic: "CSHT & KTTT",
+        front: "Tại sao Nhà nước là thiết chế quan trọng nhất của KTTT?",
+        hint: "Công cụ bạo lực và quyền lực kinh tế",
+        backTitle: "Vai trò của Nhà nước trong KTTT",
+        back: "Vì Nhà nước đại diện cho giai cấp thống trị, nắm giữ quyền lực chính trị và công cụ bạo lực (quân đội, cảnh sát, nhà tù, luật pháp) để bảo vệ và duy trì trật tự kinh tế sinh ra nó.",
+        note: "Nhà nước chi phối và định hướng mọi thiết chế xã hội khác."
+      },
+      {
+        id: 15,
+        topic: "Quy luật 2",
+        front: "CSHT quyết định KTTT như thế nào?",
+        hint: "Kinh tế quyết định chính trị",
+        backTitle: "CSHT quyết định KTTT",
+        back: "CSHT nào sinh ra KTTT ấy. Giai cấp nào thống trị về kinh tế sẽ thống trị về chính trị và tư tưởng. Khi CSHT biến đổi thì sớm muộn toàn bộ KTTT đồ sộ cũng biến đổi theo.",
+        note: "Sự thay đổi của KTTT thường diễn ra phức tạp và có độ trễ so với CSHT kinh tế."
+      },
+      {
+        id: 16,
+        topic: "Quy luật 2",
+        front: "KTTT tác động trở lại CSHT theo những chiều hướng nào?",
+        hint: "Thúc đẩy hoặc kìm hãm",
+        backTitle: "Sự tác động trở lại của KTTT",
+        back: "Tác động thông qua chức năng bảo vệ cơ sở kinh tế: Nếu KTTT tiến bộ, phù hợp quy luật kinh tế khách quan thì thúc đẩy kinh tế phát triển; nếu phản động, bảo thủ thì kìm hãm sự phát triển kinh tế.",
+        note: "Sự tác động này diễn ra trực tiếp và mạnh mẽ nhất thông qua đường lối, pháp luật của Nhà nước."
+      },
+      {
+        id: 17,
+        topic: "Tiến trình",
+        front: "Ý nghĩa luận điểm: 'Sự phát triển các hình thái KT-XH là quá trình lịch sử - tự nhiên'?",
+        hint: "Quy luật khách quan của C.Mác",
+        backTitle: "Tính Lịch sử - Tự nhiên",
+        back: "Là sự phát triển và thay thế nhau của các hình thái KT-XH diễn ra theo các quy luật khách quan (như quy luật tự nhiên), không phụ thuộc vào ý muốn hay nguyện vọng chủ quan của bất kỳ cá nhân nào.",
+        note: "Được C.Mác phát biểu trong Lời tựa cuốn 'Tư bản' (1867)."
+      },
+      {
+        id: 18,
+        topic: "Tiến trình",
+        front: "Nguyên nhân sâu xa của sự thay thế các hình thái KT-XH?",
+        hint: "Nguồn gốc từ yếu tố động nhất",
+        backTitle: "Nguyên nhân sâu xa",
+        back: "Bắt nguồn từ sự phát triển không ngừng của Lực lượng sản xuất (đặc biệt là công cụ lao động). LLSX phát triển dẫn tới mâu thuẫn với QHSX cũ, dẫn đến cách mạng xã hội thay đổi hình thái KT-XH.",
+        note: "Mâu thuẫn kinh tế là gốc rễ của mâu thuẫn giai cấp và xung đột chính trị."
+      },
+      {
+        id: 19,
+        topic: "Cách mạng XH",
+        front: "Cách mạng xã hội là gì và có vai trò gì trong lịch sử?",
+        hint: "'Đầu tàu của lịch sử' - C.Mác",
+        backTitle: "Cách mạng xã hội",
+        back: "Là đỉnh cao của cuộc đấu tranh giai cấp, làm thay đổi toàn bộ đời sống xã hội mà đỉnh cao là lật đổ chính quyền giai cấp thống trị phản động, thiết lập chính quyền mới, thay thế hình thái KT-XH cũ bằng hình thái mới cao hơn.",
+        note: "C.Mác gọi cách mạng xã hội là 'những đầu tàu của lịch sử'."
+      },
+      {
+        id: 20,
+        topic: "5 Hình thái",
+        front: "Nêu tuần tự 5 Hình thái KT-XH trong lịch sử nhân loại?",
+        hint: "Từ nguyên thủy đến cộng sản",
+        backTitle: "5 Hình thái Kinh tế - Xã hội",
+        back: "(1) Cộng sản nguyên thủy; (2) Chiếm hữu nô lệ; (3) Phong kiến; (4) Tư bản chủ nghĩa; (5) Cộng sản chủ nghĩa (bước đầu là CNXH).",
+        note: "Đây là con đường chung phản ánh quy luật phát triển đi lên của văn minh loài người."
+      },
+      {
+        id: 21,
+        topic: "Hình thái 1",
+        front: "Đặc trưng kinh tế của Hình thái Cộng sản nguyên thủy?",
+        hint: "Công hữu hay tư hữu?",
+        backTitle: "Cộng sản nguyên thủy",
+        back: "Sở hữu chung (công hữu) về tư liệu sản xuất và của cải; trình độ công cụ đá thô sơ; cùng làm cùng ăn, chưa có của dư thừa nên chưa có tư hữu, chưa có giai cấp và chưa có nhà nước.",
+        note: "Xã hội tan rã khi công cụ kim loại xuất hiện làm phát sinh của cải dư thừa."
+      },
+      {
+        id: 22,
+        topic: "Hình thái 2",
+        front: "Đặc trưng cơ bản của Hình thái Chiếm hữu nô lệ?",
+        hint: "Thân phận của người lao động",
+        backTitle: "Chiếm hữu nô lệ",
+        back: "Là xã hội có giai cấp đầu tiên trong lịch sử. Chủ nô sở hữu toàn bộ tư liệu sản xuất và coi người nô lệ là 'công cụ biết nói', bóc lột thậm tệ và có quyền định đoạt mạng sống của nô lệ.",
+        note: "Nhà nước chủ nô ra đời là công cụ chuyên chính đàn áp các cuộc khởi nghĩa của nô lệ."
+      },
+      {
+        id: 23,
+        topic: "Hình thái 3",
+        front: "Đặc trưng cơ bản của Hình thái Phong kiến?",
+        hint: "Ruộng đất và địa tô",
+        backTitle: "Hình thái Phong kiến",
+        back: "Giai cấp địa chủ phong kiến sở hữu phần lớn ruộng đất; nông dân (hoặc nông nô) canh tác và nộp tô thuế (tô lao dịch, tô hiện vật, tô tiền). Nông dân đã có tư liệu sinh hoạt và gia đình riêng.",
+        note: "Mâu thuẫn đối kháng chủ yếu là giữa Nông dân và Địa chủ phong kiến."
+      },
+      {
+        id: 24,
+        topic: "Hình thái 4",
+        front: "Mâu thuẫn cơ bản trong Hình thái Tư bản chủ nghĩa là gì?",
+        hint: "Giữa tính chất xã hội hóa và chế độ chiếm hữu",
+        backTitle: "Mâu thuẫn cơ bản của CNTB",
+        back: "Mâu thuẫn giữa tính chất xã hội hóa ngày càng cao của Lực lượng sản xuất với chế độ chiếm hữu tư nhân tư bản chủ nghĩa về Tư liệu sản xuất.",
+        note: "Về mặt xã hội, biểu hiện thành mâu thuẫn giữa Giai cấp vô sản và Giai cấp tư sản."
+      },
+      {
+        id: 25,
+        topic: "Hình thái 5",
+        front: "Hai giai đoạn phát triển của Hình thái Cộng sản chủ nghĩa?",
+        hint: "Giai đoạn thấp và giai đoạn cao",
+        backTitle: "2 giai đoạn của CNCS",
+        back: "Giai đoạn thấp: Chủ nghĩa xã hội (phân phối 'Làm theo năng lực, hưởng theo lao động'). Giai đoạn cao: Chủ nghĩa cộng sản (phân phối 'Làm theo năng lực, hưởng theo nhu cầu', nhà nước tự tiêu vong).",
+        note: "Giữa CNTB và CNCS là 'Thời kỳ quá độ' lâu dài và phức tạp."
+      },
+      {
+        id: 26,
+        topic: "Tiến trình",
+        front: "Tại sao một số quốc gia có thể 'phát triển bỏ qua' một hình thái KT-XH?",
+        hint: "Bối cảnh thời đại và tính lịch sử",
+        backTitle: "Quy luật rút ngắn / Bỏ qua",
+        back: "Do sự tác động giao lưu quốc tế, bối cảnh thời đại và điều kiện lịch sử cụ thể, một dân tộc có thể đi tắt, đón đầu, kế thừa thành tựu của nhân loại để quá độ lên hình thái cao hơn mà không cần qua mọi nấc thang.",
+        note: "Ví dụ: Mỹ không qua phong kiến; các bộ lạc da đỏ lên thẳng CNTB; Việt Nam bỏ qua TBCN."
+      },
+      {
+        id: 27,
         topic: "Vận dụng VN",
-        front: "Việt Nam 'bỏ qua chế độ TBCN' đi lên CNXH hiểu thế nào?",
-        hint: "Vận dụng thực tiễn của Đảng ta",
-        backTitle: "Vận dụng tại Việt Nam",
-        back: "Là bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng TBCN; nhưng tiếp thu, kế thừa những thành tựu mà nhân loại đã đạt được dưới chế độ tư bản (khoa học, kỹ thuật, công nghệ) để phát triển nhanh LLSX.",
-        note: "Đây là sự lựa chọn hợp quy luật khách quan và thực tiễn cách mạng Việt Nam."
+        front: "Việt Nam 'bỏ qua chế độ TBCN' đi lên CNXH hiểu thế nào cho đúng?",
+        hint: "Vận dụng Cương lĩnh của Đảng ta",
+        backTitle: "Bỏ qua TBCN ở Việt Nam",
+        back: "Bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng tư bản chủ nghĩa; nhưng tiếp thu, kế thừa những thành tựu của nhân loại dưới CNTB, đặc biệt là khoa học, công nghệ và kinh tế thị trường.",
+        note: "Bỏ qua không phải là phủ định sạch trơn, mà là phủ định biện chứng."
+      },
+      {
+        id: 28,
+        topic: "Vận dụng VN",
+        front: "Vì sao Việt Nam chọn phát triển Kinh tế thị trường định hướng XHCN?",
+        hint: "Sự phù hợp giữa QHSX với trình độ LLSX",
+        backTitle: "Kinh tế thị trường định hướng XHCN",
+        back: "Vì LLSX ở nước ta còn nhiều tầng nấc, đa dạng, đòi hỏi phải có nhiều hình thức sở hữu và thành phần kinh tế phù hợp để giải phóng và khơi dậy mọi tiềm năng sản xuất của xã hội.",
+        note: "Kinh tế nhà nước giữ vai trò chủ đạo, định hướng mục tiêu công bằng, dân giàu nước mạnh."
+      },
+      {
+        id: 29,
+        topic: "Vận dụng VN",
+        front: "Trong thời kỳ quá độ, Việt Nam xác định nhiệm vụ trọng tâm hàng đầu là gì?",
+        hint: "Nhiệm vụ vật chất kỹ thuật",
+        backTitle: "Nhiệm vụ trọng tâm thời kỳ quá độ",
+        back: "Đẩy mạnh Công nghiệp hóa, Hiện đại hóa đất nước gắn liền với phát triển Kinh tế tri thức và Chuyển đổi số, nhằm xây dựng cơ sở vật chất - kỹ thuật hiện đại cho CNXH.",
+        note: "Phát triển LLSX là chìa khóa quyết định thắng lợi của công cuộc xây dựng CNXH."
+      },
+      {
+        id: 30,
+        topic: "Ý nghĩa học thuyết",
+        front: "Ý nghĩa phương pháp luận của học thuyết Hình thái KT-XH?",
+        hint: "Chấm dứt quan điểm duy tâm về lịch sử",
+        backTitle: "Ý nghĩa phương pháp luận",
+        back: "Cung cấp phương pháp duy vật khoa học để nhận thức lịch sử: Muốn hiểu xã hội phải xuất phát từ sản xuất vật chất; muốn thay đổi xã hội phải bắt đầu từ phát triển LLSX và giải quyết mâu thuẫn kinh tế nội tại.",
+        note: "Là nền tảng lý luận khoa học cho đường lối đổi mới của Đảng Cộng sản Việt Nam."
       }
     ];
 
-    // DATA: 10 MULTIPLE CHOICE QUESTIONS
+    // DATA: 15 CÂU HỎI TRẮC NGHIỆM CHỌN LỌC
     const quizData = [
       {
-        question: "1. Yếu tố nào giữ vai trò quyết định nhất trong lực lượng sản xuất?",
-        options: [
-          "Tư liệu lao động",
-          "Người lao động",
-          "Công cụ lao động",
-          "Đối tượng lao động"
-        ],
+        question: "1. Yếu tố nào giữ vai trò quyết định nhất trong Lực lượng sản xuất?",
+        options: ["Tư liệu lao động", "Người lao động", "Công cụ lao động", "Đối tượng lao động"],
         correct: 1,
         explain: "Người lao động với tri thức, kỹ năng và kinh nghiệm là chủ thể sáng tạo, giữ vai trò quyết định nhất trong mọi quá trình sản xuất."
       },
       {
         question: "2. Trong các yếu tố của tư liệu lao động, yếu tố nào là 'động nhất, cách mạng nhất'?",
-        options: [
-          "Phương tiện vận chuyển",
-          "Nhà kho, bến bãi",
-          "Công cụ lao động",
-          "Hệ thống quản lý"
-        ],
+        options: ["Phương tiện vận chuyển", "Nhà kho bến bãi", "Công cụ lao động", "Hệ thống quản lý"],
         correct: 2,
         explain: "Công cụ lao động là thước đo trình độ chinh phục tự nhiên của con người và luôn luôn biến đổi, phát triển sớm nhất."
       },
@@ -555,19 +720,14 @@
           "Đường sá, cầu cống, trường học, bệnh viện",
           "Toàn bộ tài nguyên khoáng sản của đất nước",
           "Toàn bộ những quan hệ sản xuất hợp thành cơ cấu kinh tế của một xã hội",
-          "Tổng thể các máy móc nhà máy xí nghiệp hiện đại"
+          "Tổng thể các nhà máy xí nghiệp hiện đại"
         ],
         correct: 2,
         explain: "Trong chủ nghĩa duy vật lịch sử, CSHT là phạm trù kinh tế chỉ toàn bộ các quan hệ sản xuất của xã hội trong sự vận động hiện thực."
       },
       {
         question: "5. Thiết chế nào có quyền lực mạnh nhất trong Kiến trúc thượng tầng của xã hội có giai cấp?",
-        options: [
-          "Giáo hội và các tổ chức tôn giáo",
-          "Các hội đoàn nghề nghiệp",
-          "Nhà nước",
-          "Các cơ quan truyền thông báo chí"
-        ],
+        options: ["Giáo hội và các tôn giáo", "Các hội đoàn nghề nghiệp", "Nhà nước", "Các cơ quan truyền thông"],
         correct: 2,
         explain: "Nhà nước là bộ máy quyền lực đặc biệt nắm trong tay công cụ bạo lực và pháp luật để bảo vệ lợi ích của giai cấp thống trị."
       },
@@ -577,30 +737,20 @@
           "Thúc đẩy lực lượng sản xuất bứt phá nhanh hơn",
           "Kìm hãm sự phát triển của lực lượng sản xuất",
           "Không gây ảnh hưởng gì tới lực lượng sản xuất",
-          "Lập tức thủ tiêu toàn bộ mọi công cụ lao động"
+          "Lập tức làm biến mất toàn bộ mọi công cụ lao động"
         ],
         correct: 1,
-        explain: "Chỉ khi QHSX phù hợp thì mới là 'địa bàn' mở đường cho LLSX phát triển; nếu không phù hợp nó sẽ trở thành xiềng xích kìm hãm."
+        explain: "Chỉ khi QHSX phù hợp thì mới mở đường cho LLSX phát triển; nếu không phù hợp nó sẽ trở thành xiềng xích kìm hãm."
       },
       {
         question: "7. Luận điểm nổi tiếng 'Sự phát triển của các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên' là của ai?",
-        options: [
-          "V.I. Lênin",
-          "C. Mác",
-          "Ph. Ăngghen",
-          "G.W.F. Hêghen"
-        ],
+        options: ["V.I. Lênin", "C. Mác", "Ph. Ăngghen", "G.W.F. Hêghen"],
         correct: 1,
         explain: "C.Mác đã đưa ra luận điểm cốt tử này trong Lời tựa cuốn 'Tư bản' (Tập 1, 1867)."
       },
       {
         question: "8. Hình thái kinh tế - xã hội đầu tiên xuất hiện sự phân chia giai cấp và bóc lột là:",
-        options: [
-          "Cộng sản nguyên thủy",
-          "Chiếm hữu nô lệ",
-          "Phong kiến",
-          "Tư bản chủ nghĩa"
-        ],
+        options: ["Cộng sản nguyên thủy", "Chiếm hữu nô lệ", "Phong kiến", "Tư bản chủ nghĩa"],
         correct: 1,
         explain: "Xã hội Chiếm hữu nô lệ là hình thái đầu tiên có sự đối kháng giai cấp gay gắt giữa chủ nô và nô lệ."
       },
@@ -609,11 +759,11 @@
         options: [
           "Sự thỏa hiệp hòa bình vô điều kiện giữa các giai cấp",
           "Cách mạng xã hội",
-          "Các cuộc đàm phán ngoại giao thuần túy",
-          "Sự nhường lại quyền lực tự nguyện của giai cấp thống trị"
+          "Các cuộc đàm phán thương lượng thuần túy",
+          "Sự nhượng bộ tự nguyện của giai cấp thống trị"
         ],
         correct: 1,
-        explain: "Cách mạng xã hội là đỉnh cao của đấu tranh giai cấp, đập tan QHSX cũ và thiết lập QHSX mới giải phóng sức sản xuất."
+        explain: "Cách mạng xã hội là đỉnh cao của đấu tranh giai cấp, đập tan QHSX cũ lỗi thời và thiết lập QHSX mới tiến bộ."
       },
       {
         question: "10. Đảng ta xác định: Con đường đi lên của nước ta là sự phát triển quá độ lên CNXH bỏ qua chế độ TBCN, nghĩa là:",
@@ -625,6 +775,56 @@
         ],
         correct: 2,
         explain: "Cương lĩnh của Đảng khẳng định: bỏ qua việc xác lập địa vị thống trị của QHSX và KTTT tư bản, nhưng kế thừa thành tựu khoa học - công nghệ để phát triển đất nước."
+      },
+      {
+        question: "11. Cơ sở hạ tầng gồm những loại quan hệ sản xuất nào hợp thành?",
+        options: [
+          "Chỉ duy nhất quan hệ sản xuất thống trị",
+          "QHSX thống trị, QHSX tàn dư và QHSX mầm mống tương lai",
+          "Toàn bộ máy móc, nhà xưởng và giao thông vận tải",
+          "Quan hệ thương mại quốc tế và hội nhập"
+        ],
+        correct: 1,
+        explain: "Trong sự vận động hiện thực, CSHT gồm QHSX thống trị (chi phối), QHSX tàn dư của xã hội cũ và QHSX mầm mống của xã hội tương lai."
+      },
+      {
+        question: "12. C.Mác viết: 'Những thời đại kinh tế khác nhau không phải ở chỗ chúng sản xuất ra cái gì, mà là ở chỗ...'",
+        options: [
+          "Chúng sản xuất bằng cách nào, với những tư liệu lao động nào",
+          "Ai là người đứng đầu nhà nước thời đại đó",
+          "Quy mô dân số của thời đại đó lớn hay nhỏ",
+          "Đất nước đó có giàu tài nguyên khoáng sản hay không"
+        ],
+        correct: 0,
+        explain: "Tư liệu lao động (đặc biệt là công cụ lao động) phản ánh trình độ chinh phục tự nhiên thực sự của mỗi thời đại."
+      },
+      {
+        question: "13. Nguyên tắc phân phối sản phẩm chủ yếu trong giai đoạn cao của Hình thái Cộng sản chủ nghĩa là:",
+        options: [
+          "Làm theo năng lực, hưởng theo lao động",
+          "Phân phối bình quân cào bằng tuyệt đối",
+          "Làm theo năng lực, hưởng theo nhu cầu",
+          "Phân phối dựa theo số lượng cổ phần sở hữu"
+        ],
+        correct: 2,
+        explain: "Ở giai đoạn cao của CNCS, LLSX cực kỳ phát triển, của cải dồi dào, con người tự giác lao động nên phân phối theo nguyên tắc 'Làm theo năng lực, hưởng theo nhu cầu'."
+      },
+      {
+        question: "14. Trong thời đại cách mạng công nghiệp lần thứ tư (4.0), yếu tố nào ngày càng trở thành 'lực lượng sản xuất trực tiếp'?",
+        options: ["Tài nguyên đất đai", "Khoa học và công nghệ", "Vàng bạc dự trữ", "Công cụ thô sơ thủ công"],
+        correct: 1,
+        explain: "Khoa học công nghệ và tri thức số đã trực tiếp thâm nhập vào các khâu sản xuất, tạo năng suất vượt bậc."
+      },
+      {
+        question: "15. Muốn nhận thức và giải quyết đúng đắn các vấn đề của đời sống xã hội, phương pháp luận duy vật lịch sử đòi hỏi phải xuất phát từ:",
+        options: [
+          "Ý muốn chủ quan của những vĩ nhân",
+          "Các điều răn của tôn giáo",
+          "Hiện thực sản xuất vật chất và phương thức sản xuất",
+          "Các hiệp ước và điều ước quốc tế"
+        ],
+        correct: 2,
+        explain: "Sản xuất vật chất là nền tảng của đời sống xã hội, quyết định sự biến đổi của toàn bộ đời sống tinh thần và chính trị."
       }
     ];
 
@@ -689,23 +889,33 @@
       cards.sort(() => Math.random() - 0.5);
       currentCardIndex = 0;
       renderCurrentCard();
+      renderAllCardsGrid();
     }
 
     function resetCards() {
       cards = [...flashcardsData];
       currentCardIndex = 0;
       renderCurrentCard();
+      renderAllCardsGrid();
+    }
+
+    function jumpToCard(idx) {
+      currentCardIndex = idx;
+      renderCurrentCard();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function renderAllCardsGrid() {
       const grid = document.getElementById('flashcards-grid');
+      document.getElementById('filter-count').innerText = `${cards.length} thẻ`;
       grid.innerHTML = cards.map((c, idx) => `
-        <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:border-indigo-300 transition">
-          <div class="flex items-center justify-between text-xs font-semibold mb-1">
+        <div onclick="jumpToCard(${idx})" class="cursor-pointer bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:border-indigo-400 hover:shadow-md transition">
+          <div class="flex items-center justify-between text-xs font-semibold mb-1.5">
             <span class="text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Thẻ #${idx + 1} • ${c.topic}</span>
+            <span class="text-slate-400 text-xs"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem</span>
           </div>
-          <h4 class="font-bold text-slate-800 text-sm mb-1">${c.front}</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">${c.back}</p>
+          <h4 class="font-bold text-slate-800 text-sm mb-1 line-clamp-2">${c.front}</h4>
+          <p class="text-xs text-slate-500 line-clamp-3 leading-relaxed">${c.back}</p>
         </div>
       `).join('');
     }
@@ -800,22 +1010,22 @@
         }
       }
 
-      document.getElementById('quiz-live-score').innerText = `${correctCount} / 10`;
+      document.getElementById('quiz-live-score').innerText = `${correctCount} / ${quizData.length}`;
 
       if (totalAnswered === quizData.length) {
         const resultBox = document.getElementById('quiz-result-box');
         resultBox.classList.remove('hidden');
-        document.getElementById('quiz-result-score').innerText = `${correctCount} / 10 Điểm`;
+        document.getElementById('quiz-result-score').innerText = `${correctCount} / ${quizData.length} Điểm`;
 
-        if (correctCount >= 8) {
-          document.getElementById('quiz-result-comment').innerText = 'Xuất sắc! Bạn nắm rất vững kiến thức Hình thái Kinh tế - Xã hội và sẵn sàng cho kỳ thi!';
+        if (correctCount >= 12) {
+          document.getElementById('quiz-result-comment').innerText = 'Xuất sắc! Bạn nắm rất vững kiến thức Hình thái Kinh tế - Xã hội và sẵn sàng cho kỳ thi kết thúc học phần!';
           confetti({
-            particleCount: 100,
-            spread: 70,
+            particleCount: 120,
+            spread: 80,
             origin: { y: 0.6 }
           });
-        } else if (correctCount >= 5) {
-          document.getElementById('quiz-result-comment').innerText = 'Khá tốt! Bạn đã nắm được phần lớn khái niệm, hãy xem lại các thẻ Flashcard để củng cố thêm nhé.';
+        } else if (correctCount >= 8) {
+          document.getElementById('quiz-result-comment').innerText = 'Khá tốt! Bạn đã nắm được phần lớn khái niệm cơ bản, hãy xem lại các thẻ Flashcard để củng cố thêm nhé.';
         } else {
           document.getElementById('quiz-result-comment').innerText = 'Cần ôn tập thêm! Hãy dành ít phút lật lại các thẻ Flashcard và đọc phần Tóm tắt lý thuyết.';
         }
@@ -826,7 +1036,7 @@
     function resetQuiz() {
       userAnswers = {};
       document.getElementById('quiz-result-box').classList.add('hidden');
-      document.getElementById('quiz-live-score').innerText = '0 / 10';
+      document.getElementById('quiz-live-score').innerText = `0 / ${quizData.length}`;
       renderQuiz();
     }
 
