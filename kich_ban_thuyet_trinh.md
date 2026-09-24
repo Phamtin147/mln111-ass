@@ -5,7 +5,7 @@
 ---
 
 ## 🟢 PHẦN 1: MỞ ĐẦU & BỐI CẢNH LỊCH SỬ (SLIDE 1 - 3)
-*Người thuyết trình gợi ý: Thành viên 1*
+👤 **NGƯỜI THUYẾT TRÌNH 1 (Slide 1 - 9): Nền móng & Quy luật LLSX - QHSX**
 
 ### 📌 SLIDE 1: Mở đầu & Giới thiệu đề tài
 - **Thao tác:** Đứng thẳng, chào tự tin, bấm sang slide 1.
@@ -72,7 +72,7 @@
 ---
 
 ## 🟢 PHẦN 3: QUY LUẬT LLSX QUYẾT ĐỊNH QHSX (SLIDE 6 - 9)
-*Người thuyết trình gợi ý: Thành viên 2*
+
 
 ### 📌 SLIDE 6: Cấu trúc của Lực lượng sản xuất (LLSX)
 - **Thao tác:** Bấm slide 6, chỉ vào sơ đồ cấu trúc.
@@ -121,7 +121,8 @@
 
 ---
 
-## 🟢 PHẦN 4: BIỆN CHỨNG CSHT & KTTT (SLIDE 10 - 12)
+## 🟢 PHẦN 3: CƠ CẤU CHÍNH TRỊ - KINH TẾ & TIẾN TRÌNH LỊCH SỬ (SLIDE 10 - 18)
+👤 **NGƯỜI THUYẾT TRÌNH 2 (Slide 10 - 18): CSHT - KTTT, Hình Thái KT-XH & 3 Hình Thái Đầu Tiên**
 
 ### 📌 SLIDE 10: Cơ sở hạ tầng (CSHT) theo nghĩa Triết học
 - **Thao tác:** Chuyển slide 10, lưu ý thầy cô/lớp về bẫy hiểu nhầm khái niệm.
@@ -161,7 +162,7 @@
 ---
 
 ## 🟢 PHẦN 5: PHẠM TRÙ HÌNH THÁI KT-XH & TÍNH LỊCH SỬ - TỰ NHIÊN (SLIDE 13 - 15)
-*Người thuyết trình gợi ý: Thành viên 3*
+
 
 ### 📌 SLIDE 13: Phạm trù Hình thái kinh tế - xã hội
 - **Thao tác:** Bấm slide 13, chỉ vào mô hình kim tự tháp 3 tầng.
@@ -200,7 +201,7 @@
 
 ---
 
-## 🟢 PHẦN 6: BỨC TRANH 5 HÌNH THÁI KT-XH QUA LỊCH SỬ (SLIDE 16 - 20)
+### 📌 CÁC HÌNH THÁI KINH TẾ - XÃ HỘI LỊCH SỬ
 
 ### 📌 SLIDE 16: Hình thái 1 - Cộng sản nguyên thủy
 - **Thao tác:** Chuyển slide 16.
@@ -237,6 +238,9 @@
 
 ---
 
+## 🟢 PHẦN 4: THỜI ĐẠI TƯ BẢN, CNCS, VẬN DỤNG VIỆT NAM & DEMO WEB (SLIDE 19 - 25)
+👤 **NGƯỜI THUYẾT TRÌNH 3 (Slide 19 - 25): CNTB, CNCS, Vận Dụng Việt Nam & Demo Ứng Dụng Web**
+
 ### 📌 SLIDE 19: Hình thái 4 - Tư bản chủ nghĩa (CNTB)
 - **Thao tác:** Chuyển slide 19.
 - **Lời thoại:**
@@ -259,7 +263,7 @@
 ---
 
 ## 🟢 PHẦN 7: VẬN DỤNG CỦA ĐẢNG TA TẠI VIỆT NAM (SLIDE 21 - 23)
-*Người thuyết trình gợi ý: Thành viên 4*
+
 
 ### 📌 SLIDE 21: Ý nghĩa phương pháp luận khoa học
 - **Thao tác:** Chuyển slide 21.
@@ -319,5 +323,5 @@
 ---
 
 ## 💡 BẬT MÍ KINH NGHIỆM ĐẠT ĐIỂM TỐI ĐA (10 ĐIỂM)
-1. **Chia lượt nói nhịp nhàng:** 4 thành viên thay phiên nhau theo đúng các phần đã đánh dấu ở trên.
+1. **Chia lượt nói nhịp nhàng:** 3 thành viên phụ trách 3 khối lượng kiến thức cân đối (Người 1: Slide 1-9; Người 2: Slide 10-18; Người 3: Slide 19-25).
 2. **Tương tác trực tiếp:** Khi đến Slide 24, một bạn nói, một bạn cầm máy tính bấm vào link web demo lật thử 1 flashcard và chọn thử 1 câu trắc nghiệm cho cả lớp thấy web chạy mượt mà. Giảng viên các môn Lý luận chính trị đánh giá cực cao các nhóm biết ứng dụng CNTT vào bài tập!
