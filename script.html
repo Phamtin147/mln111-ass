@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kịch Bản & Lời Thoại Thuyết Trình (25 Slide) - Triết Học Mác Lênin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white; color: black; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen py-8 px-4 sm:px-8">
+  <div class="max-w-4xl mx-auto">
+    
+    <!-- Top Action Bar -->
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-8 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm no-print">
+      <div class="flex items-center gap-3">
+        <a href="slides.html" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition flex items-center gap-1.5">
+          <i class="fa-solid fa-arrow-left"></i> Quay lại Slide
+        </a>
+        <a href="index.html" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition flex items-center gap-1.5">
+          <i class="fa-solid fa-house"></i> Về Web Ôn Tập
+        </a>
+      </div>
+      <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs shadow-md shadow-indigo-200 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-print"></i> In / Lưu PDF Kịch Bản
+      </button>
+    </div>
+
+    <!-- Title Header -->
+    <header class="text-center mb-10 pb-6 border-b border-slate-200">
+      <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tài liệu thuyết trình nhóm</span>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3 mb-2 leading-tight">
+        KỊCH BẢN & LỜI THOẠI THUYẾT TRÌNH (SPEAKER NOTES)
+      </h1>
+      <p class="text-sm text-slate-500 font-medium">Học thuyết Hình thái Kinh tế - Xã hội • Chuẩn 25 Slide bài giảng</p>
+    </header>
+
+    <!-- CONTENT BODY (RENDERED SCRIPT) -->
+    <div class="space-y-6 text-sm leading-relaxed" id="script-content">
+      <!-- Generated content from markdown -->
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    fetch('kich_ban_thuyet_trinh.md')
+      .then(res => res.text())
+      .then(md => {
+        document.getElementById('script-content').innerHTML = marked.parse(md);
+      });
+  </script>
+</body>
+</html>
