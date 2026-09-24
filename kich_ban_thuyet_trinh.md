@@ -1,327 +1,188 @@
-# KỊCH BẢN & LỜI THOẠI THUYẾT TRÌNH CHI TIẾT (25 SLIDE)
-## HỌC THUYẾT HÌNH THÁI KINH TẾ - XÃ HỘI (TRIẾT HỌC MÁC - LÊNIN)
-*Website thực hành & Slide trực tuyến:* [https://mln111-triethoc.surge.sh/slides.html](https://mln111-triethoc.surge.sh/slides.html)
+# KỊCH BẢN & LỜI THOẠI THUYẾT TRÌNH: HỌC THUYẾT HÌNH THÁI KINH TẾ - XÃ HỘI
+## TRỌNG TÂM CHUYÊN SÂU: CẤU TRÚC, TÍNH LỊCH SỬ - TỰ NHIÊN & TIẾN TRÌNH 5 HÌNH THÁI
+*(Chuẩn 14 Slide chuyên sâu • Phân chia đều cho 3 thành viên: mỗi người 4-5 slide)*
+*Xem trực tiếp Slide online:* [https://mln111-triethoc.surge.sh/slides.html](https://mln111-triethoc.surge.sh/slides.html)
 
 ---
 
-## 🟢 PHẦN 1: MỞ ĐẦU & BỐI CẢNH LỊCH SỬ (SLIDE 1 - 3)
-👤 **NGƯỜI THUYẾT TRÌNH 1 (Slide 1 - 9): Nền móng & Quy luật LLSX - QHSX**
+## 👤 NGƯỜI THUYẾT TRÌNH 1: BẢN CHẤT, CẤU TRÚC & ĐỘNG LỰC THAY THẾ (SLIDE 1 - 4)
 
 ### 📌 SLIDE 1: Mở đầu & Giới thiệu đề tài
-- **Thao tác:** Đứng thẳng, chào tự tin, bấm sang slide 1.
+- **Thao tác:** Đứng vị trí trung tâm, chào trang trọng, tự tin.
 - **Lời thoại:**
   > *"Kính thưa quý thầy/cô và toàn thể các bạn sinh viên thân mến!*
   >
-  > *Lịch sử văn minh nhân loại đã trải qua hàng vạn năm thăng trầm. Đã bao giờ chúng ta tự hỏi: Tại sao xã hội loài người lại không ngừng biến đổi? Vì sao chế độ chiếm hữu nô lệ lại sụp đổ nhường chỗ cho chế độ phong kiến, rồi phong kiến lại bị thay thế bởi chủ nghĩa tư bản? Động lực thực sự nào đang âm thầm kéo bánh xe lịch sử tiến lên phía trước?*
+  > *Xuyên suốt hàng vạn năm lịch sử, nhân loại đã chứng kiến sự thăng trầm, sụp đổ và hưng thịnh của muôn vàn nền văn minh. Vì sao chế độ Chiếm hữu nô lệ La Mã cổ đại sụp đổ? Vì sao chế độ Phong kiến ngàn năm lại tan rã trước cơn lốc của Chủ nghĩa tư bản? Động lực nội tại nào quy định sự thay thế tất yếu của các chế độ xã hội?*
   >
-  > *Để giải mã trọn vẹn những câu hỏi lớn này, hôm nay nhóm chúng em xin đại diện trình bày đề tài: **'Học thuyết Hình thái Kinh tế - Xã hội và sự vận dụng của Đảng ta vào thực tiễn Việt Nam'** – một trong những cống hiến vĩ đại nhất của Karl Marx trong kho tàng triết học nhân loại."*
+  > *Trước Mác, lịch sử được nhìn nhận qua lăng kính thần bí của ý trời hoặc ý chí chủ quan của các bậc hoàng đế. Nhưng Karl Marx đã làm thay đổi hoàn toàn nhận thức ấy khi khám phá ra **Học thuyết Hình thái kinh tế - xã hội**. Hôm nay, nhóm chúng em xin đi sâu phân tích bản chất học thuyết này, tập trung làm rõ **Cấu trúc hình thái, Tính chất lịch sử - tự nhiên và Tiến trình chi tiết của 5 hình thái kinh tế - xã hội** qua lịch sử nhân loại."*
 
 ---
 
-### 📌 SLIDE 2: Tổng quan nội dung báo cáo (Agenda)
-- **Thao tác:** Bấm sang slide 2, dùng tay hoặc bút laser chỉ nhanh qua các đầu mục.
+### 📌 SLIDE 2: Phạm trù Hình thái KT-XH & Mô hình giải phẫu 3 tầng
+- **Thao tác:** Bấm sang slide 2, chỉ tay vào mô hình 3 tầng kim tự tháp.
 - **Lời thoại:**
-  > *"Bài báo cáo của nhóm chúng em hôm nay sẽ đi qua 7 nội dung trọng tâm:*
-  > 1. *Điểm xuất phát của lịch sử: Hoạt động sản xuất vật chất.*
-  > 2. *Quy luật cội rễ: Mối quan hệ biện chứng giữa Lực lượng sản xuất và Quan hệ sản xuất.*
-  > 3. *Cơ cấu chính trị - xã hội: Quan hệ giữa Cơ sở hạ tầng và Kiến trúc thượng tầng.*
-  > 4. *Phạm trù trung tâm: Tính chất 'Lịch sử - Tự nhiên' của các hình thái KT-XH.*
-  > 5. *Bức tranh toàn cảnh: Tiến trình 5 hình thái kinh tế - xã hội qua các thời kỳ.*
-  > 6. *Ý nghĩa thời đại và bài học vận dụng sáng tạo của Đảng ta tại Việt Nam.*
-  > 7. *Và cuối cùng, nhóm xin gửi tới thầy cô và các bạn phần Demo sản phẩm số hóa mà nhóm đã tự tay lập trình với hệ sinh thái 300 Flashcards và 300 câu hỏi trắc nghiệm."*
+  > *"Để hiểu được học thuyết, trước hết chúng ta phải nắm vững định nghĩa kinh điển của C.Mác:*
+  > *'Hình thái kinh tế - xã hội là một phạm trù của chủ nghĩa duy vật lịch sử dùng để chỉ xã hội ở từng giai đoạn lịch sử nhất định, với một kiểu quan hệ sản xuất đặc trưng cho xã hội đó, phù hợp với một trình độ nhất định của lực lượng sản xuất và với một kiến trúc thượng tầng tương ứng được xây dựng trên những quan hệ sản xuất ấy'.*
+  >
+  > *Nói một cách dễ hiểu, Mác đã 'giải phẫu' xã hội loài người như một cơ thể sống hoàn chỉnh gồm 3 tầng liên kết hữu cơ:*
+  > *1. **Tầng nền tảng - Lực lượng sản xuất (LLSX):** Là mối quan hệ giữa con người với tự nhiên, thể hiện qua Người lao động và Công cụ sản xuất. Đây là cội nguồn vật chất của mọi xã hội.*
+  > *2. **Tầng khung xương - Quan hệ sản xuất (Cơ sở hạ tầng):** Là quan hệ kinh tế giữa người với người (sở hữu TLSX, quản lý, phân phối). Kiểu QHSX thống trị sẽ định hình bản chất kinh tế của xã hội.*
+  > *3. **Tầng diện mạo - Kiến trúc thượng tầng (KTTT):** Là toàn bộ các thiết chế chính trị, pháp luật, nhà nước cùng hệ tư tưởng triết học, đạo đức, tôn giáo được dựng xây trên nền móng kinh tế đó.*
+  > *Ba bộ phận này không tách rời mà tác động biện chứng, tạo nên diện mạo đặc thù của từng nấc thang lịch sử."*
 
 ---
 
-### 📌 SLIDE 3: Bối cảnh lịch sử & Sự bế tắc của các quan điểm trước Mác
-- **Thao tác:** Bấm sang slide 3, giọng nhấn mạnh vào sự bế tắc của các thuyết cũ.
+### 📌 SLIDE 3: Nguồn gốc & Động lực nội tại của sự thay thế các Hình thái KT-XH
+- **Thao tác:** Chuyển slide 3, nhấn mạnh vào cơ chế mâu thuẫn nội tại.
 - **Lời thoại:**
-  > *"Trước khi Karl Marx công bố học thuyết của mình, nhận thức của con người về lịch sử chìm trong bế tắc:*
+  > *"Vậy điều gì làm cho một hình thái KT-XH cũ sụp đổ để một hình thái mới tiến bộ hơn ra đời?*
   >
-  > *- **Các nhà tư tưởng duy tâm thần học** thì tin rằng số phận xã hội là do ý chí của Chúa trời, Thần linh hoặc định mệnh an bài.*
-  > *- **Các nhà duy tâm chủ quan** thì lại cho rằng lịch sử được tạo nên bởi ý chí ngẫu hứng của một vài bậc vua chúa, tướng lĩnh hay các vĩ nhân xuất chúng.*
-  > *- Còn **các nhà duy vật trước Mác** tuy nhận ra hoàn cảnh tác động đến con người, nhưng lại không thể lý giải được: Vậy cái gì đã làm biến đổi chính hoàn cảnh đó?*
+  > *Mác chỉ rõ: Nguồn gốc không nằm ở đâu xa lạ, mà bắt nguồn từ **hai mâu thuẫn biện chứng nội tại trong lòng chính xã hội đó**:*
   >
-  > *Chính Karl Marx đã làm nên một cuộc cách mạng vĩ đại trong tư duy: Ông lật ngược toàn bộ thế giới quan duy tâm, đặt xã hội đứng vững trên đôi chân của chính nó, chỉ ra rằng lịch sử loài người vận động hoàn toàn theo các quy luật khách quan, bắt đầu từ hoạt động cơ bản nhất: **Sản xuất của cải vật chất**."*
+  > *- **Mâu thuẫn thứ nhất (Gốc rễ kinh tế):** Giữa Lực lượng sản xuất luôn vận động phát triển với Quan hệ sản xuất cũ bảo thủ, lỗi thời. Con người luôn cải tiến công cụ để bớt cực nhọc, khiến LLSX phát triển không ngừng. Đến một thời điểm, QHSX cũ trở thành 'xiềng xích' trói buộc LLSX, đòi hỏi phải bị xóa bỏ.*
+  >
+  > *- **Mâu thuẫn thứ hai (Về mặt chính trị - xã hội):** Mâu thuẫn kinh tế biến thành mâu thuẫn giai cấp giữa giai cấp cách mạng đại diện cho LLSX mới với giai cấp thống trị bám giữ QHSX cũ. Mâu thuẫn lên tới đỉnh điểm sẽ bùng nổ thành **Cách mạng xã hội**, đập tan trật tự cũ, thiết lập hình thái kinh tế - xã hội mới cao hơn!"*
 
 ---
 
-## 🟢 PHẦN 2: SẢN XUẤT VẬT CHẤT – ĐIỂM XUẤT PHÁT (SLIDE 4 - 5)
-
-### 📌 SLIDE 4: Khái niệm & Bản chất của Sản xuất vật chất
+### 📌 SLIDE 4: Luận điểm cốt tử: "Quá trình Lịch sử - Tự nhiên" & Quy luật "Bỏ qua"
 - **Thao tác:** Chuyển slide 4.
 - **Lời thoại:**
-  > *"Vậy sản xuất vật chất là gì?*
-  >
-  > *Theo quan điểm triết học Mác - Lênin: Sản xuất vật chất là quá trình con người sử dụng công cụ lao động tác động vào tự nhiên, cải biến các dạng vật chất của tự nhiên nhằm tạo ra của cải thỏa mãn các nhu cầu sinh tồn và phát triển.*
-  >
-  > *Các bạn hãy lưu ý một điểm cốt tử: Con ong có thể xây những tổ sáp rất tinh xảo, con nhện có thể giăng những màng tơ rất khéo léo, nhưng đó chỉ là **bản năng sinh học vô thức**. Chỉ có con người mới có **lao động sản xuất có ý thức, có mục đích và biết dùng công cụ lao động**. Lao động sản xuất chính là lằn ranh đầu tiên và vĩnh viễn phân tách loài người ra khỏi thế giới loài vật."*
-
----
-
-### 📌 SLIDE 5: Vai trò quyết định của Sản xuất vật chất
-- **Thao tác:** Chuyển slide 5, trích dẫn câu nổi tiếng của Mác.
-- **Lời thoại:**
-  > *"C.Mác và Ph.Ăngghen đã đúc kết một chân lý hết sức giản dị nhưng vô cùng sâu sắc:*
-  > *Con người trước hết cần phải có thức ăn, đồ uống, nhà ở và quần áo trước khi có thể làm chính trị, khoa học, nghệ thuật hay tôn giáo!*
-  >
-  > *Sản xuất vật chất giữ 3 vai trò quyết định tối thượng:*
-  > *Thứ nhất: Là điều kiện sinh tồn tất yếu của nhân loại qua mọi thời đại.*
-  > *Thứ hai: Quyết định toàn bộ sự hình thành, biến đổi của các quan hệ xã hội. Khi cách kiếm sống thay đổi thì quan hệ gia đình, nhà nước, đạo đức cũng buộc phải đổi thay.*
-  > *Và thứ ba: Chính trong lao động sản xuất, con người hoàn thiện đôi bàn tay, phát triển bộ não, sáng tạo ra ngôn ngữ và không ngừng hoàn thiện bản tính người của mình."*
-
----
-
-## 🟢 PHẦN 3: QUY LUẬT LLSX QUYẾT ĐỊNH QHSX (SLIDE 6 - 9)
-
-
-### 📌 SLIDE 6: Cấu trúc của Lực lượng sản xuất (LLSX)
-- **Thao tác:** Bấm slide 6, chỉ vào sơ đồ cấu trúc.
-- **Lời thoại:**
-  > *"Để sản xuất của cải, con người phải thiết lập hai mối quan hệ. Mối quan hệ thứ nhất là quan hệ giữa con người với tự nhiên, được thể hiện qua phạm trù: **Lực lượng sản xuất (LLSX)**.*
-  >
-  > *Cấu trúc LLSX gồm 2 bộ phận:*
-  > *1. **Người lao động:** Với thể lực, trí lực, kỹ năng, kinh nghiệm và tính sáng tạo. Đây là chủ thể, là yếu tố giữ vai trò **quyết định nhất**.*
-  > *2. **Tư liệu sản xuất:** Gồm Đối tượng lao động (rừng, khoáng sản, nguyên vật liệu) và Tư liệu lao động (kho bãi, giao thông, và quan trọng nhất là **Công cụ lao động**).*
-  >
-  > *Nếu không có con người thì mọi máy móc tối tân nhất cũng chỉ là những khối kim loại bất động!"*
-
----
-
-### 📌 SLIDE 7: Công cụ lao động & Khoa học trở thành LLSX trực tiếp
-- **Thao tác:** Chuyển slide 7.
-- **Lời thoại:**
-  > *"Trong tư liệu lao động, Mác đặc biệt nhấn mạnh vai trò của **Công cụ lao động**. Đây là yếu tố 'động nhất và có tính cách mạng nhất'. Mác từng viết: 'Những thời đại kinh tế khác nhau không phải ở chỗ chúng sản xuất ra cái gì, mà là sản xuất bằng cách nào, với những tư liệu lao động nào'. Rìu đá đặc trưng cho thời nguyên thủy, cày đồng cho thời nô lệ, cày sắt cho phong kiến, máy hơi nước cho chủ nghĩa tư bản, và ngày nay là máy tính lượng tử, chip bán dẫn.*
-  >
-  > *Đặc biệt, trong kỷ nguyên 4.0 hiện nay, **Khoa học và Công nghệ** đã trở thành 'Lực lượng sản xuất trực tiếp', rút ngắn khoảng cách từ phòng nghiên cứu đến xưởng sản xuất, quyết định năng suất và vị thế cạnh tranh của cả một quốc gia."*
-
----
-
-### 📌 SLIDE 8: Cấu trúc 3 mặt của Quan hệ sản xuất (QHSX)
-- **Thao tác:** Chuyển slide 8.
-- **Lời thoại:**
-  > *"Bên cạnh quan hệ với tự nhiên, con người không thể sản xuất riêng lẻ mà phải liên kết lại với nhau. Mối quan hệ kinh tế giữa người với người trong sản xuất được gọi là **Quan hệ sản xuất (QHSX)**.*
-  >
-  > *QHSX gồm 3 mặt hữu cơ:*
-  > *- Một là: Quan hệ sở hữu đối với tư liệu sản xuất.*
-  > *- Hai là: Quan hệ tổ chức và quản lý sản xuất.*
-  > *- Ba là: Quan hệ phân phối sản phẩm lao động.*
-  >
-  > *Trong đó, **Quan hệ sở hữu giữ vai trò xuất phát điểm và chi phối hai quan hệ còn lại**: Ai nắm giữ nhà máy, đất đai, tư liệu sản xuất thì người đó sẽ nắm quyền chỉ huy điều hành và quyết định ai được hưởng bao nhiêu phần trong chiếc bánh của cải!"*
-
----
-
-### 📌 SLIDE 9: Nội dung Quy luật QHSX phù hợp với trình độ LLSX
-- **Thao tác:** Giọng nói đanh thép, khẳng định tầm quan trọng của quy luật.
-- **Lời thoại:**
-  > *"Đây chính là quy luật cốt tử của toàn bộ lịch sử nhân loại:*
-  >
-  > *- **LLSX luôn quyết định QHSX:** Vì con người không ngừng cải tiến công cụ để bớt cực nhọc, nên LLSX là nội dung luôn biến đổi và phát triển nhanh. Ngược lại, QHSX là hình thức kinh tế nên có tính ổn định tương đối. Khi LLSX phát triển vượt bậc, chiếc áo QHSX cũ trở nên chật chội, trở thành xiềng xích kìm hãm. Lúc này, bắt buộc phải diễn ra một cuộc cách mạng để thay thế QHSX cũ bằng QHSX mới tiến bộ.*
-  >
-  > *- **QHSX tác động trở lại LLSX:** Nếu QHSX 'phù hợp', nó sẽ là mảnh đất màu mỡ cho LLSX cất cánh. Ngược lại, nếu 'không phù hợp' – dù là lạc hậu hơn hay nóng vội vượt trước một cách giả tạo – nó đều sẽ bóp nghẹt sức sản xuất."*
-
----
-
-## 🟢 PHẦN 3: CƠ CẤU CHÍNH TRỊ - KINH TẾ & TIẾN TRÌNH LỊCH SỬ (SLIDE 10 - 18)
-👤 **NGƯỜI THUYẾT TRÌNH 2 (Slide 10 - 18): CSHT - KTTT, Hình Thái KT-XH & 3 Hình Thái Đầu Tiên**
-
-### 📌 SLIDE 10: Cơ sở hạ tầng (CSHT) theo nghĩa Triết học
-- **Thao tác:** Chuyển slide 10, lưu ý thầy cô/lớp về bẫy hiểu nhầm khái niệm.
-- **Lời thoại:**
-  > *"Tiếp theo, chúng ta cùng làm rõ một khái niệm rất hay bị hiểu nhầm trong đời thường: **Cơ sở hạ tầng (CSHT)**.*
-  >
-  > *Trong Triết học Mác, CSHT không phải là cầu cống, đường sá, điện lưới. CSHT là phạm trù chỉ **toàn bộ những quan hệ sản xuất hợp thành cơ cấu kinh tế hiện thực của một xã hội**.*
-  >
-  > *Trong một xã hội cụ thể, CSHT gồm 3 kiểu QHSX đan xen:*
-  > *1. Quan hệ sản xuất thống trị (giữ vai trò chi phối và định hình bản chất chế độ).*
-  > *2. Quan hệ sản xuất tàn dư của xã hội cũ.*
-  > *3. Quan hệ sản xuất mầm mống của xã hội tương lai.*
-  > *Chính sự đan xen này tạo nên tính phức tạp của nền kinh tế mỗi thời kỳ."*
-
----
-
-### 📌 SLIDE 11: Khái niệm & Kết cấu Kiến trúc thượng tầng (KTTT)
-- **Thao tác:** Chuyển slide 11.
-- **Lời thoại:**
-  > *"Được xây dựng bên trên nền móng kinh tế đó chính là **Kiến trúc thượng tầng (KTTT)**.*
-  >
-  > *KTTT là toàn bộ những quan điểm tư tưởng xã hội (chính trị, pháp quyền, đạo đức, tôn giáo, nghệ thuật, triết học) cùng với các thiết chế tương ứng như Nhà nước, Đảng phái, Giáo hội, Tòa án.*
-  >
-  > *Trong các thiết chế ấy, **Nhà nước là yếu tố quyền lực mạnh nhất**. Nhà nước đại diện cho giai cấp thống trị về kinh tế, nắm trong tay quân đội, cảnh sát, nhà tù và pháp luật để bảo vệ cơ sở kinh tế sinh ra nó."*
-
----
-
-### 📌 SLIDE 12: Mối quan hệ biện chứng giữa CSHT và KTTT
-- **Thao tác:** Chuyển slide 12.
-- **Lời thoại:**
-  > *"Mối quan hệ giữa CSHT và KTTT thực chất là mối quan hệ giữa **Kinh tế** và **Chính trị - Tư tưởng**:*
-  >
-  > *- **CSHT quyết định KTTT:** Cơ cấu kinh tế nào thì sinh ra bộ máy chính trị và tư tưởng ấy. Giai cấp nào nắm quyền thống trị về kinh tế thì sẽ thống trị cả về chính trị và đời sống tinh thần. Khi kinh tế thay đổi căn bản, toàn bộ kiến trúc thượng tầng đồ sộ sớm muộn cũng sẽ biến đổi theo.*
-  >
-  > *- **KTTT tác động trở lại CSHT:** Nhà nước không đứng yên nhìn kinh tế mà dùng luật pháp, chính sách tài khóa, thuế khóa để bảo vệ trật tự kinh tế thống trị. Nếu chính sách đúng đắn, hợp quy luật, KTTT sẽ thúc đẩy kinh tế bứt phá; nếu duy ý chí, bảo thủ, nó sẽ kéo lùi sự phát triển kinh tế."*
-
----
-
-## 🟢 PHẦN 5: PHẠM TRÙ HÌNH THÁI KT-XH & TÍNH LỊCH SỬ - TỰ NHIÊN (SLIDE 13 - 15)
-
-
-### 📌 SLIDE 13: Phạm trù Hình thái kinh tế - xã hội
-- **Thao tác:** Bấm slide 13, chỉ vào mô hình kim tự tháp 3 tầng.
-- **Lời thoại:**
-  > *"Từ hai cặp quy luật nền tảng trên, C.Mác đã khái quát nên phạm trù trung tâm:*
-  >
-  > *'Hình thái kinh tế - xã hội là một phạm trù của chủ nghĩa duy vật lịch sử dùng để chỉ xã hội ở từng giai đoạn lịch sử nhất định, với một kiểu quan hệ sản xuất đặc trưng, phù hợp với một trình độ nhất định của LLSX và với một KTTT tương ứng được xây dựng trên những QHSX ấy'.*
-  >
-  > *Nói một cách hình tượng: Một hình thái KT-XH giống như một tòa nhà 3 tầng hoàn chỉnh:*
-  > *- **Móng nhà:** Là Lực lượng sản xuất (người lao động, máy móc).*
-  > *- **Khung xương ngôi nhà:** Là Cơ sở hạ tầng (các quan hệ kinh tế).*
-  > *- **Mái nhà và nội thất:** Là Kiến trúc thượng tầng (bộ máy nhà nước, luật pháp, văn hóa).*
-  > *Ba bộ phận này gắn kết hữu cơ, tác động biện chứng, tạo nên diện mạo sống động của mỗi thời đại."*
-
----
-
-### 📌 SLIDE 14: Tính chất "Lịch sử - Tự nhiên" của tiến trình phát triển
-- **Thao tác:** Chuyển slide 14.
-- **Lời thoại:**
-  > *"Trong lời tựa cuốn 'Tư bản', C.Mác đã đưa ra một luận điểm bất hủ:*
+  > *"Trong lời tựa tác phẩm kinh điển 'Tư bản', C.Mác đã đưa ra một luận điểm mang tính cách mạng:*
   > *'Sự phát triển của các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên'.*
   >
-  > *Luận điểm này khẳng định: Sự vận động, thay thế nhau của các chế độ xã hội diễn ra tuân theo các **quy luật khách quan** (như quy luật tự nhiên), hoàn toàn độc lập với ý muốn chủ quan của con người. Nguồn gốc sâu xa của sự thay thế bắt đầu từ sự phát triển không ngừng của LLSX $\rightarrow$ làm nảy sinh mâu thuẫn kinh tế với QHSX cũ $\rightarrow$ biến thành mâu thuẫn giai cấp $\rightarrow$ bùng nổ Cách mạng xã hội $\rightarrow$ khai sinh một hình thái KT-XH mới tiến bộ hơn."*
-
----
-
-### SLIDE 15: Con đường chung & Con đường phát triển "Bỏ qua"
-- **Thao tác:** Chuyển slide 15.
-- **Lời thoại:**
-  > *"Tuy nhiên, quá trình lịch sử - tự nhiên không có nghĩa là một đường thẳng tắp cứng nhắc!*
+  > *Hai chữ 'Tự nhiên' ở đây khẳng định: Lịch sử vận động tuân theo các **quy luật khách quan**, không phụ thuộc vào ý muốn chủ quan hay mệnh lệnh của bất kỳ vị vua chúa nào.*
   >
-  > *- **Con đường chung (Tính phổ biến):** Nhân loại tiến hóa tuần tự qua các hình thái từ thấp đến cao.*
-  > *- **Con đường đặc thù (Tính cá biệt):** Do điều kiện địa lý, truyền thống lịch sử và bối cảnh quốc tế, một số dân tộc có thể **bỏ qua một hoặc vài hình thái KT-XH** để tiến thẳng lên hình thái cao hơn.*
+  > *Tuy nhiên, tiến trình lịch sử là sự thống nhất biện chứng giữa **Tính phổ biến** và **Tính đặc thù**:*
+  > *- **Con đường chung:** Nhân loại tiến hóa tuần tự qua 5 hình thái KT-XH.*
+  > *- **Con đường cá biệt (Quy luật phát triển rút ngắn hay 'Bỏ qua'):** Do điều kiện địa lý, truyền thống văn hóa và bối cảnh thời đại, một số dân tộc có thể **bỏ qua một hoặc vài hình thái KT-XH** để tiến thẳng lên hình thái cao hơn mà không hề trái với quy luật khách quan (như nước Mỹ không qua phong kiến, hay Việt Nam quá độ bỏ qua chế độ tư bản).*
+  > *Sau đây, xin mời bạn thuyết trình thứ hai sẽ đưa thầy cô và các bạn bước vào chuyến du hành chi tiết qua 5 hình thái kinh tế - xã hội trong lịch sử!"*
+
+---
+
+## 👤 NGƯỜI THUYẾT TRÌNH 2: BÓC TÁCH CHI TIẾT 3 HÌNH THÁI TIỀN TƯ BẢN (SLIDE 5 - 8)
+
+### 📌 SLIDE 5: Hình thái 1 - Cộng sản nguyên thủy (Công xã nguyên thủy)
+- **Thao tác:** Bấm slide 5, chỉ vào các đặc trưng kinh tế xã hội nguyên thủy.
+- **Lời thoại:**
+  > *"Xin chào thầy cô và các bạn! Hình thái đầu tiên mở đầu lịch sử loài người là **Cộng sản nguyên thủy**, tồn tại suốt hàng triệu năm:*
   >
-  > *Ví dụ: Nước Mỹ từ chế độ chiếm hữu nô lệ tiến thẳng lên tư bản chủ nghĩa mà không hề trải qua chế độ phong kiến; các bộ lạc da đỏ Bắc Mỹ từ nguyên thủy nhảy vọt lên CNTB; và nước ta từ một nước thuộc địa nửa phong kiến đã tiến thẳng lên CNXH bỏ qua chế độ tư bản chủ nghĩa."*
-
----
-
-### 📌 CÁC HÌNH THÁI KINH TẾ - XÃ HỘI LỊCH SỬ
-
-### 📌 SLIDE 16: Hình thái 1 - Cộng sản nguyên thủy
-- **Thao tác:** Chuyển slide 16.
-- **Lời thoại:**
-  > *"Bây giờ, chúng ta hãy cùng nhìn lại bức tranh 5 nấc thang lịch sử nhân loại:*
+  > *- **Về LLSX:** Trình độ cực kỳ thấp kém, công cụ lao động thô sơ bằng đá ghè đẽo, con người sống bằng hái lượm và săn bắt, phụ thuộc 100% vào thiên nhiên.*
+  > *- **Về QHSX:** Do công cụ quá yếu ớt, một cá nhân không thể tự sinh tồn đơn lẻ trước dã thú, bắt buộc con người phải nương tựa vào nhau. Do đó hình thành **Chế độ công hữu nguyên thủy** về tư liệu sản xuất; cùng làm chung, cùng ăn chung, phân phối cào bằng. Xã hội chưa có của cải dư thừa nên **chưa có tư hữu, chưa có giai cấp và chưa có áp bức bóc lột**.*
+  > *- **Về KTTT:** Chưa hề có bộ máy Nhà nước hay pháp luật. Xã hội quản lý theo huyết thống thị tộc, bộ lạc; trật tự duy trì bằng uy tín của tù trưởng và đạo đức cộng đồng.*
   >
-  > *Thứ nhất là **Cộng sản nguyên thủy** – buổi bình minh của loài người kéo dài hàng triệu năm:*
-  > *- **LLSX:** Công cụ bằng đá thô sơ, con người săn bắt, hái lượm, phụ thuộc hoàn toàn vào thiên nhiên.*
-  > *- **QHSX:** Do công cụ thô sơ nên không ai có thể làm việc một mình. Mọi người cùng làm chung, hưởng chung dưới chế độ **Công hữu nguyên thủy**, chưa có của dư thừa.*
-  > *- **KTTT:** Xã hội thị tộc, bộ lạc; không có giai cấp, chưa có nhà nước và pháp luật.*
-  > *Chỉ đến khi công cụ kim loại bằng đồng và sắt xuất hiện, năng suất tăng vọt, của cải dư thừa bắt đầu có người chiếm làm của riêng, chế độ tư hữu ra đời và chôn vùi xã hội nguyên thủy."*
+  > *- **Nguyên nhân diệt vong:** Khi công cụ bằng kim loại (đồng, sắt) xuất hiện, năng suất lao động tăng vọt, lần đầu tiên loài người tạo ra 'của cải dư thừa tương đối'. Một số người nắm quyền đã chiếm đoạt của dư làm của riêng, chế độ tư hữu nảy sinh, phá vỡ công xã nguyên thủy từ bên trong."*
 
 ---
 
-### 📌 SLIDE 17: Hình thái 2 - Chiếm hữu nô lệ
-- **Thao tác:** Chuyển slide 17.
+### 📌 SLIDE 6: Hình thái 2 - Chiếm hữu nô lệ (Xã hội có giai cấp đầu tiên)
+- **Thao tác:** Chuyển slide 6, giọng trầm xuống nói về số phận nô lệ, sau đó nêu điểm tiến bộ.
 - **Lời thoại:**
-  > *"Hình thái thứ hai là **Chiếm hữu nô lệ** – xã hội có giai cấp đầu tiên trong lịch sử:*
-  > *- **LLSX:** Đồ kim loại phổ biến, nông nghiệp trồng trọt và chăn nuôi tách rời, thủ công nghiệp ra đời.*
-  > *- **QHSX:** Chế độ tư hữu tuyệt đối. Chủ nô sở hữu toàn bộ tư liệu sản xuất và sở hữu cả thân thể người nô lệ. Người nô lệ bị tước đoạt toàn bộ quyền con người, bị gọi là 'những công cụ biết nói'.*
-  > *- **KTTT:** Nhà nước chủ nô ra đời – đây là bộ máy nhà nước đầu tiên trong lịch sử, được lập ra với chức năng trấn áp các cuộc khởi nghĩa của nô lệ.*
-  > *Dù tàn bạo, nhưng chính sự tích lũy của cải thời nô lệ đã tạo nền tảng ra đời các kỳ quan và triết học cổ đại Hy Lạp, La Mã."*
-
----
-
-### 📌 SLIDE 18: Hình thái 3 - Phong kiến
-- **Thao tác:** Chuyển slide 18.
-- **Lời thoại:**
-  > *"Hình thái thứ ba là **Phong kiến**:*
-  > *- **LLSX:** Nông nghiệp tiểu nông dùng sức cày kéo trâu bò, công cụ sắt hoàn thiện; các phường hội thủ công và thương nghiệp thị trấn phát triển.*
-  > *- **QHSX:** Tư liệu sản xuất trung tâm là Ruộng đất, nằm trong tay Giai cấp Địa chủ, Lãnh chúa. Nông dân bị bóc lột thông qua **Địa tô** (tô lao dịch, tô hiện vật, tô tiền).*
-  > *- **Bước tiến lịch sử:** Khác với nô lệ, người nông dân phong kiến đã có gia đình riêng, có túp lều và nông cụ riêng, được giữ lại phần dư sau khi nộp tô nên họ có động lực lao động cao hơn hẳn nô lệ.*
-  > *- **KTTT:** Nhà nước quân chủ chuyên chế (Vua nắm quyền sinh sát tối cao), hệ tư tưởng tôn giáo và Nho giáo chi phối tuyệt đối."*
-
----
-
-## 🟢 PHẦN 4: THỜI ĐẠI TƯ BẢN, CNCS, VẬN DỤNG VIỆT NAM & DEMO WEB (SLIDE 19 - 25)
-👤 **NGƯỜI THUYẾT TRÌNH 3 (Slide 19 - 25): CNTB, CNCS, Vận Dụng Việt Nam & Demo Ứng Dụng Web**
-
-### 📌 SLIDE 19: Hình thái 4 - Tư bản chủ nghĩa (CNTB)
-- **Thao tác:** Chuyển slide 19.
-- **Lời thoại:**
-  > *"Nấc thang thứ tư là **Tư bản chủ nghĩa**:*
-  > *- **LLSX:** Bùng nổ Cách mạng công nghiệp, đại công nghiệp cơ khí, điện khí hóa và tự động hóa. LLSX mang tính **xã hội hóa sâu sắc** (hàng vạn người cùng hợp tác sản xuất trong một chuỗi cung ứng).*
-  > *- **QHSX:** Chế độ chiếm hữu tư nhân tư bản chủ nghĩa về TLSX. Nhà tư bản bóc lột **giá trị thặng dư** đối với giai cấp công nhân làm thuê.*
-  > *- **Mâu thuẫn cơ bản:** Giữa tính chất xã hội hóa ngày càng cao của LLSX với chế độ chiếm hữu tư nhân TBCN về TLSX. Về mặt xã hội, mâu thuẫn này biến thành cuộc đấu tranh giai cấp giữa Giai cấp vô sản và Giai cấp tư sản, báo hiệu sự sụp đổ tất yếu của CNTB."*
-
----
-
-### 📌 SLIDE 20: Hình thái 5 - Cộng sản chủ nghĩa (CNCS)
-- **Thao tác:** Chuyển slide 20.
-- **Lời thoại:**
-  > *"Và đỉnh cao của nền văn minh nhân loại chính là **Hình thái Cộng sản chủ nghĩa**, bao gồm hai giai đoạn:*
+  > *"Sự tan rã của xã hội nguyên thủy đã khai sinh ra hình thái thứ hai: **Chiếm hữu nô lệ** – xã hội có giai cấp đầu tiên trong lịch sử:*
   >
-  > *1. **Giai đoạn thấp (Chủ nghĩa xã hội - CNXH):** Từng bước xác lập chế độ công hữu về các tư liệu sản xuất chủ yếu; xóa bỏ áp bức bóc lột; thực hiện nguyên tắc phân phối công bằng: **'Làm theo năng lực, hưởng theo lao động'**.*
+  > *- **Về LLSX:** Công cụ sắt xuất hiện rộng rãi, đại thủy nông phát triển, nghề chăn nuôi tách khỏi trồng trọt, thủ công nghiệp và thương nghiệp ra đời, xuất hiện tiền tệ.*
+  > *- **Về QHSX:** Xác lập **Chế độ sở hữu tư nhân tuyệt đối** của giai cấp Chủ nô đối với toàn bộ tư liệu sản xuất và đối với chính thân thể người Nô lệ. Nô lệ bị coi là 'những công cụ biết nói' (instrumentum vocale), bị mua bán như súc vật, bị bóc lột đến kiệt cùng và chủ nô có quyền giết hại bất cứ lúc nào.*
+  > *- **Về KTTT:** **Nhà nước chủ nô ra đời** (nhà nước đầu tiên trong lịch sử) với quân đội, nhà tù, luật pháp nhằm trấn áp các cuộc khởi nghĩa của hàng vạn nô lệ (tiêu biểu như khởi nghĩa Spartacus).*
   >
-  > *2. **Giai đoạn cao (Chủ nghĩa cộng sản - CNCS):** LLSX phát triển tột bậc, của cải tuôn ra dồi dào như suối nguồn; ý thức con người đạt tới trình độ văn minh cao độ; nhà nước tự tiêu vong vì không còn giai cấp; xã hội bước sang kỷ nguyên tự do: **'Làm theo năng lực, hưởng theo nhu cầu'**."*
+  > *- **Mâu thuẫn diệt vong:** Người nô lệ bị đối xử tàn bạo nên họ cố tình phá hoại công cụ lao động, năng suất đình đốn. Khi QHSX chiếm hữu nô lệ trở thành lực cản kìm hãm LLSX, các cuộc khởi nghĩa nô lệ kết hợp với sự xâm lăng của các man tộc đã chôn vùi chế độ chiếm hữu nô lệ La Mã cổ đại."*
 
 ---
 
-## 🟢 PHẦN 7: VẬN DỤNG CỦA ĐẢNG TA TẠI VIỆT NAM (SLIDE 21 - 23)
-
-
-### 📌 SLIDE 21: Ý nghĩa phương pháp luận khoa học
-- **Thao tác:** Chuyển slide 21.
+### 📌 SLIDE 7: Hình thái 3 - Phong kiến (Cơ chế Địa tô & Nông nô)
+- **Thao tác:** Chuyển slide 7.
 - **Lời thoại:**
-  > *"Từ toàn bộ lý luận trên, học thuyết mang lại giá trị phương pháp luận vô cùng to lớn:*
-  > *- Nó chấm dứt hoàn toàn chủ nghĩa duy tâm và thần bí về lịch sử.*
-  > *- Cung cấp tiêu chuẩn khách quan để đánh giá xã hội: Muốn xem xét một quốc gia tiến bộ hay không, hãy nhìn vào nền kinh tế và đời sống của nhân dân lao động.*
-  > *- Khẳng định chân lý: Nhân dân là người sáng tạo chân chính ra lịch sử; và là cơ sở khoa học để các Đảng Cộng sản đề ra đường lối cách mạng đúng đắn."*
+  > *"Trên tàn tích của chế độ nô lệ, hình thái thứ ba được thiết lập: **Chế độ Phong kiến** kéo dài hơn một thiên niên kỷ:*
+  >
+  > *- **Về LLSX:** Nông nghiệp tiểu nông dùng sức cày kéo của trâu bò, công cụ bằng sắt được hoàn thiện; các làng nghề thủ công phát triển rực rỡ; kỹ thuật dệt, nấu kim loại và hàng hải phát triển.*
+  > *- **Về QHSX:** Tư liệu sản xuất tối thượng thời kỳ này là **Ruộng đất**, tập trung vào tay Giai cấp Địa chủ, Lãnh chúa phong kiến. Nông dân (hoặc nông nô) không có ruộng, buộc phải nhận ruộng cày cấy và nộp **Địa tô** cho địa chủ (tuần tự qua 3 hình thức: tô lao dịch $\rightarrow$ tô hiện vật $\rightarrow$ tô tiền).*
+  > *- **Bước tiến lịch sử quan trọng:** Nông dân phong kiến không còn là 'công cụ biết nói' bị giết hại như nô lệ. Họ có gia đình riêng, túp lều riêng, nông cụ riêng và được giữ lại phần nông sản dư sau khi nộp tô. Điều này đã giải phóng tâm lý, tạo ra động lực lao động lớn hơn hẳn thời kỳ nô lệ.*
+  > *- **Về KTTT:** Nhà nước quân chủ phong kiến tập quyền (Hoàng đế/Vua đứng đầu), cấu kết chặt chẽ với hệ tư tưởng tôn giáo (Thiên chúa giáo thời Trung cổ phương Tây hoặc Nho giáo phương Đông) để duy trì sự phục tùng tuyệt đối của thần dân."*
 
 ---
 
-### 📌 SLIDE 22: Sự vận dụng sáng tạo – Quá độ "Bỏ qua chế độ TBCN"
-- **Thao tác:** Nhấn mạnh sự vận dụng đúng đắn của Đảng ta.
+### 📌 SLIDE 8: Khủng hoảng Phong kiến & Cơn lốc Cách mạng Tư sản
+- **Thao tác:** Chuyển slide 8, tạo kịch tính về sự ra đời của CNTB.
 - **Lời thoại:**
-  > *"Vận dụng xuất sắc học thuyết của Mác, Đảng Cộng sản Việt Nam đã lãnh đạo nhân dân ta kiên định con đường đi lên Chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa.*
+  > *"Đến thế kỷ 16 - 18, các xưởng thủ công tập trung lớn xuất hiện, thương nghiệp hàng hải mở rộng sang các châu lục mới. Giai cấp tư sản non trẻ bắt đầu hình thành.*
   >
-  > *Vậy 'Bỏ qua chế độ TBCN' được hiểu như thế nào cho đúng?*
-  > *- **Bỏ qua:** Là bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng tư bản chủ nghĩa; bỏ qua chế độ bóc lột bất công.*
-  > *- **Nhưng tuyệt đối KHÔNG bỏ qua:** Những thành tựu tinh hoa mà văn minh nhân loại đã đạt được dưới CNTB, đặc biệt là khoa học, công nghệ, kỹ thuật hiện đại, thị trường tài chính và kinh nghiệm quản lý tiên tiến.*
-  > *Đây là một sự lựa chọn biện chứng, hoàn toàn phù hợp với xu thế thời đại và điều kiện lịch sử của dân tộc Việt Nam."*
+  > *Lúc này, chế độ phong kiến với các phường hội phong bế, chế độ cát cứ lãnh địa, thuế quan ngăn trở và thân phận nông nô bị trói buộc vào ruộng đất đã trở thành **chiếc cùm kìm kẹp kinh tế hàng hóa**.*
+  >
+  > *Mâu thuẫn giữa LLSX mang tính công trường thủ công mới với QHSX phong kiến bảo thủ nổ ra quyết liệt. Giai cấp tư sản đã tập hợp đông đảo nông dân, thợ thủ công làm nên các cuộc **Cách mạng tư sản vang dội** (Hà Lan, Anh, Cách mạng Pháp 1789), lật đổ ngai vàng vua chúa, mở đường cho một hình thái KT-XH có sức sản xuất khổng lồ bước lên vũ đài lịch sử: Chủ nghĩa tư bản!*
+  > *Và sau đây, xin mời bạn thuyết trình thứ 3 tiếp tục phân tích hai hình thái đỉnh cao của văn minh loài người!"*
 
 ---
 
-### 📌 SLIDE 23: Kinh tế thị trường định hướng XHCN & CNH - HĐH
-- **Thao tác:** Chuyển slide 23.
+## 👤 NGƯỜI THUYẾT TRÌNH 3: CNTB, CNCS, VẬN DỤNG VIỆT NAM & DEMO (SLIDE 9 - 14)
+
+### 📌 SLIDE 9: Hình thái 4 - Tư bản chủ nghĩa (Kỳ tích sản xuất & Mâu thuẫn nan giải)
+- **Thao tác:** Cảm ơn bạn trước, bấm sang slide 9.
 - **Lời thoại:**
-  > *"Trong công cuộc đổi mới hiện nay, Đảng ta đã vận dụng quy luật QHSX phù hợp với LLSX thông qua hai quyết sách chiến lược:*
+  > *"Kính thưa thầy cô và các bạn, bước sang hình thái thứ tư: **Tư bản chủ nghĩa (CNTB)**, diện mạo nhân loại đã hoàn toàn thay đổi:*
   >
-  > *1. **Phát triển nền Kinh tế thị trường định hướng XHCN:** Vì LLSX ở nước ta còn nhiều tầng nấc, đa dạng, nên phải phát triển nền kinh tế nhiều thành phần (kinh tế nhà nước, tập thể, tư nhân, FDI), trong đó kinh tế nhà nước giữ vai trò chủ đạo để bảo đảm định hướng xã hội.*
+  > *- **Về LLSX:** Cuộc Cách mạng công nghiệp bùng nổ, máy hơi nước, điện khí hóa, hóa chất, tự động hóa và nay là công nghệ số. C.Mác đã nhận xét rất khách quan: 'Giai cấp tư sản trong quá trình thống trị giai cấp chưa đầy một thế kỷ đã tạo ra một lực lượng sản xuất đồ sộ hơn lực lượng sản xuất của tất cả các thế hệ trước cộng lại!'. LLSX lúc này mang **tính chất xã hội hóa cao độ**, hàng ngàn công nhân cùng làm việc trong một chuỗi cung ứng toàn cầu.*
+  > *- **Về QHSX:** Xác lập chế độ **Sở hữu tư nhân tư bản chủ nghĩa** về tư liệu sản xuất. Công nhân tuy tự do về thân thể nhưng không có TLSX, buộc phải bán sức lao động cho nhà tư bản để nhận tiền lương. Bản chất của QHSX tư bản là **bóc lột giá trị thặng dư** ($m$) từ lao động làm thuê.*
+  > *- **Về KTTT:** Nhà nước pháp quyền tư sản với cơ chế tam quyền phân lập (lập pháp, hành pháp, tư pháp); hệ tư tưởng tự do dân chủ tư sản, nhưng thực chất là công cụ bảo vệ sở hữu tư bản.*
   >
-  > *2. **Đẩy mạnh Công nghiệp hóa, Hiện đại hóa gắn liền với Kinh tế tri thức và Chuyển đổi số:** Đây là nhiệm vụ trọng tâm xuyên suốt nhằm nhanh chóng nâng cao trình độ LLSX, xây dựng cơ sở vật chất - kỹ thuật hiện đại cho CNXH, đưa nước ta vươn mình vào kỷ nguyên mới."*
+  > *- **Mâu thuẫn nan giải tự phủ định của CNTB:** Đó là mâu thuẫn giữa tính chất xã hội hóa ngày càng cao của LLSX với chế độ chiếm hữu tư nhân TBCN về TLSX. Mâu thuẫn kinh tế này sinh ra các cuộc khủng hoảng kinh tế thừa chu kỳ, và biểu hiện về mặt xã hội thành cuộc đấu tranh giai cấp giữa **Giai cấp vô sản và Giai cấp tư sản**."*
 
 ---
 
-## 🟢 PHẦN 8: DEMO SẢN PHẨM & KẾT LUẬN (SLIDE 24 - 25)
-
-### 📌 SLIDE 24: Giới thiệu Sản phẩm số hóa học tập của nhóm (Live Demo)
-- **Thao tác:** Bấm sang slide 24, mở điện thoại hoặc tab trình duyệt `mln111-triethoc.surge.sh` chiếu trực tiếp lên máy chiếu.
+### 📌 SLIDE 10: Hình thái 5 - Cộng sản chủ nghĩa (Đỉnh cao văn minh nhân loại)
+- **Thao tác:** Chuyển slide 10, phân tích rõ 2 giai đoạn.
 - **Lời thoại:**
-  > *"Kính thưa thầy cô và các bạn! Để biến những tri thức triết học trừu tượng thành một công cụ học tập thực chiến, nhóm chúng em đã lập trình và triển khai trực tuyến ứng dụng web học tập tại địa chỉ: **mln111-triethoc.surge.sh**.*
+  > *"Để giải quyết mâu thuẫn nan giải của CNTB, lịch sử tất yếu đòi hỏi một QHSX mới dựa trên sở hữu công cộng, mở đường cho hình thái cao nhất: **Cộng sản chủ nghĩa (CNCS)**.*
+  >
+  > *Hình thái này phát triển qua hai giai đoạn khoa học:*
+  > *1. **Giai đoạn thấp - Chủ nghĩa xã hội (CNXH):** Vừa thoát thai từ lòng xã hội cũ nên còn mang nhiều dấu vết của CNTB. Từng bước xác lập chế độ **Công hữu** về các tư liệu sản xuất chủ yếu; xóa bỏ áp bức bóc lột; thực hiện nguyên tắc phân phối công bằng: **'Làm theo năng lực, hưởng theo lao động'**. Nhà nước xã hội chủ nghĩa là nhà nước của nhân dân, mang bản chất công nhân.*
+  >
+  > *2. **Giai đoạn cao - Chủ nghĩa cộng sản (CNCS):** LLSX phát triển tột bậc, của cải tuôn ra dồi dào; khoa học công nghệ tự động hóa giải phóng hoàn toàn con người khỏi lao động nặng nhọc; không còn giai cấp, nhà nước tự tiêu vong. Xã hội thực hiện nguyên tắc phân phối tối thượng: **'Làm theo năng lực, hưởng theo nhu cầu'**, con người được phát triển tự do và toàn diện mọi năng khiếu của mình."*
+
+---
+
+### 📌 SLIDE 11: Bảng so sánh tổng hợp 5 Hình thái KT-XH qua lịch sử
+- **Thao tác:** Chuyển slide 11, chỉ nhanh bảng so sánh đối chiếu.
+- **Lời thoại:**
+  > *"Trên màn hình là bảng đối chiếu tổng hợp cả 5 nấc thang lịch sử nhân loại theo 3 tiêu chí khoa học:*
+  >
+  > *1. **Cộng sản nguyên thủy:** Công cụ đá $\rightarrow$ Công hữu sơ khai $\rightarrow$ Chưa có nhà nước.*
+  > *2. **Chiếm hữu nô lệ:** Công cụ kim loại $\rightarrow$ Tư hữu chủ nô tuyệt đối (nô lệ là công cụ biết nói) $\rightarrow$ Nhà nước chủ nô chuyên chính.*
+  > *3. **Phong kiến:** Nông nghiệp cày sắt $\rightarrow$ Địa chủ sở hữu ruộng đất (bóc lột qua địa tô) $\rightarrow$ Nhà nước quân chủ phong kiến chuyên chế.*
+  > *4. **Tư bản chủ nghĩa:** Đại công nghiệp xã hội hóa cao $\rightarrow$ Tư hữu tư bản (bóc lột giá trị thặng dư) $\rightarrow$ Nhà nước pháp quyền tư sản.*
+  > *5. **Cộng sản chủ nghĩa:** Khoa học công nghệ tự động hóa đỉnh cao $\rightarrow$ Công hữu hiện đại $\rightarrow$ Nhà nước vô sản tự tiêu vong ở giai đoạn cao.*
+  >
+  > *Bảng tổng hợp này cho thấy một chân lý không thể phủ nhận: Lịch sử nhân loại là một quá trình đi lên liên tục, hình thái sau luôn kế thừa và vượt trội hơn hình thái trước!"*
+
+---
+
+### 📌 SLIDE 12: Sự vận dụng của Đảng ta – Con đường quá độ lên CNXH tại Việt Nam
+- **Thao tác:** Chuyển slide 12, giọng hào hùng, tự tin gắn với thực tiễn.
+- **Lời thoại:**
+  > *"Từ lý luận khoa học trên, Đảng Cộng sản Việt Nam đã vận dụng quy luật 'phát triển rút ngắn' vào thực tiễn cách mạng nước ta:*
+  >
+  > *Sau năm 1975, Việt Nam tiến hành thời kỳ quá độ đi lên Chủ nghĩa xã hội **bỏ qua chế độ tư bản chủ nghĩa**. Đại hội IX của Đảng đã làm sáng tỏ luận điểm này:*
+  > *- **Bỏ qua:** Là bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng tư bản chủ nghĩa; bỏ qua chế độ người bóc lột người.*
+  > *- **Không bỏ qua mà kế thừa:** Tiếp thu toàn bộ những thành tựu tinh hoa của nhân loại dưới CNTB, đặc biệt là khoa học - công nghệ, kỹ thuật hiện đại, thị trường tài chính và kinh nghiệm quản trị tiên tiến.*
+  >
+  > *Để phù hợp với trình độ LLSX đa tầng hiện nay, Đảng ta đã khởi xướng đường lối Đổi mới, phát triển nền **Kinh tế thị trường định hướng XHCN** với nhiều thành phần kinh tế, đồng thời đẩy mạnh **Công nghiệp hóa, Hiện đại hóa và Chuyển đổi số quốc gia** nhằm xây dựng cơ sở vật chất - kỹ thuật hiện đại cho CNXH."*
+
+---
+
+### 📌 SLIDE 13: Live Demo Hệ thống số hóa ôn tập Triết học của nhóm
+- **Thao tác:** Chuyển slide 13, mở điện thoại hoặc tab web chiếu màn hình thật.
+- **Lời thoại:**
+  > *"Kính thưa thầy cô và các bạn, để học thuyết Hình thái kinh tế - xã hội không chỉ nằm trên những trang sách lý thuyết khô khan, nhóm chúng em đã tự tay lập trình và xuất bản một hệ thống web app ôn tập thực chiến tại địa chỉ: **mln111-triethoc.surge.sh**.*
   >
   > *Sản phẩm của nhóm tích hợp:*
-  > *- **Bộ 300 thẻ Flashcards 3D:** Giúp ghi nhớ toàn bộ khái niệm cốt lõi theo từng chủ đề, có thể nhảy nhanh đến bất kỳ thẻ nào.*
-  > *- **Ngân hàng 300 câu trắc nghiệm thi thử:** Có tính điểm tự động, chấm đúng/sai ngay lập tức kèm lời giải thích chi tiết, sát với đề thi kết thúc học phần môn MLN111.*
-  > *- Toàn bộ **25 Slide thuyết trình** hôm nay cũng đã được nhóm xuất bản online để cả lớp có thể đọc lại mọi lúc mọi nơi.*
-  > *Xin mời quý thầy cô và các bạn quét mã QR trên màn hình để trải nghiệm sản phẩm!"*
+  > *- **Bộ 300 thẻ Flashcards 3D tương tác:** Bao quát trọn vẹn toàn bộ kiến thức 5 hình thái, quy luật LLSX - QHSX, CSHT - KTTT, lọc theo chủ đề và nhảy đến thẻ bất kỳ.*
+  > *- **Ngân hàng 300 câu trắc nghiệm thi thử:** Tự động tính điểm, phản hồi đúng/sai tức thì và có lời giải thích chi tiết bám sát đề thi kết thúc học phần môn MLN111.*
+  > *- Toàn bộ **Slide thuyết trình và Kịch bản thoại** hôm nay cũng đã được nhóm đẩy lên mạng để cả lớp có thể đọc lại hoặc tải file Word về máy.*
+  > *Xin mời thầy cô và các bạn quét mã QR Code trên màn hình để cùng trải nghiệm!"*
 
 ---
 
-### 📌 SLIDE 25: Tổng kết & Lời cảm ơn (Q&A)
-- **Thao tác:** Chuyển slide 25, tươi cười, cúi đầu chào lịch sự.
+### 📌 SLIDE 14: Tổng kết & Cảm ơn (Q&A)
+- **Thao tác:** Chuyển slide 14, tươi cười, cúi chào cảm ơn trang trọng.
 - **Lời thoại:**
-  > *"Kính thưa quý thầy cô và các bạn, học thuyết Hình thái kinh tế - xã hội của Karl Marx đã trải qua gần hai thế kỷ thử thách trước bao biến cố của lịch sử, nhưng giá trị khoa học và sức sống thời đại của nó vẫn vẹn nguyên, là ngọn đuốc soi đường cho con đường đi lên của dân tộc Việt Nam.*
+  > *"Tóm lại, học thuyết Hình thái kinh tế - xã hội của Karl Marx chính là 'chiếc la bàn' dẫn đường chỉ lối, khẳng định sự thay thế của các chế độ xã hội là tất yếu khách quan, và sự thắng lợi của Chủ nghĩa xã hội là đích đến của văn minh nhân loại.*
   >
-  > *Bài thuyết trình của nhóm chúng em đến đây xin được phép khép lại. Nhóm xin chân thành cảm ơn thầy/cô đã lắng nghe và rất mong nhận được những lời nhận xét, góp ý quý báu cũng như các câu hỏi thảo luận từ các bạn trong lớp. Em xin chân thành cảm ơn!"*
-
----
-
-## 💡 BẬT MÍ KINH NGHIỆM ĐẠT ĐIỂM TỐI ĐA (10 ĐIỂM)
-1. **Chia lượt nói nhịp nhàng:** 3 thành viên phụ trách 3 khối lượng kiến thức cân đối (Người 1: Slide 1-9; Người 2: Slide 10-18; Người 3: Slide 19-25).
-2. **Tương tác trực tiếp:** Khi đến Slide 24, một bạn nói, một bạn cầm máy tính bấm vào link web demo lật thử 1 flashcard và chọn thử 1 câu trắc nghiệm cho cả lớp thấy web chạy mượt mà. Giảng viên các môn Lý luận chính trị đánh giá cực cao các nhóm biết ứng dụng CNTT vào bài tập!
+  > *Bài thuyết trình của nhóm chúng em đến đây xin được khép lại. Nhóm xin chân thành cảm ơn thầy/cô đã lắng nghe và rất mong nhận được những câu hỏi phản biện, góp ý quý báu từ thầy cô và các bạn. Chúng em xin chân thành cảm ơn!"*
