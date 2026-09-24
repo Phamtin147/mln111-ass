@@ -1,0 +1,1289 @@
+<!-- Copyright 2026 · Bộ môn Lý luận chính trị — Triết học Mác – Lênin (MLN111) -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Học Thuyết Hình Thái Kinh Tế - Xã Hội — MLN111 Slide Deck</title>
+<style>
+  /* ==================================================================
+     Design tokens & Theme variables
+     ================================================================== */
+  :root {
+    --ivory:   #FAF9F5;
+    --slate:   #141413;
+    --clay:    #D97757;
+    --oat:     #E3DACC;
+    --olive:   #788C5D;
+    --sage:    #A3B18A;
+    --sand:    #C4A882;
+    --coral:   #E07A5F;
+    --teal:    #3D5A80;
+
+    --gray-150:#F0EEE6;
+    --gray-300:#D1CFC5;
+    --gray-500:#87867F;
+    --gray-700:#3D3D3A;
+
+    --serif:  "Playfair Display", "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans:   "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:   "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+    --bg:         var(--ivory);
+    --text:       var(--slate);
+    --text-soft:  var(--gray-500);
+    --text-muted: var(--gray-700);
+    --border:     var(--gray-300);
+    --card-bg:    rgba(217,119,87,0.06);
+    --nav-dot:    var(--gray-300);
+    --nav-dot-active: var(--clay);
+    --accent:     var(--clay);
+
+    --code-bg:       #181816;
+    --code-text:     #FAF9F5;
+    --code-border:   #2E2E2A;
+    --syn-kw:        #E07A5F;
+    --syn-type:      #A3B18A;
+    --syn-attr:      #C4A882;
+    --syn-str:       #788C5D;
+    --syn-num:       #D97757;
+    --syn-comment:   #87867F;
+    --syn-method:    #E3DACC;
+  }
+
+  body.dark {
+    --bg:         #1A1A18;
+    --text:       #EFEEE8;
+    --text-soft:  #87867F;
+    --text-muted: #B0AFA6;
+    --border:     #3D3D3A;
+    --card-bg:    rgba(217,119,87,0.1);
+    --nav-dot:    #3D3D3A;
+    --nav-dot-active: var(--clay);
+    --code-bg:     #0F0F0E;
+    --code-border: #2B2B28;
+  }
+
+  /* Reset & Baseline */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    transition: background .35s ease, color .35s ease;
+  }
+
+  /* Slide Viewport */
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 6vw;
+    position: relative;
+  }
+  .slide-inner {
+    width: 100%;
+    max-width: 900px;
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .65s ease, transform .65s ease;
+  }
+  .slide.visible .slide-inner { opacity: 1; transform: translateY(0); }
+
+  /* Typography */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(23px, 3.2vw, 33px);
+    line-height: 1.22;
+    margin-bottom: 16px;
+  }
+  h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+  .subtitle {
+    font-size: 15px;
+    line-height: 1.58;
+    color: var(--text-muted);
+    max-width: 760px;
+    margin-bottom: 20px;
+  }
+  .quote-box {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--text);
+    padding: 14px 18px;
+    border-left: 3px solid var(--clay);
+    background: rgba(217,119,87,0.06);
+    border-radius: 0 8px 8px 0;
+    margin: 14px 0;
+  }
+  .code {
+    font-family: var(--mono);
+    font-size: 12px;
+    background: rgba(217,119,87,0.12);
+    color: var(--clay);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  /* Grid Layouts */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .card-box {
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card-bg);
+    transition: border-color .25s ease, transform .25s ease;
+  }
+  .card-box:hover {
+    border-color: var(--clay);
+  }
+  .card-box ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .card-box li {
+    font-size: 13.5px;
+    line-height: 1.52;
+    margin-bottom: 7px;
+    color: var(--text-muted);
+    position: relative;
+    padding-left: 16px;
+  }
+  .card-box li::before {
+    content: "•";
+    color: var(--clay);
+    position: absolute;
+    left: 2px;
+    font-weight: bold;
+  }
+  .card-box li strong {
+    color: var(--text);
+  }
+
+  /* Flow Steps & Diagrams */
+  .flow-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    margin-bottom: 16px;
+  }
+  .flow-step {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+  }
+  .flow-step.highlight {
+    background: var(--clay);
+    color: #fff;
+    border-color: var(--clay);
+  }
+  .flow-arrow {
+    font-size: 12px;
+    color: var(--text-soft);
+  }
+  .flow-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.52;
+    margin-top: 14px;
+    padding: 11px 15px;
+    border-left: 3px solid var(--clay);
+    background: rgba(217,119,87,0.06);
+    border-radius: 0 6px 6px 0;
+  }
+
+  /* Tables */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  .styled-table th {
+    text-align: left;
+    padding: 8px 12px;
+    background: rgba(217,119,87,0.1);
+    color: var(--text);
+    border-bottom: 2px solid var(--border);
+    font-family: var(--mono);
+    font-size: 11.5px;
+  }
+  .styled-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+  .styled-table tr:last-child td { border-bottom: none; }
+
+  /* Navigation & Controls */
+  #nav-dots {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    z-index: 20;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  #nav-dots::-webkit-scrollbar { width: 3px; }
+  #nav-dots::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 3px; }
+  .nav-dot {
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background: var(--nav-dot);
+    border: none;
+    cursor: pointer;
+    transition: background .25s, transform .25s;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .nav-dot.active {
+    background: var(--nav-dot-active);
+    transform: scale(1.45);
+  }
+  #counter {
+    position: fixed;
+    bottom: 20px;
+    left: 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-soft);
+    user-select: none;
+    z-index: 10;
+  }
+  #dark-toggle {
+    position: fixed;
+    bottom: 18px;
+    right: 22px;
+    z-index: 20;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-soft);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all .2s ease;
+  }
+  #dark-toggle:hover {
+    border-color: var(--clay);
+    color: var(--clay);
+  }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .slide { padding: 4vh 4.5vw; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 12px; }
+    #nav-dots { display: none; }
+    #counter { left: 12px; font-size: 10px; }
+    #dark-toggle { right: 12px; }
+    h1 { font-size: 26px; }
+    h2 { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Navigation dots -->
+  <div id="nav-dots"></div>
+
+  <!-- Slide counter -->
+  <div id="counter">1 / 24</div>
+
+  <!-- Dark mode toggle -->
+  <button id="dark-toggle" aria-label="Toggle dark mode">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>Dark</span>
+  </button>
+
+  <!-- ============================================================
+       Slide 1 — Trang bìa & Giới thiệu đề tài
+       ============================================================ -->
+  <section class="slide" id="s1">
+    <div class="slide-inner">
+      <div class="eyebrow">
+        <span>BỘ MÔN: LÝ LUẬN CHÍNH TRỊ</span>
+        <span>·</span>
+        <span>TRIẾT HỌC MÁC – LÊNIN (MLN111)</span>
+      </div>
+      <h1>Học Thuyết Hình Thái Kinh Tế - Xã Hội</h1>
+      <p class="subtitle">
+        Và sự vận dụng sáng tạo của Đảng Cộng sản Việt Nam vào thực tiễn công cuộc đổi mới, xây dựng đất nước trong thời kỳ quá độ lên Chủ nghĩa xã hội.
+      </p>
+
+      <div class="card-box" style="margin-bottom:16px;">
+        <h3>🎯 Mục Tiêu Báo Cáo &amp; Nghiên Cứu</h3>
+        <ul>
+          <li><strong>Giải mã lịch sử:</strong> Làm sáng tỏ quy luật vận động khách quan của lịch sử loài người thông qua phương thức sản xuất.</li>
+          <li><strong>Mô hình chỉnh thể:</strong> Phân tích mối quan hệ biện chứng giữa Lực lượng sản xuất – Quan hệ sản xuất và Cơ sở hạ tầng – Kiến trúc thượng tầng.</li>
+          <li><strong>Cơ sở lý luận của Đảng:</strong> Luận giải con đường quá độ lên CNXH "bỏ qua chế độ TBCN" và phát triển kinh tế thị trường định hướng XHCN tại Việt Nam.</li>
+        </ul>
+      </div>
+
+      <div class="flow-row">
+        <span class="flow-step highlight">1. Sản xuất vật chất</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">2. LLSX &amp; QHSX</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">3. CSHT &amp; KTTT</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">4. Hình thái KT-XH</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">5. 5 Hình thái</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">6. Vận dụng VN</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 2 — Mục lục & Khung cấu trúc bài thuyết trình
+       ============================================================ -->
+  <section class="slide" id="s2">
+    <div class="slide-inner">
+      <div class="eyebrow">Khung Nội Dung Toàn Bài</div>
+      <h2>Mục Lục &amp; Cấu Trúc Báo Cáo</h2>
+      <p class="subtitle">
+        Hệ thống 6 phần lý luận khoa học kết hợp chặt chẽ giữa nguyên lý triết học duy vật lịch sử và thực tiễn đường lối đổi mới của nước ta.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <div class="eyebrow" style="margin-bottom:6px; color:var(--clay);">PHẦN I – III · NGUYÊN LÝ NỀN TẢNG</div>
+          <ul>
+            <li><strong>Phần 1:</strong> Sản xuất vật chất – Điểm xuất phát của lịch sử loài người.</li>
+            <li><strong>Phần 2:</strong> Quy luật biện chứng giữa Lực lượng sản xuất (LLSX) và Quan hệ sản xuất (QHSX).</li>
+            <li><strong>Phần 3:</strong> Mối quan hệ biện chứng giữa Cơ sở hạ tầng (CSHT) và Kiến trúc thượng tầng (KTTT).</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <div class="eyebrow" style="margin-bottom:6px; color:var(--olive);">PHẦN IV – VI · HỌC THUYẾT &amp; THỰC TIỄN</div>
+          <ul>
+            <li><strong>Phần 4:</strong> Phạm trù Hình thái KT-XH &amp; Quá trình "Lịch sử - Tự nhiên".</li>
+            <li><strong>Phần 5:</strong> Tiến trình 5 hình thái kinh tế - xã hội qua các thời kỳ lịch sử.</li>
+            <li><strong>Phần 6:</strong> Ý nghĩa phương pháp luận &amp; Sự vận dụng của Đảng Cộng sản Việt Nam.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flow-note">
+        <strong>Phương pháp tiếp cận:</strong> Đi từ nguồn gốc nguyên sơ nhất (sản xuất vật chất) → bóc tách hai quy luật vận động cơ bản → khái quát thành học thuyết hình thái KT-XH → liên hệ thực tiễn đường lối đổi mới tại Việt Nam.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 3 — Bối cảnh ra đời & Sự bế tắc trước Mác
+       ============================================================ -->
+  <section class="slide" id="s3">
+    <div class="slide-inner">
+      <div class="eyebrow">Bối Cảnh Lịch Sử &amp; Tiền Đề Lý Luận</div>
+      <h2>Sự Bế Tắc Của Quan Điểm Triết Học Trước Mác</h2>
+      <p class="subtitle">
+        Cuộc cách mạng của C.Mác trong việc khám phá ra quy luật vận động nội tại khách quan của lịch sử loài người.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box" style="border-top:3px solid var(--coral);">
+          <h3 style="color:var(--coral);">⚠️ Hạn Chế Triết Học Trước Mác</h3>
+          <ul>
+            <li><strong>Chủ nghĩa duy tâm:</strong> Xem sự biến đổi xã hội do Thần linh, Thượng đế, hoặc "Ý niệm tuyệt đối" (Hegel) chi phối; lịch sử bị quyết định bởi ý chí chủ quan của vua chúa, giáo hoàng.</li>
+            <li><strong>Chủ nghĩa duy vật siêu hình:</strong> Xem xã hội tĩnh tại, bất biến; giải thích cơ học, bất lực trong việc tìm ra động lực nội tại thúc đẩy xã hội chuyển hóa.</li>
+          </ul>
+        </div>
+
+        <div class="card-box" style="border-top:3px solid var(--olive);">
+          <h3 style="color:var(--olive);">✨ Bước Ngoặt Cách Mạng Của C.Mác</h3>
+          <ul>
+            <li><strong>Chủ nghĩa duy vật lịch sử:</strong> Chấm dứt sự thần bí hóa lịch sử; chứng minh xã hội vận động theo các <strong>quy luật khách quan</strong> độc lập với ý muốn con người.</li>
+            <li><strong>Khởi điểm thực tế:</strong> Điểm xuất phát của lịch sử chính là hoạt động sản xuất vật chất hiện thực của con người sống.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 4 — Khái niệm & Bản chất Sản xuất vật chất
+       ============================================================ -->
+  <section class="slide" id="s4">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần I · Điểm Xuất Phát Của Lịch Sử</div>
+      <h2>Khái Niệm &amp; Bản Chất Sản Xuất Vật Chất</h2>
+      <p class="subtitle">
+        Hành vi lịch sử đầu tiên đưa con người dứt khoát tách rời khỏi thế giới loài vật.
+      </p>
+
+      <div class="card-box" style="margin-bottom:14px;">
+        <h3>Định Nghĩa Sản Xuất Vật Chất</h3>
+        <p style="font-size:14px; line-height:1.6; color:var(--text);">
+          Là quá trình con người sử dụng công cụ lao động tác động vào giới tự nhiên, cải biến các dạng vật chất của tự nhiên để tạo ra của cải thỏa mãn nhu cầu sinh tồn và phát triển của mình.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>Đặc Trưng Bản Chất</h3>
+          <ul>
+            <li><strong>Tính lịch sử - xã hội:</strong> Phương thức sản xuất biến đổi và truyền thừa qua các thế hệ.</li>
+            <li><strong>Tính có mục đích &amp; sáng tạo:</strong> Phân biệt tuyệt đối với hoạt động bản năng của loài vật (nhện giăng tơ, ong xây tổ).</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3>Tiền Đề Lịch Sử</h3>
+          <ul>
+            <li>Tiền đề đầu tiên của nhân loại là sự tồn tại của những con người sống.</li>
+            <li>Muốn sống con người phải có thức ăn, nước uống, nhà ở, quần áo $\rightarrow$ Phải lao động sản xuất để sinh tồn.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 5 — Vai trò quyết định của Sản xuất vật chất
+       ============================================================ -->
+  <section class="slide" id="s5">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần I · Động Lực Sinh Tồn</div>
+      <h2>Vai Trò Quyết Định Của Sản Xuất Vật Chất</h2>
+      <p class="subtitle">
+        Cơ sở hạ tầng vật chất chi phối toàn bộ cấu trúc và sự tiến hóa của đời sống tinh thần, thể chế xã hội.
+      </p>
+
+      <div class="grid-3">
+        <div class="card-box" style="border-left:3px solid var(--teal);">
+          <h3>1. Cơ Sở Sinh Tồn</h3>
+          <p style="font-size:13px; line-height:1.5;">Là điều kiện tiên quyết duy trì sự tồn tại của con người và xã hội loài người qua mọi thời đại lịch sử.</p>
+        </div>
+
+        <div class="card-box" style="border-left:3px solid var(--clay);">
+          <h3>2. Quyết Định Toàn Diện</h3>
+          <p style="font-size:13px; line-height:1.5;">Quy định sự hình thành và biến đổi của các quan hệ xã hội: gia đình, giai cấp, nhà nước, đạo đức, pháp luật, văn hóa.</p>
+        </div>
+
+        <div class="card-box" style="border-left:3px solid var(--olive);">
+          <h3>3. Động Lực Tiến Bộ</h3>
+          <p style="font-size:13px; line-height:1.5;">Sự biến đổi của sản xuất vật chất là nguyên nhân sâu xa thúc đẩy xã hội phát triển từ thấp đến cao.</p>
+        </div>
+      </div>
+
+      <div class="flow-note">
+        <strong>Ý nghĩa phương pháp luận:</strong> Muốn giải thích bất kỳ hiện tượng xã hội, chính trị, tư tưởng nào, phải bắt đầu từ hiện thực sản xuất vật chất chứ không thể bắt đầu từ ý thức, tư tưởng thuần túy.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 6 — Cấu trúc Lực lượng sản xuất (LLSX)
+       ============================================================ -->
+  <section class="slide" id="s6">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần II · Quy Luật Biện Chứng LLSX - QHSX</div>
+      <h2>Cấu Trúc Của Lực Lượng Sản Xuất (LLSX)</h2>
+      <p class="subtitle">
+        Biểu thị mối quan hệ giữa con người với tự nhiên trong quá trình sản xuất; phản ánh năng lực thực tiễn chinh phục tự nhiên của nhân loại.
+      </p>
+
+      <div class="card-box" style="margin-bottom:14px; text-align:center; font-family:var(--mono); font-size:14px; background:rgba(217,119,87,0.1); border-color:var(--clay);">
+        LLSX = Người lao động + Tư liệu sản xuất (TLSX)
+      </div>
+
+      <div class="grid-2">
+        <div class="card-box" style="border-top:3px solid var(--clay);">
+          <h3 style="color:var(--clay);">👤 Người Lao Động (Yếu Tố Quyết Định Nhất)</h3>
+          <ul>
+            <li>Bao gồm: thể lực, trí lực, kinh nghiệm, kỹ năng tay nghề và tri thức khoa học.</li>
+            <li>Là chủ thể sáng tạo, giữ vai trò quyết định hàng đầu trong LLSX.</li>
+            <li>Không có người lao động, mọi tư liệu sản xuất chỉ là những vật vô tri vô giác.</li>
+          </ul>
+        </div>
+
+        <div class="card-box" style="border-top:3px solid var(--teal);">
+          <h3 style="color:var(--teal);">⚙️ Tư Liệu Sản Xuất (TLSX)</h3>
+          <ul>
+            <li><strong>Đối tượng lao động:</strong> Có sẵn trong tự nhiên (khoáng sản, rừng, đất) hoặc nhân tạo (thép, vi mạch, sợi).</li>
+            <li><strong>Tư liệu lao động:</strong> Phương tiện vận chuyển, kho bãi + <strong>Công cụ lao động</strong> (yếu tố quyết định năng suất).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 7 — Công cụ lao động & Khoa học công nghệ
+       ============================================================ -->
+  <section class="slide" id="s7">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần II · Yếu Tố Cách Mạng Của LLSX</div>
+      <h2>Công Cụ Lao Động &amp; Vai Trò Khoa Học - Công Nghệ</h2>
+      <p class="subtitle">
+        Thước đo trình độ con người chinh phục tự nhiên và cuộc cách mạng biến khoa học thành lực lượng sản xuất trực tiếp.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>Công Cụ Lao Động</h3>
+          <ul>
+            <li>Là yếu tố <strong>động nhất, cách mạng nhất</strong> trong LLSX.</li>
+            <li>Thay đổi từ đá mài $\rightarrow$ đồ đồng, sắt $\rightarrow$ máy hơi nước $\rightarrow$ tự động hóa $\rightarrow$ Trí tuệ nhân tạo (AI).</li>
+          </ul>
+          <div class="quote-box">
+            "Những thời đại kinh tế khác nhau không phải ở chỗ chúng sản xuất ra cái gì, mà là ở chỗ chúng sản xuất bằng cách nào, với những tư liệu lao động nào." — C.Mác
+          </div>
+        </div>
+
+        <div class="card-box">
+          <h3>Khoa Học - Công Nghệ Ngày Nay</h3>
+          <ul>
+            <li>Trở thành <strong>"Lực lượng sản xuất trực tiếp"</strong> của thời đại mới.</li>
+            <li>Rút ngắn khoảng cách từ phát minh phòng thí nghiệm đến dây chuyền công nghiệp.</li>
+            <li>Thâm nhập vào mọi khâu: vật liệu mới, tự động hóa, số hóa, năng lượng sạch, quyết định năng lực cạnh tranh quốc gia.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 8 — Ba mặt cấu thành Quan hệ sản xuất (QHSX)
+       ============================================================ -->
+  <section class="slide" id="s8">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần II · Quan Hệ Kinh Tế Xã Hội</div>
+      <h2>Ba Mặt Cấu Thành Quan Hệ Sản Xuất (QHSX)</h2>
+      <p class="subtitle">
+        Quan hệ kinh tế giữa người với người trong quá trình sản xuất, phân phối, trao đổi và tiêu dùng của cải vật chất.
+      </p>
+
+      <div class="grid-3">
+        <div class="card-box" style="border-top:3px solid var(--clay);">
+          <h3 style="color:var(--clay);">1. Quan Hệ Sở Hữu</h3>
+          <p style="font-size:12.5px; margin-bottom:8px;"><strong>Sở hữu đối với TLSX</strong></p>
+          <ul style="font-size:12.5px;">
+            <li>Giữ vai trò <strong>xuất phát điểm và quyết định nhất</strong>.</li>
+            <li>Ai nắm TLSX sẽ có quyền chi phối tổ chức quản lý và phân phối sản phẩm.</li>
+            <li>Xác định bản chất chế độ: Tư hữu hay Công hữu.</li>
+          </ul>
+        </div>
+
+        <div class="card-box" style="border-top:3px solid var(--olive);">
+          <h3 style="color:var(--olive);">2. Quan Hệ Tổ Chức</h3>
+          <p style="font-size:12.5px; margin-bottom:8px;"><strong>Tổ chức &amp; Quản lý sản xuất</strong></p>
+          <ul style="font-size:12.5px;">
+            <li>Quy định quy trình phân công lao động, điều hành và phối hợp sản xuất.</li>
+            <li>Có thể thúc đẩy hoặc kìm hãm hiệu quả sử dụng tư liệu sản xuất.</li>
+          </ul>
+        </div>
+
+        <div class="card-box" style="border-top:3px solid var(--teal);">
+          <h3 style="color:var(--teal);">3. Quan Hệ Phân Phối</h3>
+          <p style="font-size:12.5px; margin-bottom:8px;"><strong>Phân phối sản phẩm lao động</strong></p>
+          <ul style="font-size:12.5px;">
+            <li>Quy định phương thức và tỉ lệ hưởng thụ của cải của các thành viên.</li>
+            <li>Tác động trực tiếp đến động lực làm việc và thái độ của người lao động.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 9 — Quy luật QHSX phù hợp trình độ LLSX
+       ============================================================ -->
+  <section class="slide" id="s9">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần II · Quy Luật Vận Động Cơ Bản</div>
+      <h2>Quy Luật QHSX Phù Hợp Trình Độ LLSX</h2>
+      <p class="subtitle">
+        Quy luật kinh tế phổ biến nhất chi phối sự vận động, phát triển và thay thế của các phương thức sản xuất trong lịch sử.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>LLSX Quyết Định QHSX</h3>
+          <ul>
+            <li>LLSX là <strong>nội dung vật chất năng động</strong> $\rightarrow$ luôn biến đổi và phát triển không ngừng.</li>
+            <li>QHSX là <strong>hình thức xã hội</strong> $\rightarrow$ có tính ổn định tương đối.</li>
+            <li>Khi LLSX phát triển vượt bậc, chiếc áo QHSX cũ trở thành "xiềng xích" kìm hãm $\rightarrow$ Đòi hỏi tất yếu phải thay thế bằng QHSX mới phù hợp hơn.</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3>QHSX Tác Động Trở Lại LLSX</h3>
+          <ul>
+            <li><strong>Tác động tích cực (khi phù hợp):</strong> Mở đường, kích thích tính tích cực của người lao động, thúc đẩy LLSX nhảy vọt.</li>
+            <li><strong>Tác động tiêu cực (khi không phù hợp):</strong> Kìm hãm, triệt tiêu động lực phát triển (cả khi lạc hậu hơn lẫn khi chủ quan vượt trước trình độ thực tế).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 10 — Cơ sở hạ tầng (CSHT) theo nghĩa Triết học
+       ============================================================ -->
+  <section class="slide" id="s10">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần III · Biện Chứng CSHT - KTTT</div>
+      <h2>Khái Niệm Cơ Sở Hạ Tầng (CSHT)</h2>
+      <p class="subtitle">
+        Toàn bộ những quan hệ sản xuất của một xã hội trong sự vận động hiện thực hợp thành cơ cấu kinh tế của xã hội đó.
+      </p>
+
+      <div class="card-box" style="margin-bottom:14px; background:rgba(224,122,95,0.08); border-color:var(--coral);">
+        <strong>⚠️ Lưu ý quan trọng:</strong> CSHT trong triết học <strong>KHÔNG PHẢI</strong> là hạ tầng kỹ thuật xây dựng (cầu cống, đường sá, bến bãi, điện lưới), mà là <strong>cơ cấu kinh tế hiện thực</strong> của xã hội.
+      </div>
+
+      <div class="grid-3">
+        <div class="card-box">
+          <h3>1. QHSX Thống Trị</h3>
+          <p style="font-size:13px; line-height:1.5;">Giữ vai trò chủ đạo, chi phối các quan hệ khác và định hình bản chất kinh tế của chế độ xã hội.</p>
+        </div>
+
+        <div class="card-box">
+          <h3>2. QHSX Tàn Dư</h3>
+          <p style="font-size:13px; line-height:1.5;">Tồn tại từ phương thức sản xuất cũ để lại, vẫn còn ảnh hưởng trong nền kinh tế hiện hành.</p>
+        </div>
+
+        <div class="card-box">
+          <h3>3. QHSX Mầm Mống</h3>
+          <p style="font-size:13px; line-height:1.5;">Đại diện cho những yếu tố kinh tế của xã hội tương lai đang nảy sinh trong lòng xã hội hiện tại.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 11 — Khái niệm & Kết cấu Kiến trúc thượng tầng (KTTT)
+       ============================================================ -->
+  <section class="slide" id="s11">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần III · Cấu Trúc Chính Trị - Tinh Thần</div>
+      <h2>Khái Niệm &amp; Kết Cấu Kiến Trúc Thượng Tầng (KTTT)</h2>
+      <p class="subtitle">
+        Toàn bộ những quan điểm, tư tưởng xã hội cùng các thiết chế tương ứng được hình thành trên một cơ sở hạ tầng nhất định.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>1. Hệ Thống Quan Điểm, Tư Tưởng</h3>
+          <ul>
+            <li>Tư tưởng chính trị, quan điểm pháp quyền.</li>
+            <li>Hệ tư tưởng triết học, đạo đức học.</li>
+            <li>Quan điểm tôn giáo, nghệ thuật, thẩm mỹ xã hội.</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3>2. Hệ Thống Thiết Chế Tương Ứng</h3>
+          <ul>
+            <li><strong>Nhà nước:</strong> Thiết chế quyền lực mạnh nhất.</li>
+            <li>Đảng phái chính trị, giáo hội tôn giáo.</li>
+            <li>Tòa án, viện kiểm sát, các tổ chức đoàn thể xã hội.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flow-note">
+        <strong>Thiết chế trung tâm:</strong> Trong xã hội có giai cấp, <strong>Nhà nước</strong> là thiết chế quyền lực tập trung nhất, nắm quân đội, cảnh sát, nhà tù và pháp luật để bảo vệ quyền lợi của giai cấp thống trị kinh tế.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 12 — Quan hệ biện chứng CSHT - KTTT
+       ============================================================ -->
+  <section class="slide" id="s12">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần III · Kinh Tế &amp; Chính Trị</div>
+      <h2>Quan Hệ Biện Chứng Giữa CSHT và KTTT</h2>
+      <p class="subtitle">
+        Kinh tế quyết định chính trị; chính trị tác động trở lại mạnh mẽ, bảo vệ và thúc đẩy kinh tế phát triển.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>CSHT Quyết Định KTTT</h3>
+          <ul>
+            <li>CSHT nào sinh ra KTTT ấy; giai cấp thống trị về kinh tế sẽ nắm quyền thống trị về chính trị và tư tưởng.</li>
+            <li>Khi CSHT biến đổi thì sớm muộn toàn bộ KTTT đồ sộ cũng phải biến đổi theo.</li>
+            <li>Không thể xây dựng một nền chính trị dân chủ thực sự trên cơ sở kinh tế chiếm hữu nô lệ.</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3>KTTT Tác Động Trở Lại CSHT</h3>
+          <ul>
+            <li>Chức năng xã hội của KTTT là bảo vệ, củng cố và phát triển cơ sở kinh tế sinh ra nó; ngăn chặn kinh tế đối lập.</li>
+            <li><strong>Tác động tích cực:</strong> Khi KTTT phù hợp quy luật kinh tế khách quan $\rightarrow$ mở đường cho kinh tế thăng hoa.</li>
+            <li><strong>Tác động tiêu cực:</strong> Khi bảo thủ, phản tiến bộ hoặc quan liêu $\rightarrow$ bóp nghẹt nền kinh tế.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 13 — Định nghĩa & Mô hình Hình thái KT-XH
+       ============================================================ -->
+  <section class="slide" id="s13">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần IV · Phạm Trù Trung Tâm</div>
+      <h2>Mô Hình Chỉnh Thể Hình Thái Kinh Tế - Xã Hội</h2>
+      <p class="subtitle">
+        Phạm trù của chủ nghĩa duy vật lịch sử chỉ xã hội ở từng giai đoạn lịch sử nhất định với cấu trúc 3 tầng hữu cơ.
+      </p>
+
+      <div class="quote-box" style="margin-bottom:16px;">
+        "Hình thái kinh tế - xã hội là một phạm trù của chủ nghĩa duy vật lịch sử dùng để chỉ xã hội ở từng giai đoạn lịch sử nhất định, với một kiểu quan hệ sản xuất đặc trưng cho xã hội đó, phù hợp với một trình độ nhất định của lực lượng sản xuất và với một kiến trúc thượng tầng tương ứng được xây dựng trên những quan hệ sản xuất ấy." — C.Mác
+      </div>
+
+      <div class="grid-3">
+        <div class="card-box" style="text-align:center; border-top:3px solid var(--coral);">
+          <h3>🏛️ Kiến Trúc Thượng Tầng</h3>
+          <p style="font-size:12.5px;">Phần diện mạo chính trị, pháp luật, đạo đức và hệ thống thiết chế Nhà nước.</p>
+        </div>
+        <div class="card-box" style="text-align:center; border-top:3px solid var(--clay);">
+          <h3>🧱 Quan Hệ Sản Xuất (CSHT)</h3>
+          <p style="font-size:12.5px;">Bộ khung xương kinh tế, quan hệ sở hữu TLSX, tổ chức và phân phối của cải.</p>
+        </div>
+        <div class="card-box" style="text-align:center; border-top:3px solid var(--olive);">
+          <h3>⚙️ Lực Lượng Sản Xuất</h3>
+          <p style="font-size:12.5px;">Nền móng vật chất - kỹ thuật, người lao động và công cụ lao động.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 14 — Tính "Lịch sử - Tự nhiên"
+       ============================================================ -->
+  <section class="slide" id="s14">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần IV · Tính Quy Luật Khách Quan</div>
+      <h2>"Quá Trình Lịch Sử - Tự Nhiên" Của Lịch Sử</h2>
+      <p class="subtitle">
+        Luận điểm bất hủ trong Lời tựa cuốn <em>Tư bản</em> (1867) khẳng định tính quy luật khách quan của sự phát triển xã hội loài người.
+      </p>
+
+      <div class="grid-3">
+        <div class="card-box">
+          <h3>Quy Luật Khách Quan</h3>
+          <p style="font-size:13px; line-height:1.5;">Sự vận động, thay thế nhau của các hình thái KT-XH tuân theo các quy luật khách quan (như quy luật tự nhiên), không phụ thuộc vào ý muốn chủ quan của bất kỳ ai.</p>
+        </div>
+
+        <div class="card-box">
+          <h3>Động Lực Nội Tại</h3>
+          <p style="font-size:13px; line-height:1.5;">Nguồn gốc sâu xa bắt đầu từ sự phát triển không ngừng của công cụ lao động và Lực lượng sản xuất trong lòng xã hội.</p>
+        </div>
+
+        <div class="card-box">
+          <h3>Cách Mạng Xã Hội</h3>
+          <p style="font-size:13px; line-height:1.5;">Mâu thuẫn kinh tế biến thành mâu thuẫn giai cấp gay gắt $\rightarrow$ bùng nổ Cách mạng xã hội $\rightarrow$ khai sinh hình thái KT-XH mới cao hơn.</p>
+        </div>
+      </div>
+
+      <div class="flow-note">
+        <strong>Ý nghĩa:</strong> Bác bỏ hoàn toàn các quan điểm định mệnh tôn giáo hoặc ý chí chủ quan duy tâm của các triết gia trước Mác.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 15 — Tính đặc thù & Quy luật "Bỏ qua"
+       ============================================================ -->
+  <section class="slide" id="s15">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần IV · Tính Phổ Biến &amp; Đặc Thù</div>
+      <h2>Quy Luật Phát Triển Rút Ngắn ("Bỏ Qua")</h2>
+      <p class="subtitle">
+        Sự thống nhất biện chứng giữa con đường phổ biến của nhân loại và con đường đặc thù của từng dân tộc cụ thể.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>Con Đường Chung (Tính Phổ Biến)</h3>
+          <ul>
+            <li>Toàn bộ nhân loại phát triển tuần tự qua 5 hình thái kinh tế - xã hội từ thấp đến cao.</li>
+            <li>Phản ánh tính quy luật chung, xuyên suốt lịch sử loài người.</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3>Con Đường Đặc Thù (Tính Cá Biệt)</h3>
+          <ul>
+            <li>Do điều kiện địa lý, lịch sử, văn hóa và bối cảnh quốc tế, một số dân tộc có thể <strong>"bỏ qua một hoặc vài hình thái KT-XH"</strong> để tiến thẳng lên hình thái cao hơn.</li>
+            <li><strong>Minh chứng lịch sử:</strong> Mỹ không qua phong kiến đi thẳng lên TBCN; Úc từ nguyên thủy lên TBCN; Việt Nam quá độ bỏ qua TBCN đi lên CNXH.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 16 — Hình thái 1: Cộng sản nguyên thủy
+       ============================================================ -->
+  <section class="slide" id="s16">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần V · 5 Hình Thái Lịch Sử</div>
+      <h2>Hình Thái 1: Cộng Sản Nguyên Thủy</h2>
+      <p class="subtitle">
+        Thời kỳ bình minh kéo dài hàng triệu năm đầu tiên của nhân loại trên cơ sở chế độ sở hữu công cộng sơ khai.
+      </p>
+
+      <div class="grid-3">
+        <div class="card-box">
+          <h3>⚙️ LLSX Thô Sơ</h3>
+          <p style="font-size:13px; line-height:1.5;">Công cụ bằng đá thô sơ; săn bắt, hái lượm; dựa hoàn toàn vào tự nhiên; năng suất lao động cực kỳ thấp kém.</p>
+        </div>
+
+        <div class="card-box">
+          <h3>🤝 QHSX Công Hữu</h3>
+          <p style="font-size:13px; line-height:1.5;">Sở hữu chung về tư liệu sản xuất; cùng làm, cùng hưởng bình quân; chưa có sản phẩm dư thừa để tích lũy cá nhân.</p>
+        </div>
+
+        <div class="card-box">
+          <h3>🏕️ KTTT Thị Tộc</h3>
+          <p style="font-size:13px; line-height:1.5;">Chưa có Nhà nước, chưa có pháp luật và giai cấp; quản lý xã hội theo thị tộc, bộ lạc dựa trên tập quán, đạo đức sơ khai.</p>
+        </div>
+      </div>
+
+      <div class="flow-note">
+        <strong>Nguyên nhân tan rã:</strong> Công cụ kim loại xuất hiện $\rightarrow$ năng suất tăng $\rightarrow$ của cải dư thừa nảy sinh $\rightarrow$ tư hữu và phân hóa giàu nghèo xuất hiện $\rightarrow$ xã hội nguyên thủy tất yếu tan rã.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 17 — Hình thái 2: Chiếm hữu nô lệ
+       ============================================================ -->
+  <section class="slide" id="s17">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần V · 5 Hình Thái Lịch Sử</div>
+      <h2>Hình Thái 2: Chiếm Hữu Nô Lệ</h2>
+      <p class="subtitle">
+        Xã hội có giai cấp đối kháng đầu tiên trong lịch sử nhân loại và sự xuất hiện của Nhà nước đầu tiên.
+      </p>
+
+      <div class="grid-3">
+        <div class="card-box">
+          <h3>⚙️ LLSX Cơ Khí Bước Đầu</h3>
+          <p style="font-size:13px; line-height:1.5;">Công cụ đồng và sắt; chăn nuôi tách khỏi trồng trọt; thủ công nghiệp và thương nghiệp sơ khai ra đời.</p>
+        </div>
+
+        <div class="card-box">
+          <h3>⛓️ QHSX Chiếm Đoạt Con Người</h3>
+          <p style="font-size:13px; line-height:1.5;">Chủ nô sở hữu tư nhân tuyệt đối toàn bộ TLSX và bản thân người Nô lệ. Nô lệ bị coi là "công cụ biết nói" (instrumentum vocale).</p>
+        </div>
+
+        <div class="card-box">
+          <h3>🏛️ KTTT Nhà Nước Chủ Nô</h3>
+          <p style="font-size:13px; line-height:1.5;">Nhà nước đầu tiên trong lịch sử ra đời để trấn áp các cuộc nổi dậy và bảo vệ quyền sở hữu của chủ nô.</p>
+        </div>
+      </div>
+
+      <div class="flow-note">
+        <strong>Tiến bộ lịch sử:</strong> Chấm dứt tục giết tù binh, thúc đẩy phân công lao động trí óc tách khỏi lao động chân tay, làm nảy nở nền văn minh rực rỡ cổ đại Hy Lạp, La Mã.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 18 — Hình thái 3: Phong kiến
+       ============================================================ -->
+  <section class="slide" id="s18">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần V · 5 Hình Thái Lịch Sử</div>
+      <h2>Hình Thái 3: Xã Hội Phong Kiến</h2>
+      <p class="subtitle">
+        Chế độ bóc lột địa tô dựa trên quyền sở hữu ruộng đất của giai cấp địa chủ, lãnh chúa đối với nông dân.
+      </p>
+
+      <div class="grid-3">
+        <div class="card-box">
+          <h3>🌾 LLSX Nông Nghiệp Hoàn Thiện</h3>
+          <p style="font-size:13px; line-height:1.5;">Nông nghiệp dùng sức kéo trâu bò, công cụ sắt hoàn thiện; làng nghề thủ công và buôn bán trao đổi phát triển mạnh.</p>
+        </div>
+
+        <div class="card-box">
+          <h3>📜 QHSX Địa Tô Phong Kiến</h3>
+          <p style="font-size:13px; line-height:1.5;">Địa chủ sở hữu ruộng đất. Nông dân cày cấy thuê và nộp <strong>địa tô</strong> (tô lao dịch $\rightarrow$ hiện vật $\rightarrow$ tiền). Nông dân có gia đình riêng.</p>
+        </div>
+
+        <div class="card-box">
+          <h3>👑 KTTT Quân Chủ Tập Quyền</h3>
+          <p style="font-size:13px; line-height:1.5;">Nhà nước quân chủ chuyên chế tập quyền (Vua đứng đầu); hệ tư tưởng Nho giáo (phương Đông) hoặc Thần quyền Kitô giáo (phương Tây) thống trị.</p>
+        </div>
+      </div>
+
+      <div class="flow-note">
+        <strong>Tiến bộ:</strong> Nông dân không còn là tài sản bị giết hại tùy tiện như nô lệ, có động lực sản xuất cao hơn, tạo nền tảng cho sự phát triển của các đô thị trung đại.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 19 — Hình thái 4: Tư bản chủ nghĩa (CNTB)
+       ============================================================ -->
+  <section class="slide" id="s19">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần V · 5 Hình Thái Lịch Sử</div>
+      <h2>Hình Thái 4: Tư Bản Chủ Nghĩa (CNTB)</h2>
+      <p class="subtitle">
+        Nền đại công nghiệp cơ khí hóa tạo ra lực lượng sản xuất khổng lồ nhưng mang trong mình mâu thuẫn xã hội hóa sâu sắc.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>LLSX Khổng Lồ &amp; Xã Hội Hóa Cao</h3>
+          <ul>
+            <li>Nền đại công nghiệp cơ khí hóa, tự động hóa, khoa học công nghệ bùng nổ.</li>
+            <li>Tạo ra sức sản xuất đồ sộ hơn tất cả các thế hệ trước cộng lại.</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3>QHSX Chiếm Đoạt Giá Trị Thặng Dư ($m$)</h3>
+          <ul>
+            <li>Sở hữu tư nhân tư bản chủ nghĩa về tư liệu sản xuất.</li>
+            <li>Bóc lột <strong>giá trị thặng dư</strong> ($m$) đối với giai cấp công nhân (lao động làm thuê).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flow-note">
+        <strong>Mâu thuẫn kinh tế cơ bản:</strong> Tính chất xã hội hóa ngày càng cao của LLSX đối lập gay gắt với chế độ chiếm hữu tư nhân TBCN về TLSX $\rightarrow$ Biểu hiện thành đấu tranh giai cấp giữa Giai cấp vô sản và Giai cấp tư sản.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 20 — Hình thái 5: Cộng sản chủ nghĩa (CNCS)
+       ============================================================ -->
+  <section class="slide" id="s20">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần V · 5 Hình Thái Lịch Sử</div>
+      <h2>Hình Thái 5: Cộng Sản Chủ Nghĩa (CNCS)</h2>
+      <p class="subtitle">
+        Hình thái phát triển cao nhất trong lịch sử nhân loại, giải phóng con người khỏi mọi áp bức, bóc lột bất công.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box" style="border-top:3px solid var(--olive);">
+          <h3 style="color:var(--olive);">1. Giai Đoạn Thấp: Chủ Nghĩa Xã Hội (CNXH)</h3>
+          <ul>
+            <li>Xác lập chế độ công hữu về các TLSX chủ yếu.</li>
+            <li>Xóa bỏ bóc lột; Nhà nước chuyên chính vô sản / Nhà nước của nhân dân lao động.</li>
+            <li>Nguyên tắc phân phối: <strong>"Làm theo năng lực, hưởng theo lao động"</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="card-box" style="border-top:3px solid var(--clay);">
+          <h3 style="color:var(--clay);">2. Giai Đoạn Cao: Chủ Nghĩa Cộng Sản (CNCS)</h3>
+          <ul>
+            <li>LLSX phát triển vượt bậc; của cải xã hội tuôn ra dồi dào.</li>
+            <li>Xóa bỏ hoàn toàn đối kháng giai cấp; Nhà nước tự tiêu vong.</li>
+            <li>Nguyên tắc phân phối: <strong>"Làm theo năng lực, hưởng theo nhu cầu"</strong>; con người phát triển tự do, toàn diện.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 21 — Ý nghĩa phương pháp luận khoa học
+       ============================================================ -->
+  <section class="slide" id="s21">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần VI · Vận Dụng Thực Tiễn</div>
+      <h2>Ý Nghĩa Phương Pháp Luận Khoa Học</h2>
+      <p class="subtitle">
+        Chiếc chìa khóa lý luận soi sáng việc nhận thức quy luật lịch sử và hoạch định đường lối cách mạng đúng đắn.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>Giá Trị Nhận Thức Khoa Học</h3>
+          <ul>
+            <li>Cung cấp phương pháp luận duy vật khoa học: muốn nhận thức xã hội phải bắt đầu từ hiện thực sản xuất vật chất.</li>
+            <li>Tiêu chuẩn khách quan để phân kỳ các thời đại lịch sử chính là kiểu Quan hệ sản xuất đặc trưng.</li>
+            <li>Khẳng định quần chúng nhân dân là người sáng tạo chân chính ra lịch sử.</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3>Giá Trị Thực Tiễn &amp; Cách Mạng</h3>
+          <ul>
+            <li>Đặt nền tảng lý luận vững chắc cho việc hoạch định cương lĩnh, đường lối của Đảng Cộng sản.</li>
+            <li>Tránh được hai căn bệnh nguy hiểm: <strong>chủ quan duy ý chí</strong> (nóng vội xóa bỏ tư nhân) và <strong>bảo thủ trì trệ</strong> (ngại đổi mới).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 22 — Sự vận dụng: Quá độ "Bỏ qua chế độ TBCN"
+       ============================================================ -->
+  <section class="slide" id="s22">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần VI · Thực Tiễn Cách Mạng Việt Nam</div>
+      <h2>Con Đường Quá Độ "Bỏ Qua Chế Độ TBCN"</h2>
+      <p class="subtitle">
+        Sự vận dụng sáng tạo tính lịch sử - tự nhiên và quy luật phát triển rút ngắn của Đảng Cộng sản Việt Nam.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box" style="border-left:3px solid var(--coral);">
+          <h3 style="color:var(--coral);">🚫 BẢN CHẤT "BỎ QUA"</h3>
+          <ul>
+            <li>Bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng tư bản chủ nghĩa.</li>
+            <li>Bỏ qua chế độ áp bức, bóc lột và bất công xã hội tư bản.</li>
+          </ul>
+        </div>
+
+        <div class="card-box" style="border-left:3px solid var(--olive);">
+          <h3 style="color:var(--olive);">✨ BẢN CHẤT "KẾ THỪA"</h3>
+          <ul>
+            <li>Kế thừa những thành tựu tinh hoa mà nhân loại đạt được dưới CNTB.</li>
+            <li>Đặc biệt là khoa học, công nghệ, kinh tế thị trường và kỹ năng quản lý hiện đại.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flow-note">
+        <strong>Mục tiêu chiến lược:</strong> Giải phóng tối đa sức sản xuất, xây dựng đất nước <em>"Dân giàu, nước mạnh, dân chủ, công bằng, văn minh"</em>.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 23 — Kinh tế thị trường định hướng XHCN & CNH - HĐH
+       ============================================================ -->
+  <section class="slide" id="s23">
+    <div class="slide-inner">
+      <div class="eyebrow">Phần VI · Đường Lối Đổi Mới</div>
+      <h2>Kinh Tế Thị Trường Định Hướng XHCN &amp; CNH - HĐH</h2>
+      <p class="subtitle">
+        Mô hình kinh tế tổng quát trong thời kỳ quá độ nhằm giải phóng triệt để và phát triển mạnh mẽ lực lượng sản xuất.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>Kinh Tế Thị Trường Định Hướng XHCN</h3>
+          <ul>
+            <li>Do trình độ LLSX ở nước ta còn nhiều tầng nấc $\rightarrow$ Đòi hỏi phải đa dạng hóa hình thức sở hữu (toàn dân, tập thể, tư nhân) và nhiều thành phần kinh tế.</li>
+            <li>Các thành phần kinh tế bình đẳng, cùng phát triển; <strong>kinh tế nhà nước giữ vai trò chủ đạo</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3>Đẩy Mạnh CNH - HĐH &amp; Kinh Tế Tri Thức</h3>
+          <ul>
+            <li>Nhiệm vụ trung tâm xuyên suốt thời kỳ quá độ để xây dựng cơ sở vật chất - kỹ thuật cho CNXH.</li>
+            <li>Chủ động nắm bắt Cách mạng công nghiệp 4.0, chuyển đổi số quốc gia, phát triển nguồn nhân lực chất lượng cao.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Slide 24 — Tổng kết & Lời cảm ơn (Q&A)
+       ============================================================ -->
+  <section class="slide" id="s24">
+    <div class="slide-inner" style="text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Tổng Kết Báo Cáo · Q&amp;A</div>
+      <h2>Chân Lý Khoa Học Soi Rọi Con Đường Đổi Mới</h2>
+      <p class="subtitle" style="margin-left:auto; margin-right:auto;">
+        Học thuyết Hình thái kinh tế - xã hội luôn là nền tảng lý luận vững chắc, kim chỉ nam soi đường cho sự nghiệp xây dựng Chủ nghĩa xã hội ở Việt Nam.
+      </p>
+
+      <div class="grid-2" style="text-align:left; margin-bottom:24px;">
+        <div class="card-box">
+          <h3>Giá Trị Thời Đại Bền Vững</h3>
+          <ul>
+            <li>Trải qua hơn một thế kỷ nhiều biến động, học thuyết vẫn giữ nguyên giá trị khoa học và tính cách mạng sâu sắc.</li>
+            <li>Cung cấp thế giới quan duy vật lịch sử giúp nhận thức đúng đắn thời đại ngày nay.</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3 style="color:var(--clay);">Niềm Tin Tất Thắng</h3>
+          <ul>
+            <li>Khẳng định tính tất yếu khách quan của con đường đi lên CNXH mà Đảng, Bác Hồ và nhân dân ta đã chọn.</li>
+            <li>Cơ sở vững chắc để kiên định mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card-box" style="padding:22px; border-color:var(--clay); background:rgba(217,119,87,0.08);">
+        <h3 style="font-family:var(--serif); font-size:22px; color:var(--clay); margin-bottom:8px;">
+          XIN CHÂN THÀNH CẢM ƠN THẦY CÔ VÀ CÁC BẠN ĐÃ LẮNG NGHE!
+        </h3>
+        <p style="font-size:14px; color:var(--text-muted);">
+          Kính mời quý thầy cô và các bạn sinh viên cùng trao đổi, đặt câu hỏi phản biện (Q&amp;A).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       JavaScript: Scroll-Snap, IntersectionObserver, Controls
+       ============================================================ -->
+  <script>
+  (function () {
+    var slides = Array.from(document.querySelectorAll('.slide'));
+    var counter = document.getElementById('counter');
+    var navDots = document.getElementById('nav-dots');
+    var darkToggle = document.getElementById('dark-toggle');
+    var current = 0;
+
+    /* Build dynamic navigation dots */
+    slides.forEach(function (_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Chuyển đến slide ' + (i + 1));
+      dot.addEventListener('click', function () { go(i); });
+      navDots.appendChild(dot);
+    });
+
+    var dots = Array.from(navDots.children);
+
+    function go(i) {
+      current = Math.max(0, Math.min(slides.length - 1, i));
+      slides[current].scrollIntoView({ behavior: 'smooth' });
+    }
+
+    /* Keyboard navigation */
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+        e.preventDefault();
+        go(current + 1);
+      }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        go(current - 1);
+      }
+      if (e.key === 'Home') {
+        e.preventDefault();
+        go(0);
+      }
+      if (e.key === 'End') {
+        e.preventDefault();
+        go(slides.length - 1);
+      }
+    });
+
+    /* IntersectionObserver for fade-in animations & counter */
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var idx = slides.indexOf(en.target);
+        if (en.isIntersecting) {
+          current = idx;
+          counter.textContent = (current + 1) + ' / ' + slides.length;
+          dots.forEach(function (d, i) {
+            d.classList.toggle('active', i === current);
+          });
+          en.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    slides.forEach(function (s) { obs.observe(s); });
+    slides[0].classList.add('visible');
+
+    /* Dark mode toggle */
+    darkToggle.addEventListener('click', function () {
+      document.body.classList.toggle('dark');
+      var isDark = document.body.classList.contains('dark');
+      darkToggle.querySelector('span').textContent = isDark ? 'Light' : 'Dark';
+    });
+
+    /* Touch swipe handling */
+    var touchStartY = 0;
+    document.addEventListener('touchstart', function (e) {
+      touchStartY = e.touches[0].clientY;
+    });
+    document.addEventListener('touchend', function (e) {
+      var dy = e.changedTouches[0].clientY - touchStartY;
+      if (Math.abs(dy) > 50) {
+        if (dy < 0) go(current + 1);
+        else go(current - 1);
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
