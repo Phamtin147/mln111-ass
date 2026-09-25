@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh Sách 10 Câu Hỏi Minigame Túi Mù - Triết Học MLN111</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #FAF9F5; }
+    .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between text-stone-800">
+
+  <!-- TOP NAVIGATION -->
+  <nav class="sticky top-0 z-30 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-stone-200 px-4 py-3 sm:px-8">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="w-9 h-9 rounded-xl bg-[#D97757] text-white flex items-center justify-center font-bold text-lg shadow-sm hover:opacity-90 transition">
+          <i class="fa-solid fa-gift"></i>
+        </a>
+        <div>
+          <h1 class="font-bold text-base sm:text-lg leading-tight text-stone-900">10 Câu Hỏi Minigame Túi Mù</h1>
+          <p class="text-xs text-stone-500 hidden sm:block">Đáp Án &amp; Lời Giải Thích Chi Tiết Dành Cho Diễn Giả</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="index.html" class="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-[#D97757] hover:bg-[#b85d3f] text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+          <i class="fa-solid fa-play"></i>
+          <span>Vào Chơi Túi Mù</span>
+        </a>
+        <a href="slides.html" class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl border border-stone-300 hover:border-[#D97757] hover:text-[#D97757] text-xs font-semibold text-stone-700 transition flex items-center gap-1.5 bg-white shadow-sm">
+          <i class="fa-solid fa-file-powerpoint text-[#D97757]"></i>
+          <span>14 Slide</span>
+        </a>
+        <a href="script.html" class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl border border-stone-300 hover:border-[#D97757] hover:text-[#D97757] text-xs font-semibold text-stone-700 transition flex items-center gap-1.5 bg-white shadow-sm">
+          <i class="fa-solid fa-scroll text-blue-600"></i>
+          <span>Kịch Bản</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="max-w-4xl mx-auto px-4 py-8 sm:py-10 w-full flex-1">
+    <div class="text-center max-w-xl mx-auto mb-10">
+      <span class="inline-block bg-orange-100 text-[#D97757] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+        Bộ câu hỏi tương tác &amp; mini game
+      </span>
+      <h2 class="font-serif text-3xl font-extrabold text-stone-900">10 Câu Hỏi Thử Thách Túi Mù</h2>
+      <p class="text-sm text-stone-600 mt-2">Dưới đây là danh sách đầy đủ 10 câu hỏi, phương án lựa chọn, đáp án chính xác và lời giải thích khoa học chuẩn giáo trình MLN111.</p>
+    </div>
+
+    <!-- QUESTIONS LIST -->
+    <div class="space-y-6" id="questions-list">
+      <!-- Generated via JS -->
+    </div>
+  </main>
+
+  <footer class="border-t border-stone-200 bg-white py-6 px-4 text-center text-xs text-stone-500">
+    <p>© 2026 Nhóm Thuyết Trình Triết Học Mác - Lênin (MLN111) • Học thuyết Hình thái Kinh tế - Xã hội</p>
+  </footer>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        bagName: "Túi Bí Mật 1",
+        badge: "Khái Niệm Cốt Lõi",
+        question: "Theo quan điểm của C.Mác, cấu trúc chỉnh thể của một Hình thái kinh tế - xã hội bao gồm những yếu tố cơ bản nào hợp thành?",
+        options: [
+          "Giai cấp vô sản, Giai cấp tư sản và Nhà nước pháp quyền",
+          "Lực lượng sản xuất, Quan hệ sản xuất và Kiến trúc thượng tầng",
+          "Kinh tế thị trường, Doanh nghiệp tư nhân và Quản lý vĩ mô",
+          "Con người, Môi trường sinh thái và Khoa học kỹ thuật"
+        ],
+        answer: 1,
+        explain: "C.Mác chỉ rõ hình thái KT-XH là một chỉnh thể gồm 3 tầng: Lực lượng sản xuất (nền tảng vật chất kỹ thuật), Quan hệ sản xuất / Cơ sở hạ tầng (khung xương kinh tế), và Kiến trúc thượng tầng (thiết chế chính trị - tư tưởng tương ứng)."
+      },
+      {
+        id: 2,
+        bagName: "Túi Bí Mật 2",
+        badge: "Động Lực Phát Triển",
+        question: "Yếu tố nào trong lực lượng sản xuất là động nhất, cách mạng nhất và thường xuyên biến đổi nhất trong lịch sử nhân loại?",
+        options: [
+          "Người lao động với kinh nghiệm truyền đời",
+          "Tư liệu sinh hoạt và văn hóa tiêu dùng",
+          "Công cụ lao động (công cụ sản xuất)",
+          "Đối tượng lao động có sẵn trong tự nhiên"
+        ],
+        answer: 2,
+        explain: "Công cụ lao động luôn luôn được con người cải tiến để bớt cực nhọc và nâng cao năng suất (từ rìu đá sang kim loại, máy hơi nước, tự động hóa, AI). Do đó công cụ lao động là yếu tố động nhất, cách mạng nhất của LLSX."
+      },
+      {
+        id: 3,
+        bagName: "Túi Bí Mật 3",
+        badge: "CS Nguyên Thủy",
+        question: "Nguyên nhân cốt lõi nào đã dẫn tới sự tan rã tất yếu của hình thái kinh tế - xã hội Cộng sản nguyên thủy?",
+        options: [
+          "Công cụ kim loại xuất hiện làm năng suất tăng → có sản phẩm dư thừa → chế độ tư hữu xuất hiện",
+          "Sự xâm lược và thôn tính từ các bộ lạc hùng mạnh khác",
+          "Thiên tai, lũ lụt và kỷ băng hà quét sạch nguồn thức ăn",
+          "Thị tộc tự nguyện giải thể để bầu ra hoàng đế tối cao"
+        ],
+        answer: 0,
+        explain: "Khi công cụ kim loại ra đời, năng suất lao động tăng, xuất hiện của cải dư thừa thường xuyên. Các thủ lĩnh thị tộc chiếm đoạt làm của riêng, chế độ tư hữu ra đời làm phá vỡ chế độ công hữu nguyên thủy."
+      },
+      {
+        id: 4,
+        bagName: "Túi Bí Mật 4",
+        badge: "Chiếm Hữu Nô Lệ",
+        question: "Trong xã hội Chiếm hữu nô lệ, địa vị pháp lý và kinh tế của người nô lệ bị coi là gì?",
+        options: [
+          "Người làm thuê được tự do chuyển đổi nơi cư trú",
+          "Tài sản thuộc sở hữu tuyệt đối của chủ nô, là 'công cụ biết nói'",
+          "Nông dân có quyền tự do canh tác và chỉ nộp địa tô",
+          "Bạn đồng hành được chia hoa lợi bình đẳng với chủ nhân"
+        ],
+        answer: 1,
+        explain: "Chủ nô nắm quyền sở hữu tuyệt đối cả TLSX lẫn người nô lệ. Nô lệ bị coi là tài sản, hàng hóa, một thứ 'công cụ biết nói' (Instrumentum vocale) và bị cưỡng bức lao động tàn khốc."
+      },
+      {
+        id: 5,
+        bagName: "Túi Bí Mật 5",
+        badge: "Xã Hội Phong Kiến",
+        question: "Hình thức bóc lột đặc trưng cơ bản nhất của giai cấp địa chủ phong kiến đối với nông dân là gì?",
+        options: [
+          "Bóc lột giá trị thặng dư thông qua trả tiền lương rẻ mạt",
+          "Cưỡng bức nô dịch bằng xiềng xích và roi vọt tại hầm mỏ",
+          "Bóc lột địa tô (tô lao dịch, tô hiện vật hoặc tô tiền)",
+          "Bán quyền công dân và đánh thuế cổ phiếu"
+        ],
+        answer: 2,
+        explain: "Địa chủ nắm độc quyền tư hữu ruộng đất. Nông dân không có đất, phải nhận ruộng của địa chủ để canh tác và nộp tô phong kiến (tô lao dịch → tô hiện vật → tô tiền)."
+      },
+      {
+        id: 6,
+        bagName: "Túi Bí Mật 6",
+        badge: "Tư Bản Chủ Nghĩa",
+        question: "Bản chất kinh tế của sự bóc lột trong hình thái kinh tế - xã hội Tư bản chủ nghĩa là gì?",
+        options: [
+          "Chiếm đoạt giá trị thặng dư (m) do công nhân tạo ra ngoài thời gian lao động tất yếu",
+          "Cướp bóc trắng trợn công cụ sản xuất của người lao động tự do",
+          "Thu tô ruộng đất và bắt lao dịch phục vụ hoàng gia",
+          "Đánh thuế tiêu dùng lên mọi hàng hóa sinh hoạt thiết yếu"
+        ],
+        answer: 0,
+        explain: "Nhà tư bản mua sức lao động của công nhân. Trong quá trình sản xuất, công nhân tạo ra một lượng giá trị mới lớn hơn giá trị sức lao động; phần dôi ra đó chính là giá trị thặng dư (m) bị nhà tư bản chiếm đoạt."
+      },
+      {
+        id: 7,
+        bagName: "Túi Bí Mật 7",
+        badge: "Quy Luật Lịch Sử",
+        question: "Luận điểm 'Sự phát triển của các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên' của C.Mác mang ý nghĩa cốt lõi gì?",
+        options: [
+          "Lịch sử phát triển hoàn toàn ngẫu nhiên, không ai có thể giải thích được",
+          "Xã hội vận động và thay thế nhau tuân theo các quy luật khách quan, không phụ thuộc ý muốn chủ quan",
+          "Xã hội loài người phát triển y hệt như sự tiến hóa của muôn loài động vật hoang dã",
+          "Mọi quốc gia trên thế giới bắt buộc phải trải qua y hệt cùng một mốc thời gian lịch sử"
+        ],
+        answer: 1,
+        explain: "Luận điểm khẳng định: Sự vận động và thay thế của các hình thái KT-XH tuân theo các quy luật khách quan (LLSX quyết định QHSX, CSHT quyết định KTTT), không phụ thuộc vào ý chí chủ quan của bất kỳ ai."
+      },
+      {
+        id: 8,
+        bagName: "Túi Bí Mật 8",
+        badge: "Cộng Sản Chủ Nghĩa",
+        question: "Ở giai đoạn cao của hình thái Cộng sản chủ nghĩa (Chủ nghĩa cộng sản hoàn chỉnh), nguyên tắc phân phối của cải xã hội là gì?",
+        options: [
+          "Làm theo năng lực, hưởng theo lao động",
+          "Phân phối cào bằng bình quân cho tất cả mọi người",
+          "Làm theo năng lực, hưởng theo nhu cầu",
+          "Phân phối dựa theo nguồn gốc xuất thân và dòng họ"
+        ],
+        answer: 2,
+        explain: "Ở giai đoạn cao của CNCS, LLSX phát triển tột bậc, của cải dồi dào, con người phát triển toàn diện nên xã hội thực hiện nguyên tắc phân phối tối thượng: 'Làm theo năng lực, hưởng theo nhu cầu'."
+      },
+      {
+        id: 9,
+        bagName: "Túi Bí Mật 9",
+        badge: "Thực Tiễn Việt Nam",
+        question: "Theo quan điểm của Đảng ta tại Đại hội IX, quá độ lên CNXH 'bỏ qua chế độ tư bản chủ nghĩa' ở Việt Nam được hiểu chính xác là gì?",
+        options: [
+          "Bỏ qua mọi thành tựu văn minh, công nghệ và kinh nghiệm quản lý của CNTB",
+          "Bỏ qua việc xác lập vị trí thống trị của QHSX và KTTT tư bản chủ nghĩa, nhưng kế thừa tinh hoa kinh tế - kỹ thuật của nhân loại",
+          "Bỏ qua công nghiệp hóa để tiến thẳng lên kỷ nguyên làm việc trên mạng xã hội",
+          "Bỏ qua giai đoạn tích lũy kinh tế để phân phát tài sản cào bằng cho toàn dân"
+        ],
+        answer: 1,
+        explain: "Bỏ qua chế độ TBCN là bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng TBCN; nhưng tiếp thu, kế thừa tinh hoa thành tựu mà nhân loại đã đạt được dưới CNTB, đặc biệt là khoa học, công nghệ và quản trị."
+      },
+      {
+        id: 10,
+        bagName: "Túi Bí Mật 10",
+        badge: "Tiến Trình 5 Nấc Thang",
+        question: "Trình tự tiến hóa tuần tự của 5 hình thái kinh tế - xã hội trong lịch sử nhân loại theo học thuyết Mác là gì?",
+        options: [
+          "CSNT → Tư bản chủ nghĩa → Chiếm hữu nô lệ → Phong kiến → CSCN",
+          "CSNT → Phong kiến → Chiếm hữu nô lệ → Tư bản chủ nghĩa → CSCN",
+          "CSNT → Chiếm hữu nô lệ → Xã hội phong kiến → Tư bản chủ nghĩa → Cộng sản chủ nghĩa",
+          "Chiếm hữu nô lệ → CSNT → Phong kiến → Tư bản chủ nghĩa → CSCN"
+        ],
+        answer: 2,
+        explain: "Tiến trình 5 hình thái kinh tế - xã hội kế tiếp nhau trong lịch sử nhân loại: 1. Cộng sản nguyên thủy → 2. Chiếm hữu nô lệ → 3. Xã hội phong kiến → 4. Tư bản chủ nghĩa → 5. Cộng sản chủ nghĩa."
+      }
+    ];
+
+    const listContainer = document.getElementById('questions-list');
+    const letters = ['A', 'B', 'C', 'D'];
+
+    questionsData.forEach(q => {
+      const card = document.createElement('div');
+      card.className = "bg-white rounded-3xl border border-stone-200 p-6 shadow-sm";
+      card.innerHTML = `
+        <div class="flex items-center justify-between pb-3 border-b border-stone-100 mb-4">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-xl bg-orange-100 text-[#D97757] font-mono font-bold flex items-center justify-center text-xs">#${q.id}</span>
+            <span class="font-bold text-stone-800 text-sm">${q.bagName}</span>
+          </div>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-stone-100 text-stone-600">${q.badge}</span>
+        </div>
+
+        <h3 class="text-base font-bold text-stone-900 mb-4 leading-snug">${q.question}</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-4">
+          ${q.options.map((opt, i) => `
+            <div class="p-3 rounded-xl border text-xs sm:text-sm flex items-start gap-2.5 ${i === q.answer ? 'bg-emerald-50 border-emerald-300 text-emerald-900 font-semibold' : 'bg-stone-50 border-stone-200 text-stone-700'}">
+              <span class="w-5 h-5 rounded-md ${i === q.answer ? 'bg-emerald-600 text-white' : 'bg-stone-200 text-stone-600'} font-bold flex items-center justify-center shrink-0 text-[11px]">${letters[i]}</span>
+              <span>${opt} ${i === q.answer ? '✓' : ''}</span>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200/70 text-xs text-amber-900 leading-relaxed">
+          <span class="font-bold text-amber-800"><i class="fa-solid fa-lightbulb"></i> Giải thích khoa học:</span> ${q.explain}
+        </div>
+      `;
+      listContainer.appendChild(card);
+    });
+  </script>
+</body>
+</html>

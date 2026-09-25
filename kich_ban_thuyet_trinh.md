@@ -167,22 +167,25 @@
 
 ---
 
-### 📌 SLIDE 13: Live Demo Hệ thống số hóa ôn tập Triết học của nhóm
-- **Thao tác:** Chuyển slide 13, mở điện thoại hoặc tab web chiếu màn hình thật.
+### 📌 SLIDE 13: Ý nghĩa phương pháp luận & Giá trị thời đại của học thuyết
+- **Thao tác:** Chuyển slide 13, giọng truyền cảm, khái quát tầm vóc tư tưởng.
 - **Lời thoại:**
-  > *"Kính thưa thầy cô và các bạn, để học thuyết Hình thái kinh tế - xã hội không chỉ nằm trên những trang sách lý thuyết khô khan, nhóm chúng em đã tự tay lập trình và xuất bản một hệ thống web app ôn tập thực chiến tại địa chỉ: **mln111-triethoc.surge.sh**.*
+  > *"Sau khi đi qua trọn vẹn 5 hình thái lịch sử và thực tiễn Việt Nam, chúng ta nhận thấy học thuyết Hình thái kinh tế - xã hội mang lại **ý nghĩa phương pháp luận vô cùng to lớn** trên cả hai phương diện:*
   >
-  > *Sản phẩm của nhóm tích hợp:*
-  > *- **Bộ 300 thẻ Flashcards 3D tương tác:** Bao quát trọn vẹn toàn bộ kiến thức 5 hình thái, quy luật LLSX - QHSX, CSHT - KTTT, lọc theo chủ đề và nhảy đến thẻ bất kỳ.*
-  > *- **Ngân hàng 300 câu trắc nghiệm thi thử:** Tự động tính điểm, phản hồi đúng/sai tức thì và có lời giải thích chi tiết bám sát đề thi kết thúc học phần môn MLN111.*
-  > *- Toàn bộ **Slide thuyết trình và Kịch bản thoại** hôm nay cũng đã được nhóm đẩy lên mạng để cả lớp có thể đọc lại hoặc tải file Word về máy.*
-  > *Xin mời thầy cô và các bạn quét mã QR Code trên màn hình để cùng trải nghiệm!"*
+  > *1. **Về mặt lý luận:** Học thuyết đã đập tan vĩnh viễn những quan điểm duy tâm, thần bí coi lịch sử là do ý muốn của thượng đế hay vua chúa. Nó cung cấp chiếc kính hiển vi khoa học: Muốn hiểu bản chất của một thời đại lịch sử, phải xuất phát từ phương thức sản xuất và kiểu quan hệ sản xuất đặc trưng. Đồng thời, học thuyết khẳng định chân lý: **Quần chúng nhân dân lao động chính là người sáng tạo chân chính ra lịch sử**.*
+  >
+  > *2. **Về mặt thực tiễn:** Đây là kim chỉ nam khoa học vững chắc giúp Đảng Cộng sản xác định đúng đắn đường lối cách mạng; củng cố niềm tin vững chắc vào tính tất yếu của con đường đi lên CNXH ở nước ta; giúp chúng ta vừa tránh được căn bệnh chủ quan duy ý chí, vừa phòng ngừa tư tưởng bảo thủ, trì trệ trước những biến động của thời đại."*
 
 ---
 
-### 📌 SLIDE 14: Tổng kết & Cảm ơn (Q&A)
-- **Thao tác:** Chuyển slide 14, tươi cười, cúi chào cảm ơn trang trọng.
+### 📌 SLIDE 14: Tổng kết & Vòng Minigame Tương Tác "Túi Mù Triết Học" (Q&A)
+- **Thao tác:** Chuyển sang slide 14, chào cảm ơn và mời cả lớp tham gia phần minigame túi mù. Mở trình duyệt chuyển sang trang `index.html` (Minigame Túi Mù).
 - **Lời thoại:**
-  > *"Tóm lại, học thuyết Hình thái kinh tế - xã hội của Karl Marx chính là 'chiếc la bàn' dẫn đường chỉ lối, khẳng định sự thay thế của các chế độ xã hội là tất yếu khách quan, và sự thắng lợi của Chủ nghĩa xã hội là đích đến của văn minh nhân loại.*
+  > *"Kính thưa thầy cô và các bạn! Học thuyết Hình thái kinh tế - xã hội của Karl Marx luôn là ngọn đuốc khoa học soi đường cho sự phát triển của nhân loại và sự nghiệp đổi mới tại Việt Nam.*
   >
-  > *Bài thuyết trình của nhóm chúng em đến đây xin được khép lại. Nhóm xin chân thành cảm ơn thầy/cô đã lắng nghe và rất mong nhận được những câu hỏi phản biện, góp ý quý báu từ thầy cô và các bạn. Chúng em xin chân thành cảm ơn!"*
+  > *Để buổi thuyết trình thêm phần sôi nổi và giúp cả lớp cùng khắc sâu những luận điểm quan trọng vừa rồi, nhóm chúng em xin được mang đến một phần trò chơi tương tác đặc biệt: **MINIGAME TÚI MÙ TRIẾT HỌC** tại địa chỉ web: **mln111-triethoc.surge.sh**!*
+  >
+  > *Thể lệ vô cùng hấp dẫn: Nhóm đã chuẩn bị 10 chiếc túi mù chứa 10 câu hỏi thử thách ngẫu nhiên xoay quanh bài học hôm nay. Bạn nào xung phong bốc trúng số nào sẽ trả lời câu hỏi số đó, nếu trả lời đúng sẽ nhận ngay một phần quà bí mật từ nhóm thuyết trình!*
+  >
+  > *Bây giờ, xin mời cánh tay đầu tiên của các bạn trong lớp tham gia mở chiếc túi mù đầu tiên ạ!"*
+
